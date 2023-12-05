@@ -1,2 +1,2 @@
 # noahbazer.github.io
-My public portfolio, made from scratch
+This is a running portfolio of my projects, repositories, and freelance work. I will update it periodically.
