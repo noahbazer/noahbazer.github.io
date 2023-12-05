@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>noahbazerdev</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
@@ -24,6 +24,28 @@
                 </nav>
             </div>
         </div>
-        <script src="main.js" async defer></script>
+        <div class="splash">
+            <div class="textsplash">
+                <h2>Your favorite</h2>
+                <h2 id="dynText">HTML</h2>
+                <h2 id="dynCursor">|</h2>
+                <h2>Developer</h2>
+            </div>
+        </div>
+        <script async defer>
+            const dynamicTextActive = false;
+let cursorBlink = true;
+const dynamicText = document.getElementById("dynText")
+const dynamicCursor = document.getElementById("dynCursor")
+
+while (cursorBlink === true) {
+    setTimeout(() => {
+        dynamicCursor.innerHTML = " "
+    }, 1000);
+    setTimeout(() => {
+        dynamicCursor.innerHTML = "|"
+    }, 1000);
+};
+        </script>
     </body>
 </html>
