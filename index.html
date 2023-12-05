@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>noahbazerdev</title>
+        <title>Noah Bazer</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
@@ -23,6 +23,7 @@
                     <a href="contact">contact</a>
                 </nav>
             </div>
+
         </div>
         <div class="splash">
             <div class="textsplash">
@@ -32,20 +33,20 @@
                 <h2>Developer</h2>
             </div>
         </div>
-        <script async defer>
+        <script>
             const dynamicTextActive = false;
-let cursorBlink = true;
-const dynamicText = document.getElementById("dynText")
-const dynamicCursor = document.getElementById("dynCursor")
+            let cursorBlink = true;
+            const dynamicText = document.getElementById("dynText");
+            const dynamicCursor = document.getElementById("dynCursor");
 
-while (cursorBlink === true) {
-    setTimeout(() => {
-        dynamicCursor.innerHTML = " "
-    }, 1000);
-    setTimeout(() => {
-        dynamicCursor.innerHTML = "|"
-    }, 1000);
-};
+            while (cursorBlink === true) {
+                setTimeout(() => {
+                    dynamicCursor.innerHTML = " "
+                }, 1000);
+                setTimeout(() => {
+                    dynamicCursor.innerHTML = "|"
+                }, 1000);
+            };
         </script>
     </body>
 </html>
