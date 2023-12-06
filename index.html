@@ -61,7 +61,7 @@ function blinkCursor() {
 }
 
 const changeTally = function () {
-    if (wordTally === 3) {
+    if (wordTally === 2) {
         wordTally = 0;
     } else {
         wordTally = wordTally + 1;
@@ -81,10 +81,6 @@ const changeWord = function () {
         case 2:
             currentWord = 'Javascript';
             wordColor = 'yellow';
-            break;
-        case 3:
-            currentWord = 'React';
-            wordColor = 'cyan';
             break;
     }
 };
