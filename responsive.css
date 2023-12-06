@@ -37,7 +37,7 @@
         padding-left: 12px;
     }
 
-    .aboutmecontent {
+    .aboutmecontent, .showcase {
         margin-top: 50px;
         text-align: center;
         width: 80%;

@@ -48,7 +48,7 @@ const changeWord = function () {
             wordColor = 'cyan';
             break;
         case 2:
-            currentWord = 'JavaScript();';
+            currentWord = 'javaScript();';
             wordColor = 'yellow';
             break;
     }
