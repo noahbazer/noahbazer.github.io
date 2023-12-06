@@ -37,7 +37,7 @@
 const dynamicTextActive = false;
 let currentWord = 'HTML';
 let cursorBlink = false;
-let wordTally = 1;
+let wordTally = 0;
 let dynamicText = document.getElementById("dynText");
 let wordColor = 'yellow';
 const dynamicCursor = document.getElementById("dynCursor");
@@ -61,7 +61,7 @@ function blinkCursor() {
 }
 
 const changeTally = function () {
-    if (wordTally == 2) {
+    if (wordTally === 3) {
         wordTally = 0;
     } else {
         wordTally = wordTally + 1;
@@ -71,16 +71,20 @@ const changeTally = function () {
 const changeWord = function () {
     switch (wordTally) {
         case 0:
-            currentWord = 'JavaScript';
-            wordColor = 'yellow';
-            break;
-        case 1:
             currentWord = 'HTML';
             wordColor = 'red';
             break;
-        case 2:
+        case 1:
             currentWord = 'CSS';
             wordColor = 'blue';
+            break;
+        case 2:
+            currentWord = 'Javascript';
+            wordColor = 'yellow';
+            break;
+        case 3:
+            currentWord = 'React';
+            wordColor = 'cyan';
             break;
     }
 };
@@ -95,7 +99,7 @@ function buildWord() {
 
             if (j === currentWord.length - 1) {
                 clearInterval(buildInt);
-                resolve(); // Resolve the promise when building is done
+                resolve();
             }
 
             j++;
@@ -113,7 +117,7 @@ function deleteWord() {
 
             if (i === 0) {
                 clearInterval(intervalId);
-                resolve(); // Resolve the promise when deleting is done
+                resolve(); 
             }
         }, 100);
     });
@@ -124,20 +128,20 @@ blinkCursor();
 const wordUpdater = async function () {
     dynamicCursor.style.visibility = "visible";
     cursorBlink = false;
-    await deleteWord(); // Wait for deletion to complete
+    await deleteWord();
     cursorBlink = true;
     changeTally();
     changeWord();
-    await new Promise(resolve => setTimeout(resolve, 500)); // Wait for 5000 milliseconds (adjust as needed)
+    await new Promise(resolve => setTimeout(resolve, 500));
     dynamicCursor.style.visibility = "visible";
     cursorBlink = false;
-    await buildWord(); // Wait for building to complete
+    await buildWord();
     cursorBlink = true;
 };
 
 setInterval(() => {
     wordUpdater();
-}, 10000); // Adjust interval as needed
+}, 7500);
 
 wordUpdater();
         </script>
