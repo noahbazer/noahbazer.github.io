@@ -1,0 +1,44 @@
+@media (max-width: 800px) {
+    .splash {
+        margin-top: 50px;
+    }
+
+     .textsplash {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+     }
+     .textsplash h2 {
+        font-size: 30px;
+        line-height: 1.1em;
+        margin: 0;
+    }
+    
+    .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    nav {
+        display: none;
+    }
+    
+    #dynCursor {
+        display: inline-flex;
+    }
+    
+    #dynText {
+        padding-left: 12px;
+    }
+
+    .aboutmecontent {
+        margin-top: 50px;
+        text-align: center;
+        width: 80%;
+    }
+}

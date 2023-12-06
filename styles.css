@@ -4,6 +4,10 @@
     color: white;
 }
 
+body {
+    margin: 0;
+}
+
 .header {
     display: flex;
     flex-direction: row;
@@ -92,6 +96,11 @@ nav a:hover {
 
 .aboutmecontent p {
     text-wrap: wrap;
+}
+
+.int {
+    display: flex;
+    flex-direction: row;
 }
 
 
