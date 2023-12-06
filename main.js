@@ -1,10 +1,11 @@
 const dynamicTextActive = false;
-let currentWord = 'HTML';
+let currentWord = '<html>';
 let cursorBlink = false;
 let wordTally = 0;
 let dynamicText = document.getElementById("dynText");
 let wordColor = 'yellow';
 const dynamicCursor = document.getElementById("dynCursor");
+dynText.textContent = '<html>'
 
 function blinkCursor() {
     if (cursorBlink === true) {
@@ -23,6 +24,8 @@ function blinkCursor() {
     }
 }
 
+const htmlFix = '<html>'
+
 const changeTally = function () {
     if (wordTally === 2) {
         wordTally = 0;
@@ -31,18 +34,21 @@ const changeTally = function () {
     }
 };
 
+const front = '&lt';
+const back = '&gt';
+
 const changeWord = function () {
     switch (wordTally) {
         case 0:
-            currentWord = 'HTML';
+            currentWord = '<html>';
             wordColor = 'red';
             break;
         case 1:
-            currentWord = 'CSS';
+            currentWord = '#CSS';
             wordColor = 'cyan';
             break;
         case 2:
-            currentWord = 'JavaScript';
+            currentWord = 'JavaScript();';
             wordColor = 'yellow';
             break;
     }
@@ -54,7 +60,7 @@ function buildWord() {
 
     return new Promise((resolve) => {
         const buildInt = setInterval(() => {
-            dynamicText.innerHTML += currentWord[j];
+            dynamicText.textContent += currentWord[j];
 
             if (j === currentWord.length - 1) {
                 clearInterval(buildInt);
@@ -67,11 +73,11 @@ function buildWord() {
 }
 
 function deleteWord() {
-    let i = dynamicText.innerHTML.length;
+    let i = dynamicText.textContent.length;
 
     return new Promise((resolve) => {
         const intervalId = setInterval(() => {
-            dynamicText.innerHTML = dynamicText.innerHTML.slice(0, -1);
+            dynamicText.textContent = dynamicText.textContent.slice(0, -1);
             i--;
 
             if (i === 0) {
