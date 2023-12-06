@@ -1,4 +1,4 @@
-@media (max-width: 800px) {
+@media (orientation: portrait) {
     .splash {
         margin-top: 50px;
     }
