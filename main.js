@@ -15,12 +15,11 @@ function blinkCursor() {
                 blinkCursor();
             }, 500);
         }, 500);
-    }
-    else if (cursorBlink === false) {
+    } else if (cursorBlink === false) {
         dynamicCursor.style.visibility = "visible";
         setTimeout(() => {
-                blinkCursor();
-            }, 1000);
+            blinkCursor();
+        }, 1000);
     }
 }
 
@@ -77,7 +76,7 @@ function deleteWord() {
 
             if (i === 0) {
                 clearInterval(intervalId);
-                resolve(); 
+                resolve();
             }
         }, 100);
     });
@@ -92,15 +91,34 @@ const wordUpdater = async function () {
     cursorBlink = true;
     changeTally();
     changeWord();
-    await new Promise(resolve => setTimeout(resolve, 500));
+    await new Promise((resolve) => setTimeout(resolve, 500));
     dynamicCursor.style.visibility = "visible";
     cursorBlink = false;
     await buildWord();
     cursorBlink = true;
 };
 
-setInterval(() => {
-    wordUpdater();
-}, 7500);
+let intervalId;
+
+function startInterval() {
+    intervalId = setInterval(() => {
+        if (!document.hidden) {
+            wordUpdater();
+        }
+    }, 5000);
+}
+
+startInterval();
+
+// Check for visibility changes
+document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") {
+        // Resume interval when tab becomes visible
+        startInterval();
+    } else {
+        // Pause interval when tab becomes hidden
+        clearInterval(intervalId);
+    }
+});
 
 wordUpdater();
