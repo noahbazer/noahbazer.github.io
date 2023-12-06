@@ -27,26 +27,119 @@
         </div>
         <div class="splash">
             <div class="textsplash">
-                <h2>Your favorite</h2>
+                <h2>your favorite</h2>
                 <h2 id="dynText">HTML</h2>
                 <h2 id="dynCursor">|</h2>
-                <h2>Developer</h2>
+                <h2>developer</h2>
             </div>
         </div>
-        <script>
-            const dynamicTextActive = false;
-            let cursorBlink = true;
-            const dynamicText = document.getElementById("dynText");
-            const dynamicCursor = document.getElementById("dynCursor");
+        <script async defer>
+const dynamicTextActive = false;
+let currentWord = 'HTML';
+let cursorBlink = false;
+let wordTally = 1;
+let dynamicText = document.getElementById("dynText");
+let wordColor = 'yellow';
+const dynamicCursor = document.getElementById("dynCursor");
 
-            while (cursorBlink === true) {
-                setTimeout(() => {
-                    dynamicCursor.innerHTML = " "
-                }, 1000);
-                setTimeout(() => {
-                    dynamicCursor.innerHTML = "|"
-                }, 1000);
-            };
+function blinkCursor() {
+    if (cursorBlink === true) {
+        dynamicCursor.style.visibility = "hidden";
+        setTimeout(() => {
+            dynamicCursor.style.visibility = "visible";
+            setTimeout(() => {
+                blinkCursor();
+            }, 500);
+        }, 500);
+    }
+    else if (cursorBlink === false) {
+        dynamicCursor.style.visibility = "visible";
+        setTimeout(() => {
+                blinkCursor();
+            }, 1000);
+    }
+}
+
+const changeTally = function () {
+    if (wordTally == 2) {
+        wordTally = 0;
+    } else {
+        wordTally = wordTally + 1;
+    }
+};
+
+const changeWord = function () {
+    switch (wordTally) {
+        case 0:
+            currentWord = 'JavaScript';
+            wordColor = 'yellow';
+            break;
+        case 1:
+            currentWord = 'HTML';
+            wordColor = 'red';
+            break;
+        case 2:
+            currentWord = 'CSS';
+            wordColor = 'blue';
+            break;
+    }
+};
+
+function buildWord() {
+    let j = 0;
+    dynamicText.style.color = wordColor;
+
+    return new Promise((resolve) => {
+        const buildInt = setInterval(() => {
+            dynamicText.innerHTML += currentWord[j];
+
+            if (j === currentWord.length - 1) {
+                clearInterval(buildInt);
+                resolve(); // Resolve the promise when building is done
+            }
+
+            j++;
+        }, 100);
+    });
+}
+
+function deleteWord() {
+    let i = dynamicText.innerHTML.length;
+
+    return new Promise((resolve) => {
+        const intervalId = setInterval(() => {
+            dynamicText.innerHTML = dynamicText.innerHTML.slice(0, -1);
+            i--;
+
+            if (i === 0) {
+                clearInterval(intervalId);
+                resolve(); // Resolve the promise when deleting is done
+            }
+        }, 100);
+    });
+}
+
+blinkCursor();
+
+const wordUpdater = async function () {
+    dynamicCursor.style.visibility = "visible";
+    cursorBlink = false;
+    await deleteWord(); // Wait for deletion to complete
+    cursorBlink = true;
+    changeTally();
+    changeWord();
+    await new Promise(resolve => setTimeout(resolve, 500)); // Wait for 5000 milliseconds (adjust as needed)
+    dynamicCursor.style.visibility = "visible";
+    cursorBlink = false;
+    await buildWord(); // Wait for building to complete
+    cursorBlink = true;
+};
+
+setInterval(() => {
+    wordUpdater();
+}, 10000); // Adjust interval as needed
+
+wordUpdater();
         </script>
     </body>
 </html>

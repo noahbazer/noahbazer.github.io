@@ -36,7 +36,40 @@ nav a:hover {
     text-decoration: underline;
 }
 
+.splash {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .textsplash {
     display: flex;
     flex-direction: row;
+    font-weight: lighter;
 }
+
+.textsplash h2 {
+    font-size: 50px;
+    font-weight: 400;
+}
+
+#dynText {
+    padding-left: 25px;
+    margin-right: none;
+    overflow: visible;
+}
+
+#dynCursor {
+    font-weight: lighter;
+    margin-left: none;
+    position: relative;
+    left: -5px;
+    bottom: 2px;
+    overflow: visible;
+    text-overflow: clip;
+    background: none;
+}
+
+
