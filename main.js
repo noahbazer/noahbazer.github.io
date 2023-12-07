@@ -31,7 +31,7 @@ function blinkCursor() {
 }
 
 const changeWord = function () {
-    if (wordTally === 2) {
+    if (wordTally === dynWordList.length - 1) {
         wordTally = 0;
     } else {
         wordTally = wordTally + 1;
