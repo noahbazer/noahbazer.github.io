@@ -31,7 +31,7 @@ function blinkCursor() {
 }
 
 const changeWord = function () {
-    if (wordTally === dynWordList.length - 1) {
+    if (wordTally === dynWordList.length-1) {
         wordTally = 0;
     } else {
         wordTally = wordTally + 1;
@@ -101,13 +101,10 @@ function startInterval() {
 
 startInterval();
 
-// Check for visibility changes
 document.addEventListener("visibilitychange", () => {
     if (document.visibilityState === "visible") {
-        // Resume interval when tab becomes visible
         startInterval();
     } else {
-        // Pause interval when tab becomes hidden
         clearInterval(intervalId);
     }
 });
