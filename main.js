@@ -7,6 +7,12 @@ let wordColor = 'yellow';
 const dynamicCursor = document.getElementById("dynCursor");
 dynText.textContent = '<html>'
 
+const dynWordList = [
+{word: '<html>', color: 'red'},
+{word: '#css', color: 'cyan'},
+{word: 'javaScript();', color: 'yellow'}
+];
+
 function blinkCursor() {
     if (cursorBlink === true) {
         dynamicCursor.style.visibility = "hidden";
@@ -24,34 +30,14 @@ function blinkCursor() {
     }
 }
 
-const htmlFix = '<html>'
-
-const changeTally = function () {
+const changeWord = function () {
     if (wordTally === 2) {
         wordTally = 0;
     } else {
         wordTally = wordTally + 1;
     }
-};
-
-const front = '&lt';
-const back = '&gt';
-
-const changeWord = function () {
-    switch (wordTally) {
-        case 0:
-            currentWord = '<html>';
-            wordColor = 'red';
-            break;
-        case 1:
-            currentWord = '#CSS';
-            wordColor = 'cyan';
-            break;
-        case 2:
-            currentWord = 'javaScript();';
-            wordColor = 'yellow';
-            break;
-    }
+    currentWord = dynWordList[wordTally].word;
+    wordColor = dynWordList[wordTally].color;
 };
 
 function buildWord() {
@@ -95,7 +81,6 @@ const wordUpdater = async function () {
     cursorBlink = false;
     await deleteWord();
     cursorBlink = true;
-    changeTally();
     changeWord();
     await new Promise((resolve) => setTimeout(resolve, 500));
     dynamicCursor.style.visibility = "visible";
