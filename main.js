@@ -110,3 +110,14 @@ document.addEventListener("visibilitychange", () => {
 });
 
 wordUpdater();
+
+
+const removeModal = function() {
+    let modal = document.getElementsByClassName('modal');
+    modal[0].style.display = 'none';
+}
+
+const showModal = function() {
+    let modal = document.getElementsByClassName('modal');
+    modal[0].style.display = 'flex';
+}

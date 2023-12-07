@@ -128,4 +128,30 @@ margin-bottom: 50px;
     border-radius: 0 0 25px 25px;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(19, 19, 19, 0.815);
+}
 
+.modalcontent {
+    height: 400px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(39, 39, 39);
+    border-radius: 25px;
+}
+
+.modalcontent img {
+    object-fit: cover;
+    height: 50%;
+    width: 100%;
+    border-radius: 25px 25px 0 0;
+}
