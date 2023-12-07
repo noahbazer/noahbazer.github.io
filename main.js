@@ -111,13 +111,18 @@ document.addEventListener("visibilitychange", () => {
 
 wordUpdater();
 
+let modalcontent = document.getElementsByClassName('modalcontent');
+let modal = document.getElementsByClassName('modal');
+
 
 const removeModal = function() {
-    let modal = document.getElementsByClassName('modal');
-    modal[0].style.display = 'none';
+    modal[0].style.opacity = 0;
+    modal[0].style.pointerEvents = 'none';
+    modalcontent[0].classList.remove('visible');
 }
 
 const showModal = function() {
-    let modal = document.getElementsByClassName('modal');
-    modal[0].style.display = 'flex';
+    modal[0].style.opacity = 1;
+    modal[0].style.pointerEvents = 'all';
+    modalcontent[0].classList.add('visible');
 }

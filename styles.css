@@ -112,6 +112,26 @@ margin-bottom: 50px;
     display: flex;
     padding: 120px 0px 0px 0px;
     border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.modalpreview:hover {
+    scale: 1.1;
+    transition: all 0.2s ease-in-out;
+}
+
+.fade-in-up {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+  .fade-in-up.visible {
+    pointer-events: all;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #class1 {
@@ -129,7 +149,9 @@ margin-bottom: 50px;
 }
 
 .modal {
-    display: none;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
     position: fixed;
     top: 0;
     width: 100vw;
