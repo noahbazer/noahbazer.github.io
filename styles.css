@@ -223,3 +223,16 @@ margin-bottom: 50px;
     width: 80%;
     border-radius: 25px;
 }
+
+.gitlink, .gitlink span {
+    color: gray;
+    text-decoration: none;
+}
+
+.gitlink:hover, .gitlink:hover span {
+    color: rgb(83, 178, 255);
+}
+
+.gray {
+    color: gray;
+}
