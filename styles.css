@@ -78,6 +78,13 @@ nav a:hover {
     background: none;
 }
 
+.showcasecon {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
 .aboutme, .showcase {
     display: flex;
     flex-direction: column;
@@ -109,6 +116,8 @@ margin-bottom: 50px;
 }
 
 .modalpreview {
+
+    width: 240px;
     display: flex;
     padding: 120px 0px 0px 0px;
     border-radius: 25px;
@@ -139,13 +148,25 @@ margin-bottom: 50px;
     background-size: cover;
 }
 
+#class2 {
+    background-image: url(https://cdn.discordapp.com/attachments/1135458074170245212/1182567281545453613/image.png?ex=65852a9a&is=6572b59a&hm=d50916bfac62bb5755f049b305fa43672ca229ded703bb19c41551e26308247c&);
+    background-size: cover;
+}
+
+#class3 {
+    background-image: url(https://cdn.discordapp.com/attachments/1135458074170245212/1182583942277255198/image.png?ex=65853a1f&is=6572c51f&hm=45bd02360912ce3c1398ee0a94f88a956c0c6d3538de7a8f7beb7365b2ccc564&);
+    background-size: cover;
+}
+
 .textcontainer {
+    width: 100%;
     display: flex;
     flex-direction: row;
     gap: 50px;
     background-color: rgba(0, 0, 0, 0.605);
     padding: 1px 30px;
     border-radius: 0 0 25px 25px;
+    text-align: center;
 }
 
 .modal {
@@ -203,9 +224,17 @@ margin-bottom: 50px;
 }
 
 .modaltextright {
-    width: 40%;
+    width: 55%;
     display: flex;
     flex-direction: column;
+}
+
+.modaltextright .languagecount {
+    margin: 8px 0 8px 0;
+}
+
+.languagecount p {
+    margin: 2px 0 2px 0;
 }
 
 .white {
@@ -216,15 +245,49 @@ margin-bottom: 50px;
     color: yellow;
 }
 
-.langaugebar {
-    display: block;
-    background-color: yellow;
-    height: 4px;
-    width: 80%;
-    border-radius: 25px;
+.htmlcolor {
+    color: rgb(226, 73, 43);
 }
 
+.csscolor {
+    color: rgb(101, 43, 226);
+}
+
+.languagebar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 4px;
+    width: 100%;
+    border-radius: 25px;
+    gap: 3px;
+}
+
+#languagebar1 {
+    background-color: yellow;
+}
+
+#languagebar2 div {
+    height: 4px;
+}
+
+#languagebar2 .bar1 {background-color: rgb(226, 73, 43); width: 52%; border-radius: 25px 0 0 25px;}
+#languagebar2 .bar2 {background-color: rgb(101, 43, 226); width: 48%; border-radius: 0 25px 25px 0;}
+
+#languagebar3 .bar1 {background-color: rgb(226, 73, 43); width: 34%; border-radius: 25px 0 0 25px;}
+#languagebar3 .bar2 {background-color: rgb(101, 43, 226); width: 29%;}
+#languagebar3 .bar3 {background-color: yellow; width: 37%; border-radius: 0 25px 25px 0;}
+
 .gitlink, .gitlink span {
+    color: gray;
+    text-decoration: none;
+}
+
+.gitlinkdead {
+    margin: 0;
+}
+
+.gitlinkdead, .gitlinkdead span {
     color: gray;
     text-decoration: none;
 }
