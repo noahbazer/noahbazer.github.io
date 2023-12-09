@@ -49,4 +49,28 @@
         justify-content: center;
         align-items: center;
     }
+
+    .modal {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .modalcontent {
+        width: 80%;
+    }
+
+    .modalcontent video {
+        height: 40%;
+    }
+
+    .modaltextplane {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .modaltextleft {
+        width: 100%;
+        max-width: 100%;
+    }
 }
