@@ -87,7 +87,8 @@
     </div>
     <div class="modalbundle">
       <div class="modal" id="modal1" onclick="removeModal()">
-        <div class="modalcontent fade-in-up" id="modalcontent1">
+        <div class="modalcontent fade-in-up" id="modalcontent1" onclick="event.stopPropagation()">
+          <i class="fa-solid fa-xmark exitbutton" onclick="removeModal()"></i>
           <img src="https://engeniusweb.com/wp-content/uploads/2021/04/Untitled-design-1.png"/>
           <div class="modaltextplane">
             <div class="modaltextleft">
@@ -114,8 +115,9 @@
         </div>
       </div>
       <div class="modal" id="modal2" onclick="removeModal()">
-        <div class="modalcontent fade-in-up" id="modalcontent2">
-          <img src="https://cdn.discordapp.com/attachments/1135458074170245212/1182578673287692359/image.png?ex=65853536&is=6572c036&hm=db6fe09fc4b8b391d9e749dbdab401839d31ecedb443852da87784118bb8e2e4&"/>
+        <div class="modalcontent fade-in-up" id="modalcontent2" onclick="event.stopPropagation()">
+          <i class="fa-solid fa-xmark exitbutton" onclick="removeModal()"></i>
+          <video autoplay="autoplay" loop muted src="./assets/tavrshowcase5.mp4"></video>
           <div class="modaltextplane">
             <div class="modaltextleft">
                 <p><strong>project:</strong><br>tavr website</p>
@@ -142,7 +144,8 @@
         </div>
       </div>
       <div class="modal" id="modal3" onclick="removeModal()">
-        <div class="modalcontent fade-in-up" id="modalcontent3">
+        <div class="modalcontent fade-in-up" id="modalcontent3" onclick="event.stopPropagation()">
+          <i class="fa-solid fa-xmark exitbutton" onclick="removeModal()"></i>
           <img src="https://cdn.discordapp.com/attachments/1135458074170245212/1182585450200838144/image.png?ex=65853b86&is=6572c686&hm=01f6e88892c1e531a4e5565a0d00017954a27a584c27d3c1a08ce32acc044ddf&"/>
           <div class="modaltextplane">
             <div class="modaltextleft">

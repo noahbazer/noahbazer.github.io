@@ -184,17 +184,19 @@ margin-bottom: 50px;
 }
 
 .modalcontent {
-    height: 400px;
-    width: 500px;
+    height: 600px;
+    width: 820px;
     display: flex;
     flex-direction: column;
     background-color: rgb(39, 39, 39);
     border-radius: 25px;
 }
 
-.modalcontent img {
+.modalcontent video {
+    pointer-events: none;
     object-fit: cover;
-    height: 50%;
+    object-position: top;
+    height: 60%;
     width: 100%;
     border-radius: 25px 25px 0 0;
 }
@@ -208,8 +210,8 @@ margin-bottom: 50px;
     gap: 50px;
 }
 
-.modatextleft {
-    width: 45%;
+.modaltextleft {
+    max-width: 45%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -224,7 +226,7 @@ margin-bottom: 50px;
 }
 
 .modaltextright {
-    width: 55%;
+    width: 200px;
     display: flex;
     flex-direction: column;
 }
@@ -298,4 +300,22 @@ margin-bottom: 50px;
 
 .gray {
     color: gray;
+}
+
+.exitbutton {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    font-size: 1.5em;
+    right: 15px;
+    color: rgb(255, 255, 255);
+    padding: 0 3px;
+    background-color: rgba(0, 0, 0, 0.405);
+    box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, 0.405);
+    border-radius: 25px;
+}
+
+.exitbutton:hover {
+    color: rgb(255, 87, 87);
 }

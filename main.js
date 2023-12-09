@@ -30,7 +30,7 @@ function blinkCursor() {
     }
 }
 
-const changeWord = function () {
+const changeWord = function() {
     if (wordTally === dynWordList.length-1) {
         wordTally = 0;
     } else {
@@ -120,6 +120,7 @@ const removeModal = function() {
         modals[i].style.opacity = 0;
         modals[i].style.pointerEvents = 'none';
         contents[i].classList.remove('visible');
+        contents[i].style.pointerEvents = 'none';
     }
 }
 
@@ -129,4 +130,5 @@ const showModal = function(id) {
     modal.style.opacity = 1;
     modal.style.pointerEvents = 'all';
     modalcontent.classList.add('visible');
+    modalcontent.style.pointerEvents = 'all';
 }
