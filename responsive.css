@@ -42,4 +42,11 @@
         text-align: center;
         width: 80%;
     }
+
+    .showcasecon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
