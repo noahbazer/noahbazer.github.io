@@ -6,6 +6,44 @@
 body {
     margin: 0;
     background-color: rgb(39, 39, 39);
+    overflow-x: hidden;
+}
+
+.parallax {
+    height: 100vh;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+  
+    perspective: 1px;
+}
+
+.para {
+    position: absolute;
+    left: 0;
+    z-index: -9999;
+    perspective: 1px;
+}
+
+#para1 {
+    transform: translateZ(-2px);
+    background-image: url(./assets/para1.png);
+    background-size: cover;
+    background-repeat: repeat;
+    width: 276vw;
+    left: -95%;
+    top: -1703px;
+    
+}
+#para2 {
+    transform: translateZ(-1px);
+    width: 216vw;
+    left: -55%;
+    top: -785px;
+}
+#para3 {
+    transform: translateZ(0);
+    top: 30px;
 }
 
 .header {
