@@ -6,6 +6,9 @@
     <title>Noah Bazer</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv='cache-control' content='no-cache'> 
+    <meta http-equiv='expires' content='0'> 
+    <meta http-equiv='pragma' content='no-cache'>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="responsive.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -121,6 +124,33 @@
           </div>
         </div>
       </div>
+      <div class="modal" id="modal4" onclick="removeModal()">
+        <div class="modalcontent fade-in-up" id="modalcontent4" onclick="event.stopPropagation()">
+          <i class="fa-solid fa-xmark exitbutton" onclick="removeModal()"></i>
+          <video autoplay="autoplay" loop muted src="./assets/asteriateaser.mp4""></video>
+          <div class="modaltextplane">
+            <div class="modaltextleft">
+                <p><strong>project:</strong><br>VR MMORPG</p>
+                <hr>
+                <p><strong>objective:</strong><br>build a virtual reality mmorpg that breaks from market convention</p>
+                <hr>
+                <p><strong>tools/packages:</strong><br>Unity 2022</p>
+            </div>
+            <div class="modaltextright">
+                <p>Languages:</p>
+                <div class="languagebar" id="languagebar4">
+                  <div class="bar1"></div>
+                </div>
+                <div class="languagecount">
+                  <p class="aqua">C# <span class="white">- 100%</span></p>
+                </div>
+                <p class="gitlinkdead">
+                  private repository
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="parallax">
     <img class="para" id="para1" src="./assets/para1.png">
@@ -175,6 +205,11 @@
         <div class="modalpreview" id="class3" onclick="showModal(3)">
           <div class="textcontainer">
             <p>carrd alternative</p>
+          </div>
+        </div>
+        <div class="modalpreview" id="class4" onclick="showModal(4)">
+          <div class="textcontainer">
+            <p>VR MMORPG</p>
           </div>
         </div>
       </div>

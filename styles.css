@@ -197,6 +197,11 @@ margin-bottom: 50px;
     background-size: cover;
 }
 
+#class4 {
+    background-image: url(https://cdn.discordapp.com/attachments/1135458074170245212/1184353539821162496/image.png?ex=658baa30&is=65793530&hm=1b11206e0e916564200873d6fe52947f259b3163aed4b35330221e62e10bb181&);
+    background-size: cover;
+}
+
 .textcontainer {
     width: 100%;
     display: flex;
@@ -320,6 +325,14 @@ margin-bottom: 50px;
 #languagebar3 .bar1 {background-color: rgb(226, 73, 43); width: 34%; border-radius: 25px 0 0 25px;}
 #languagebar3 .bar2 {background-color: rgb(101, 43, 226); width: 29%;}
 #languagebar3 .bar3 {background-color: yellow; width: 37%; border-radius: 0 25px 25px 0;}
+
+#languagebar4 {
+    background-color: aqua;
+}
+
+.aqua {
+    color: aqua;
+}
 
 .gitlink, .gitlink span {
     color: gray;
