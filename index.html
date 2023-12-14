@@ -194,16 +194,16 @@
       <div class="sortmenu">
         <p>Sort by:</p>
         <label for="filterall">All (4)</label>
-        <input type="radio" name="filterall" value="1" onclick="filterModals(all)">
+        <input type="radio" name="filterall" value="1" onclick="filterModals('all')">
         <label for="filterall">Front End (3)</label>
-        <input type="radio" name="filterall" value="2" onclick="filterModals(frontend)">
+        <input type="radio" name="filterall" value="2" onclick="filterModals('frontend')">
         <label for="filterall">Javascript (2)</label>
-        <input type="radio" name="filterall" value="3" onclick="filterModals(js)">
+        <input type="radio" name="filterall" value="3" onclick="filterModals('js')">
         <label for="filterall">Game Development (1)</label>
-        <input type="radio" name="filterall" value="4" onclick="filterModals(game)">
+        <input type="radio" name="filterall" value="4" onclick="filterModals('game')">
       </div>
       <div class="showcasecon">
-        <div class="modalpreview" id="class1" onclick="showModal(1)">
+        <div class="modalpreview" id="class1" dataset="js" onclick="showModal(1)">
           <div class="textcontainer">
             <p>node.js battleship</p>
           </div>

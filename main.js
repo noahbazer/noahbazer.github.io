@@ -113,6 +113,7 @@ wordUpdater();
 
 const modals = document.querySelectorAll('.modal');
 const contents = document.querySelectorAll('.modalcontent');
+const modalpreviews = document.querySelectorAll('.mopdalpreview');
 
 
 const removeModal = function() {
@@ -131,4 +132,15 @@ const showModal = function(id) {
     modal.style.pointerEvents = 'all';
     modalcontent.classList.add('visible');
     modalcontent.style.pointerEvents = 'all';
+}
+
+const filterModals = function(type) {
+    for (let i = 0; i < modalpreviews.length; i++) {
+        if (modalpreviews[i].dataset === type) {
+            modalpreviews[i].style.display = display;
+        }
+        else {
+            modalpreviews[i].style.display = none;
+        }
+    }
 }
