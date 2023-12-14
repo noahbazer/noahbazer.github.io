@@ -373,3 +373,10 @@ margin-bottom: 50px;
 .exitbutton:hover {
     color: rgb(255, 87, 87);
 }
+
+.sortmenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
