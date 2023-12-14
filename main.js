@@ -145,3 +145,14 @@ const filterModals = function(filter) {
         }
     })
 }
+
+const filters = document.querySelectorAll('.sortlink');
+const setActive = (child) => {
+    for (let i = 0; i < filters.length; i ++) {
+        if (i === (child - 1)) {
+            filters[i].id = 'sortactive';
+        } else {
+            filters[i].id = '';
+        }
+    }
+}

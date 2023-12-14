@@ -385,3 +385,16 @@ margin-bottom: 10px;
 .sortmenu p {
     padding-left: 30px;
 }
+
+.sortlink {
+    color: rgb(181, 181, 181);
+}
+
+.sortlink:hover {
+    color: white;
+    cursor: pointer;
+}
+
+#sortactive {
+    color: rgb(255, 240, 156);
+}

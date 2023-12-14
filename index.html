@@ -193,10 +193,10 @@
       <h3>my projects:</h3>
       <div class="sortmenu">
         <p>Sort by:</p>
-        <p onclick="filterModals('all')">All Work (4)</p>
-        <p onclick="filterModals('node')">Node.js (1)</p>
-        <p onclick="filterModals('web')">Web Development (2)</p>
-        <p onclick="filterModals('game')">Game Development (1)</p>
+        <p class="sortlink" id="sortactive" onclick="filterModals('all'); setActive(1)">All Work (4)</p>
+        <p class="sortlink" onclick="filterModals('node'); setActive(2)">Node.js (1)</p>
+        <p class="sortlink" onclick="filterModals('web'); setActive(3)">Web Development (2)</p>
+        <p class="sortlink" onclick="filterModals('game'); setActive(4)">Game Development (1)</p>
       </div>
       <div class="showcasecon">
         <div class="modalpreview" id="class1" data-filter="node" onclick="showModal(1)">
