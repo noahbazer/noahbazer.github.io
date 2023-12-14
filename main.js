@@ -40,7 +40,7 @@ const changeWord = function() {
     wordColor = dynWordList[wordTally].color;
 };
 
-function buildWord() {
+const buildWord = function() {
     let j = 0;
     dynamicText.style.color = wordColor;
 
@@ -58,7 +58,7 @@ function buildWord() {
     });
 }
 
-function deleteWord() {
+const deleteWord = function() {
     let i = dynamicText.textContent.length;
 
     return new Promise((resolve) => {
@@ -91,7 +91,7 @@ const wordUpdater = async function () {
 
 let intervalId;
 
-function startInterval() {
+const startInterval = function() {
     intervalId = setInterval(() => {
         if (!document.hidden) {
             wordUpdater();
