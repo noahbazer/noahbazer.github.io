@@ -113,7 +113,7 @@ wordUpdater();
 
 const modals = document.querySelectorAll('.modal');
 const contents = document.querySelectorAll('.modalcontent');
-const modalpreviews = document.querySelectorAll('.mopdalpreview');
+const modalpreviews = document.querySelectorAll('.modalpreview');
 
 
 const removeModal = function() {
@@ -134,13 +134,14 @@ const showModal = function(id) {
     modalcontent.style.pointerEvents = 'all';
 }
 
-const filterModals = function(type) {
-    for (let i = 0; i < modalpreviews.length; i++) {
-        if (modalpreviews[i].dataset === type) {
-            modalpreviews[i].style.display = display;
+const filterModals = function(filter) {
+    modalpreviews.forEach((card) => {
+        if (filter === 'all') {
+            card.style.display = 'flex';
+        } else if (card.dataset.filter === filter) {
+            card.style.display = 'flex';
+        } else {
+            card.style.display = 'none';
         }
-        else {
-            modalpreviews[i].style.display = none;
-        }
-    }
+    })
 }
