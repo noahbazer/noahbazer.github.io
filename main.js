@@ -13,6 +13,7 @@ const dynWordList = [
 {word: 'javaScript();', color: 'yellow'}
 ];
 
+
 function blinkCursor() {
     if (cursorBlink === true) {
         dynamicCursor.style.visibility = "hidden";
