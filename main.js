@@ -157,3 +157,9 @@ const setActive = (child) => {
         }
     }
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    setInterval(() => {
+        console.log(window.scrollY);
+    }, 1000);
+});
