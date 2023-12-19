@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     let scrollpos = window.scrollY;
-    const header = document.getElementById('stickyHeader');
+    const header = document.querySelector('.header');
     const header_height = header.offsetHeight;
 
     const add_class_on_scroll = () => {

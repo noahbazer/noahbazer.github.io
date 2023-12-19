@@ -59,6 +59,10 @@ body {
     padding: 20px 27px 20px;
 }
 
+.headersticky {
+    background-color: black;
+}
+
 h3 {
     margin: 0;
     letter-spacing: 2px;
