@@ -126,13 +126,13 @@ const removeModal = function() {
     }
 }
 
-const showModal = function(id) {
-    let modal = document.getElementById(`modal${id}`);
-    let modalcontent = document.getElementById(`modalcontent${id}`);
+const showModal = function() {
+    let modal = document.getElementById(`modal`);
+    let modalContent = document.getElementById(`modalcontent`);
     modal.style.opacity = 1;
     modal.style.pointerEvents = 'all';
-    modalcontent.classList.add('visible');
-    modalcontent.style.pointerEvents = 'all';
+    modalContent.classList.add('visible');
+    modalContent.style.pointerEvents = 'all';
 }
 
 const filterModals = function(filter) {
@@ -149,7 +149,7 @@ const filterModals = function(filter) {
 
 const filters = document.querySelectorAll('.sortlink');
 const setActive = (child) => {
-    for (let i = 0; i < filters.length; i ++) {
+    for (let i = 0; i < filters.length; i++) {
         if (i === (child - 1)) {
             filters[i].id = 'sortactive';
         } else {
@@ -157,9 +157,3 @@ const setActive = (child) => {
         }
     }
 }
-
-document.addEventListener('DOMContentLoaded', function () {
-    setInterval(() => {
-        console.log(window.scrollY);
-    }, 1000);
-});

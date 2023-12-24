@@ -253,13 +253,13 @@ margin-bottom: 10px;
     pointer-events: none;
     object-fit: cover;
     object-position: top;
-    height: 70%;
+    height: 60%;
     width: 100%;
     border-radius: 25px 25px 0 0;
 }
 
 .modaltextplane {
-    padding: 10px;
+    padding: 20px 10px 10px 10px;
     font-size: .9em;
     display: flex;
     flex-direction: row;
@@ -275,11 +275,11 @@ margin-bottom: 10px;
 }
 
 .modaltextleft p {
-    margin: 10px;
+    margin: 2px;
 }
 
 .modaltextleft hr {
-    margin: 0 10% 0 0;
+    margin: 10px 10% 10px 0;
 }
 
 .modaltextright {

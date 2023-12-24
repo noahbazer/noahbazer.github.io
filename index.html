@@ -48,17 +48,23 @@
       </div>
     </div>
     <div class="modalbundle">
-      <div class="modal" id="modal1" onclick="removeModal()">
-        <div class="modalcontent fade-in-up" id="modalcontent1" onclick="event.stopPropagation()">
+      <div class="modal" id="modal" onclick="removeModal()">
+        <div class="modalcontent fade-in-up" id="modalcontent" onclick="event.stopPropagation()">
           <i class="fa-solid fa-xmark exitbutton" onclick="removeModal()"></i>
-          <video autoplay="autoplay" loop muted src="./assets/battleshowcase.mp4"></video>
+          <video loop muted
+          class="modal-datalist"
+          autoplay="autoplay" 
+          src="./assets/battleshowcase.mp4"></video>
           <div class="modaltextplane">
             <div class="modaltextleft">
-                <p><strong>project:</strong><br>node.js battleship</p>
+                <p><strong>project:</strong></p>
+                <p class="modal-datalist">test</p>
                 <hr>
-                <p><strong>objective:</strong><br>build a playable, terminal-only battleship using node.js</p>
+                <p><strong>objective:</strong></p>
+                <p class="modal-datalist">test</p>
                 <hr>
-                <p><strong>tools/packages:</strong><br>node.js, readline-sync, chalk</p>
+                <p><strong>tools/packages:</strong></p>
+                <p class="modal-datalist">test</p>
             </div>
             <div class="modaltextright">
                 <p>Languages:</p>
@@ -72,93 +78,6 @@
                 href="https://github.com/noahbazer/battleship-project">
                     open on <span class="fa-brands fa-github"></span>
                 </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal" id="modal2" onclick="removeModal()">
-        <div class="modalcontent fade-in-up" id="modalcontent2" onclick="event.stopPropagation()">
-          <i class="fa-solid fa-xmark exitbutton" onclick="removeModal()"></i>
-          <video autoplay="autoplay" loop muted src="./assets/tavrshowcase5.mp4"></video>
-          <div class="modaltextplane">
-            <div class="modaltextleft">
-                <p><strong>project:</strong><br>tavr website</p>
-                <hr>
-                <p><strong>objective:</strong><br>build a front-face for TBVR's flagship game</p>
-                <hr>
-                <p><strong>tools/packages:</strong><br>none, all native languages</p>
-            </div>
-            <div class="modaltextright">
-                <p>Languages:</p>
-                <div class="languagebar" id="languagebar2">
-                  <div class="bar1"></div>
-                  <div class="bar2"></div>
-                </div>
-                <div class="languagecount">
-                  <p class="htmlcolor">HTML <span class="white">- 51.8%</span></p>
-                <p class="csscolor">CSS <span class="white">- 48.2%</span></p>
-                </div>
-                <p class="gitlinkdead">
-                  private repository
-                </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal" id="modal3" onclick="removeModal()">
-        <div class="modalcontent fade-in-up" id="modalcontent3" onclick="event.stopPropagation()">
-          <i class="fa-solid fa-xmark exitbutton" onclick="removeModal()"></i>
-          <video autoplay="autoplay" loop muted src="./assets/ffshowcasenew.mp4""></video>
-          <div class="modaltextplane">
-            <div class="modaltextleft">
-                <p><strong>project:</strong><br>carrd alternative</p>
-                <hr>
-                <p><strong>objective:</strong><br>create a cheaper, more customizable alternative to static page subscriptions</p>
-                <hr>
-                <p><strong>tools/packages:</strong><br>none, all native languages</p>
-            </div>
-            <div class="modaltextright">
-                <p>Languages:</p>
-                <div class="languagebar" id="languagebar3">
-                  <div class="bar1"></div>
-                  <div class="bar2"></div>
-                  <div class="bar3"></div>
-                </div>
-                <div class="languagecount">
-                  <p class="htmlcolor">HTML <span class="white">- 34.3%</span></p>
-                  <p class="csscolor">CSS <span class="white">- 29.6%</span></p>
-                  <p class="yellow">Javascript <span class="white">- 37.1%</span></p>
-                </div>
-                <p class="gitlinkdead">
-                  private repository
-                </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal" id="modal4" onclick="removeModal()">
-        <div class="modalcontent fade-in-up" id="modalcontent4" onclick="event.stopPropagation()">
-          <i class="fa-solid fa-xmark exitbutton" onclick="removeModal()"></i>
-          <video autoplay="autoplay" loop muted src="./assets/asteriateaser.mp4""></video>
-          <div class="modaltextplane">
-            <div class="modaltextleft">
-                <p><strong>project:</strong><br>VR MMORPG</p>
-                <hr>
-                <p><strong>objective:</strong><br>build a virtual reality mmorpg that breaks from market convention</p>
-                <hr>
-                <p><strong>tools/packages:</strong><br>Unity 2022</p>
-            </div>
-            <div class="modaltextright">
-                <p>Languages:</p>
-                <div class="languagebar" id="languagebar4">
-                  <div class="bar1"></div>
-                </div>
-                <div class="languagecount">
-                  <p class="aqua">C# <span class="white">- 100%</span></p>
-                </div>
-                <p class="gitlinkdead">
-                  private repository
-                </p>
             </div>
           </div>
         </div>
@@ -199,22 +118,22 @@
         <p class="sortlink" onclick="filterModals('game'); setActive(4)">Game Development (1)</p>
       </div>
       <div class="showcasecon">
-        <div class="modalpreview" id="class1" data-filter="node" onclick="showModal(1)">
+        <div class="modalpreview" id="class1" data-filter="node" onclick="setModalData(1); showModal()">
           <div class="textcontainer">
             <p>node.js battleship</p>
           </div>
         </div>
-        <div class="modalpreview" id="class2" data-filter="web" onclick="showModal(2)">
+        <div class="modalpreview" id="class2" data-filter="web" onclick="setModalData(2); showModal()">
           <div class="textcontainer">
             <p>tavr website</p>
           </div>
         </div>
-        <div class="modalpreview" id="class3" data-filter="web" onclick="showModal(3)">
+        <div class="modalpreview" id="class3" data-filter="web" onclick="setModalData(3); showModal()">
           <div class="textcontainer">
             <p>carrd alternative</p>
           </div>
         </div>
-        <div class="modalpreview" id="class4" data-filter="game" onclick="showModal(4)">
+        <div class="modalpreview" id="class4" data-filter="game" onclick="setModalData(4); showModal()">
           <div class="textcontainer">
             <p>VR MMORPG</p>
           </div>
@@ -223,6 +142,8 @@
     </div>
     <script src="./main.js"></script>
     <script src="./header.js"></script>
+    <script src="./modals.js"></script>
   </div>
   </body>
 </html>
++
