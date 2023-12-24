@@ -6,9 +6,9 @@
     <title>Noah Bazer</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv='cache-control' content='no-cache'> 
-    <meta http-equiv='expires' content='0'> 
-    <meta http-equiv='pragma' content='no-cache'>
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="responsive.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,7 +32,10 @@
     />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="icon" type="image/png" href="./assets/favicon.ico" />
-    <script src="https://kit.fontawesome.com/ec4cce9624.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/ec4cce9624.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="header">
@@ -49,101 +52,151 @@
     </div>
     <div class="modalbundle">
       <div class="modal" id="modal" onclick="removeModal()">
-        <div class="modalcontent fade-in-up" id="modalcontent" onclick="event.stopPropagation()">
+        <div
+          class="modalcontent fade-in-up"
+          id="modalcontent"
+          onclick="event.stopPropagation()"
+        >
           <i class="fa-solid fa-xmark exitbutton" onclick="removeModal()"></i>
-          <video loop muted
-          class="modal-datalist"
-          autoplay="autoplay" 
-          src="./assets/battleshowcase.mp4"></video>
+          <video
+            loop
+            muted
+            class="modal-datalist"
+            autoplay="autoplay"
+            src="./assets/battleshowcase.mp4"
+          ></video>
           <div class="modaltextplane">
             <div class="modaltextleft">
-                <p><strong>project:</strong></p>
-                <p class="modal-datalist">test</p>
-                <hr>
-                <p><strong>objective:</strong></p>
-                <p class="modal-datalist">test</p>
-                <hr>
-                <p><strong>tools/packages:</strong></p>
-                <p class="modal-datalist">test</p>
+              <p><strong>project:</strong></p>
+              <p class="modal-datalist">test</p>
+              <hr />
+              <p><strong>objective:</strong></p>
+              <p class="modal-datalist">test</p>
+              <hr />
+              <p><strong>tools/packages:</strong></p>
+              <p class="modal-datalist">test</p>
             </div>
             <div class="modaltextright">
-                <p>Languages:</p>
-                <div class="languagebar" id="languagebar1"></div>
-                <div class="languagecount">
-                  <div class="yellow">Javascript<span class="white">- 100%</span></div>
+              <p>Languages:</p>
+              <div class="languagebar" id="languagebar1"></div>
+              <div class="languagecount">
+                <div class="yellow">
+                  Javascript<span class="white">- 100%</span>
                 </div>
-                <a class="gitlink" 
-                target="_blank" 
-                rel="noreferrer noopener" 
-                href="https://github.com/noahbazer/battleship-project">
-                    open on <span class="fa-brands fa-github"></span>
-                </a>
+              </div>
+              <a
+                class="gitlink"
+                target="_blank"
+                rel="noreferrer noopener"
+                href="https://github.com/noahbazer/battleship-project"
+              >
+                open on <span class="fa-brands fa-github"></span>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="parallax">
-    <img class="para" id="para1" src="./assets/para1.png">
-    <img class="para" id="para2" src="./assets/para2.png">
-    <img class="para" id="para3" src="./assets/para3.png">
-    <div class="splash">
-      <div class="textsplash">
-        <h2>your favorite</h2>
-        <div class="int">
-          <h2 id="dynText"></h2>
-          <h2 id="dynCursor">|</h2>
+      <img
+        id="waldo"
+        src="https://assets.stickpng.com/thumbs/58b82c35dcf6e61433da9494.png"
+        height="10px"
+        width="10px"
+        onclick="handleFoundWaldo()"
+      />
+      <img class="para" id="para1" src="./assets/para1.png" />
+      <img class="para" id="para2" src="./assets/para2.png" />
+      <img class="para" id="para3" src="./assets/para3.png" />
+      <div class="splash">
+        <div class="textsplash">
+          <h2>your favorite</h2>
+          <div class="int">
+            <h2 id="dynText"></h2>
+            <h2 id="dynCursor">|</h2>
+          </div>
+          <h2>developer</h2>
         </div>
-        <h2>developer</h2>
       </div>
+      <div class="aboutme" id="about">
+        <div class="aboutmecontent">
+          <h3>about me:</h3>
+          <p>
+            My name is Noah. I'm a 23 year old front-end web/software developer
+            with a passion for creating beautiful and innovative solutions for
+            clients of all needs. I'm constantly working to expand my skillset
+            and stay ahead of industry standards.
+          </p>
+        </div>
+      </div>
+      <div class="showcase" id="projects">
+        <h3>my projects:</h3>
+        <div class="sortmenu">
+          <p>Sort by:</p>
+          <p
+            class="sortlink"
+            id="sortactive"
+            onclick="filterModals('all'); setActive(1)"
+          >
+            All Work (4)
+          </p>
+          <p class="sortlink" onclick="filterModals('node'); setActive(2)">
+            Node.js (1)
+          </p>
+          <p class="sortlink" onclick="filterModals('web'); setActive(3)">
+            Web Development (2)
+          </p>
+          <p class="sortlink" onclick="filterModals('game'); setActive(4)">
+            Game Development (1)
+          </p>
+        </div>
+        <div class="showcasecon">
+          <div
+            class="modalpreview"
+            id="class1"
+            data-filter="node"
+            onclick="setModalData(1); showModal()"
+          >
+            <div class="textcontainer">
+              <p>node.js battleship</p>
+            </div>
+          </div>
+          <div
+            class="modalpreview"
+            id="class2"
+            data-filter="web"
+            onclick="setModalData(2); showModal()"
+          >
+            <div class="textcontainer">
+              <p>tavr website</p>
+            </div>
+          </div>
+          <div
+            class="modalpreview"
+            id="class3"
+            data-filter="web"
+            onclick="setModalData(3); showModal()"
+          >
+            <div class="textcontainer">
+              <p>carrd alternative</p>
+            </div>
+          </div>
+          <div
+            class="modalpreview"
+            id="class4"
+            data-filter="game"
+            onclick="setModalData(4); showModal()"
+          >
+            <div class="textcontainer">
+              <p>VR MMORPG</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="./main.js"></script>
+      <script src="./header.js"></script>
+      <script src="./modals.js"></script>
+      <script src="./waldo.js"></script>
     </div>
-    <div class="aboutme" id="about">
-      <div class="aboutmecontent">
-        <h3>about me:</h3>
-        <p>
-          My name is Noah. I'm a 23 year old front-end web/software developer
-          with a passion for creating beautiful and innovative solutions for
-          clients of all needs. I'm constantly working to expand my skillset and
-          stay ahead of industry standards.
-        </p>
-      </div>
-    </div>
-    <div class="showcase" id="projects">
-      <h3>my projects:</h3>
-      <div class="sortmenu">
-        <p>Sort by:</p>
-        <p class="sortlink" id="sortactive" onclick="filterModals('all'); setActive(1)">All Work (4)</p>
-        <p class="sortlink" onclick="filterModals('node'); setActive(2)">Node.js (1)</p>
-        <p class="sortlink" onclick="filterModals('web'); setActive(3)">Web Development (2)</p>
-        <p class="sortlink" onclick="filterModals('game'); setActive(4)">Game Development (1)</p>
-      </div>
-      <div class="showcasecon">
-        <div class="modalpreview" id="class1" data-filter="node" onclick="setModalData(1); showModal()">
-          <div class="textcontainer">
-            <p>node.js battleship</p>
-          </div>
-        </div>
-        <div class="modalpreview" id="class2" data-filter="web" onclick="setModalData(2); showModal()">
-          <div class="textcontainer">
-            <p>tavr website</p>
-          </div>
-        </div>
-        <div class="modalpreview" id="class3" data-filter="web" onclick="setModalData(3); showModal()">
-          <div class="textcontainer">
-            <p>carrd alternative</p>
-          </div>
-        </div>
-        <div class="modalpreview" id="class4" data-filter="game" onclick="setModalData(4); showModal()">
-          <div class="textcontainer">
-            <p>VR MMORPG</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script src="./main.js"></script>
-    <script src="./header.js"></script>
-    <script src="./modals.js"></script>
-  </div>
   </body>
 </html>
-+

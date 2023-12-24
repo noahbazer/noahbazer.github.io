@@ -177,6 +177,7 @@ margin-bottom: 10px;
     border-radius: 25px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    z-index: 100;
 }
 
 .modalpreview:hover {
@@ -412,4 +413,13 @@ margin-bottom: 10px;
 
 #sortactive {
     color: rgb(255, 240, 156);
+}
+
+#waldo {
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    cursor: pointer;
+    pointer-events: all;
+    z-index: 5000;
 }
