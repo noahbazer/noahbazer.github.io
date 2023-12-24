@@ -1,0 +1,10 @@
+const modalPreviewData = [
+    {
+        id: 1,
+    }
+]
+
+const modalBox = document.querySelector('.showcasecon');
+for (let i = 0; i < modalPreviewData.length; i++) {
+    let modalpreview
+}

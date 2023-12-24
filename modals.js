@@ -19,10 +19,16 @@ const modalData = [
      },
     {   id: 4,
         backgroundVideo: './assets/asteriateaser.mp4',
-        name: 'VR MMORPG', 
+        name: 'vr mmorpg', 
         description: 'build a virtual reality mmorpg that breaks from market convention',
         tools: 'Unity 2022'
-     }
+     },
+    {   id: 5,
+        backgroundVideo: './assets/asteriateaser.mp4',
+        name: 'company website rebrand', 
+        description: 'revitalize the front-face of an existing company brand',
+        tools: 'none, all native languages'
+     },
 ];
 
 
