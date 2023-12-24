@@ -73,4 +73,12 @@
         width: 100%;
         max-width: 100%;
     }
+
+    .sortmenu {
+        flex-direction: column;
+    }
+
+    .sortlink {
+        margin: 3px 0 3px 0;
+    }
 }
