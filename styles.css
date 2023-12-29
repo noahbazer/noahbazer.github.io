@@ -177,6 +177,7 @@ margin-bottom: 10px;
 .modalpreview {
     width: 240px;
     min-width: 240px;
+    max-width: 240px;
     display: flex;
     padding: 120px 0px 0px 0px;
     border-radius: 25px;
