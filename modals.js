@@ -38,10 +38,11 @@ const modalData = [
 
 const fullScreenModal = document.querySelector('.modal');
 const dataList = document.getElementsByClassName('modal-datalist')
+const langBar = document.querySelector('.languagebar');
 console.log(dataList);
 
 const setModalData = (id) => {
-dataList[0].src = modalData[id-1].backgroundVideo; 
+dataList[0].src = modalData[id-1].backgroundVideo;
 dataList[1].innerHTML = modalData[id-1].name;
 dataList[2].innerHTML = modalData[id-1].description;
 dataList[3].innerHTML = modalData[id-1].tools;
@@ -50,7 +51,15 @@ buildBar(id);
 
 
 const buildBar = (id) => {
+    langBar.innerHTML = '';
+    const newBar = document.createElement('div');
+    const barSecs = langBar.childNodes;
     for (let i = 0; i < modalData[id].languages.length; i++) {
+        const newBar = document.createElement('div');
+
+        newBar.style.color = 'yellow';
+        newBar.style.width = `${modalData[id].languages[i]}%`;  
         
+        langBar.appendChild(newBar);
     }
 }
