@@ -3,13 +3,17 @@ const modalData = [
         backgroundVideo: './assets/battleshowcase.mp4',
         name: 'node.js battleship', 
         description: 'build a playable, terminal-only battleship using node.js',
-        tools: 'npm chalk, readline-sync'
+        tools: 'npm chalk, readline-sync',
+        languages: [{lang: 'javascript', value: '100'}]
      },
     {   id: 2,
         backgroundVideo: './assets/tavrshowcase5.mp4',
         name: 'tavr website', 
         description: 'build a front-face for TBVR\'s flagship game',
-        tools: 'none, all native languages'
+        tools: 'none, all native languages',
+        languages: [{lang: 'javascript', value: '27'}, 
+                    {lang: 'html', value: '34'},
+                    {lang: 'css', value: '39'}, ]
      },
     {   id: 3,
         backgroundVideo: './assets/ffshowcasenew.mp4',
@@ -41,4 +45,12 @@ dataList[0].src = modalData[id-1].backgroundVideo;
 dataList[1].innerHTML = modalData[id-1].name;
 dataList[2].innerHTML = modalData[id-1].description;
 dataList[3].innerHTML = modalData[id-1].tools;
+buildBar(id);
+}
+
+
+const buildBar = (id) => {
+    for (let i = 0; i < modalData[id].languages.length; i++) {
+        
+    }
 }
