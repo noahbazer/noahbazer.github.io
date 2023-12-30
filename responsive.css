@@ -23,6 +23,7 @@
         align-items: center;
         padding-left: 0;
         padding-right: 0;
+        background-color: rgba(25, 25, 25, 0.369);
     }
     
     nav {
@@ -80,5 +81,9 @@
 
     .sortlink {
         margin: 3px 0 3px 0;
+    }
+
+    .sortmenu .sortlink, .sortmenu p {
+        padding: 0px;
     }
 }
