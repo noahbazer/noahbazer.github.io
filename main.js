@@ -8,9 +8,9 @@ const dynamicCursor = document.getElementById("dynCursor");
 dynText.textContent = '<html>'
 
 const dynWordList = [
-{word: '<html>', color: 'red'},
-{word: '#css', color: 'cyan'},
-{word: 'javaScript();', color: 'yellow'}
+{word: '<html>', color: 'var(--langcolorhtml)'},
+{word: '#css', color: 'var(--langcolorcss)'},
+{word: 'javaScript();', color: 'var(--langcolorjs)'}
 ];
 
 

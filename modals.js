@@ -43,11 +43,11 @@ console.log(dataList);
 const langColor = (lang) => {
     switch (lang) {
         case 'html':
-            return 'red';
+            return 'var(--langcolorhtml)';
         case 'css':
-            return 'blue';
+            return 'var(--langcolorcss)';
         case 'javascript':
-            return 'yellow';
+            return 'var(--langcolorjs)';
         default:
             return 'black';
     }
@@ -66,7 +66,7 @@ const buildBar = (id) => {
 
         for (let i = 0; i < modalData[id - 1].languages.length; i++) {
             const barSection = document.createElement('div');
-            barSection.style.color = langColor(modalData[id - 1].languages[i].lang);
+            barSection.style.backgroundColor = langColor(modalData[id - 1].languages[i].lang);
             barSection.style.width = `${modalData[id - 1].languages[i].value}%`;
             
             console.log("Creating barSection:", barSection);
