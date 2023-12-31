@@ -65,6 +65,10 @@ body {
     margin: 0px;
 }
 
+.disexit {
+    cursor: pointer;
+}
+
 .memoryclear {
     color: gray;
     font-style: italic;
