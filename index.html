@@ -38,11 +38,12 @@
     ></script>
   </head>
   <body>
-    <div class="disclaimer">
+    <div class="disclaimer" id='disclaimer'>
       <p class="disclaimertext">This website is <strong>incomplete.</strong> As such, some development shortcomings will result in broken features (language info on modals, mobile parallax, etc.)</p>
-      <i class="fa-solid fa-xmark exitbutton" onclick="removeDisclaimer()"></i>
+      <p class="disclaimertext memoryclear" onclick="deleteDisclaimer">Don't show this again</p>
+      <i class="fa-solid fa-xmark disexit" onclick="removeDisclaimer()"></i>
     </div>
-    <div class="header">
+    <div class="header" id="header">
       <div class="header-start">
         <h3>noahbazer.dev</h3>
       </div>
