@@ -44,6 +44,7 @@ body {
     left: -55%;
     top: -785px;
 }
+
 #para3 {
     width: 100%;
     transform: translateZ(0);
@@ -51,10 +52,10 @@ body {
 }
 
 .disclaimer {
+    display: none;
     height: 20px;
     padding: 10px;
     background-color: rgba(255, 24, 24, 0.129);
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -62,6 +63,18 @@ body {
 
 .disclaimer p {
     margin: 0px;
+}
+
+.memoryclear {
+    color: gray;
+    font-style: italic;
+    padding-left: 15px;
+}
+
+.memoryclear:hover {
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 #header {
