@@ -50,9 +50,13 @@ body {
     top: 30px;
 }
 
+.disclaimer {
+    height: 50px;
+}
+
 .header {
     display: flex;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
