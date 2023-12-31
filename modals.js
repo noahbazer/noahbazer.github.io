@@ -35,31 +35,58 @@ const modalData = [
      },
 ];
 
-
 const fullScreenModal = document.querySelector('.modal');
 const dataList = document.getElementsByClassName('modal-datalist')
 const langBar = document.querySelector('.languagebar');
 console.log(dataList);
 
-const setModalData = (id) => {
-dataList[0].src = modalData[id-1].backgroundVideo;
-dataList[1].innerHTML = modalData[id-1].name;
-dataList[2].innerHTML = modalData[id-1].description;
-dataList[3].innerHTML = modalData[id-1].tools;
-buildBar(id);
+const langColor = (lang) => {
+    switch (lang) {
+        case 'html':
+            return 'red';
+        case 'css':
+            return 'blue';
+        case 'javascript':
+            return 'yellow';
+        default:
+            return 'black';
+    }
 }
 
-
 const buildBar = (id) => {
-    langBar.innerHTML = '';
-    const newBar = document.createElement('div');
-    const barSecs = langBar.childNodes;
-    for (let i = 0; i < modalData[id].languages.length; i++) {
-        const newBar = document.createElement('div');
+    console.log("Entering buildBar function for id:", id);
 
-        newBar.style.color = 'yellow';
-        newBar.style.width = `${modalData[id].languages[i]}%`;  
-        
-        langBar.appendChild(newBar);
+    langBar.innerHTML = '';
+    console.log("Cleared langBar inner HTML");
+
+    const newBar = document.createElement('div');
+    
+    if (modalData[id - 1] && modalData[id - 1].languages) {
+        console.log("Languages found for id:", id);
+
+        for (let i = 0; i < modalData[id - 1].languages.length; i++) {
+            const barSection = document.createElement('div');
+            barSection.style.color = langColor(modalData[id - 1].languages[i].lang);
+            barSection.style.width = `${modalData[id - 1].languages[i].value}%`;
+            
+            console.log("Creating barSection:", barSection);
+
+            langBar.appendChild(barSection);
+        }
+
+    } else {
+        console.log("No languages found for id:", id);
+    }
+
+    console.log("Exiting buildBar function for id:", id);
+}
+
+const setModalData = (id) => {
+    if (dataList.length >= 4 && modalData[id - 1]) {
+        dataList[0].src = modalData[id - 1].backgroundVideo || '';
+        dataList[1].innerHTML = modalData[id - 1].name || '';
+        dataList[2].innerHTML = modalData[id - 1].description || '';
+        dataList[3].innerHTML = modalData[id - 1].tools || '';
+        buildBar(id);
     }
 }

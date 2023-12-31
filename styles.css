@@ -371,23 +371,8 @@ margin-bottom: 10px;
     gap: 3px;
 }
 
-#languagebar1 {
-    background-color: yellow;
-}
-
-#languagebar2 div {
-    height: 4px;
-}
-
-#languagebar2 .bar1 {background-color: rgb(226, 73, 43); width: 52%; border-radius: 25px 0 0 25px;}
-#languagebar2 .bar2 {background-color: rgb(101, 43, 226); width: 48%; border-radius: 0 25px 25px 0;}
-
-#languagebar3 .bar1 {background-color: rgb(226, 73, 43); width: 34%; border-radius: 25px 0 0 25px;}
-#languagebar3 .bar2 {background-color: rgb(101, 43, 226); width: 29%;}
-#languagebar3 .bar3 {background-color: yellow; width: 37%; border-radius: 0 25px 25px 0;}
-
-#languagebar4 {
-    background-color: aqua;
+.languagebar div {
+    display: block;
 }
 
 .aqua {
