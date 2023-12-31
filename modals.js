@@ -38,6 +38,7 @@ const modalData = [
 const fullScreenModal = document.querySelector('.modal');
 const dataList = document.getElementsByClassName('modal-datalist')
 const langBar = document.querySelector('.languagebar');
+const langInfo = document.querySelector('.languagecount');
 console.log(dataList);
 
 const langColor = (lang) => {
@@ -58,8 +59,6 @@ const buildBar = (id) => {
 
     langBar.innerHTML = '';
     console.log("Cleared langBar inner HTML");
-
-    const newBar = document.createElement('div');
     
     if (modalData[id - 1] && modalData[id - 1].languages) {
         console.log("Languages found for id:", id);
@@ -81,6 +80,29 @@ const buildBar = (id) => {
     console.log("Exiting buildBar function for id:", id);
 }
 
+const displayLangs = (id) => {
+    console.log("Entering displayLang function for id:", id);
+
+    langInfo.innerHTML = '';
+    console.log("Cleared langInfo inner HTML");
+    
+    if (modalData[id - 1] && modalData[id - 1].languages) {
+        console.log("Languages found for id:", id);
+
+        for (let i = 0; i < modalData[id - 1].languages.length; i++) {
+            const langLine = document.createElement('p');
+            langLine.innerHTML = 
+            `<p class='${modalData[id - 1].languages[i].lang}'>${modalData[id - 1].languages[i].lang} <span> - ${modalData[id - 1].languages[i].value}%</span><p>`
+            langInfo.appendChild(langLine);
+        }
+
+    } else {
+        console.log("No languages found for id:", id);
+    }
+
+    console.log("Exiting buildBar function for id:", id);
+}
+
 const setModalData = (id) => {
     if (dataList.length >= 4 && modalData[id - 1]) {
         dataList[0].src = modalData[id - 1].backgroundVideo || '';
@@ -88,5 +110,6 @@ const setModalData = (id) => {
         dataList[2].innerHTML = modalData[id - 1].description || '';
         dataList[3].innerHTML = modalData[id - 1].tools || '';
         buildBar(id);
+        displayLangs(id);
     }
 }

@@ -5,6 +5,17 @@
     --langcolorjs: rgb(255, 255, 26);
 }
 
+.html {
+    color: var(--langcolorhtml);
+}
+
+.css {
+    color: var(--langcolorcss);
+}
+
+.javascript {
+    color: var(--langcolorjs);
+}
 
 * {
     font-family: 'Inconsolata', monospace;
@@ -343,6 +354,14 @@ margin-bottom: 10px;
     width: 200px;
     display: flex;
     flex-direction: column;
+}
+
+.languagecount {
+    padding: 5px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2px;
 }
 
 .modaltextright .languagecount {
