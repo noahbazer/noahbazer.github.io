@@ -39,7 +39,7 @@
   </head>
   <body>
     <div class="disclaimer" id='disclaimer'>
-      <p class="disclaimertext">This website is <strong>incomplete.</strong> As such, some features may not work as intended (language info on modals, mobile parallax, etc.)<span class="disclaimertext memoryclear" onclick="deleteDisclaimer()">Don't show this again</span></p>
+      <p class="disclaimer-text">This website is <strong>incomplete.</strong> As such, some features may not work as intended (language info on modals, mobile parallax, etc.)<span class="disclaimertext memoryclear" onclick="deleteDisclaimer()">Don't show this again</span></p>
       <i class="fa-solid fa-xmark disexit" onclick="removeDisclaimer()"></i>
     </div>
     <div class="header" id="header">
@@ -89,7 +89,7 @@
                 </div>
               </div>
               <a
-                class="gitlink"
+                class="git-link"
                 target="_blank"
                 rel="noreferrer noopener"
                 href="https://github.com/noahbazer/battleship-project"
@@ -106,7 +106,7 @@
       <img class="para" id="para2" src="./assets/para2.png" />
       <img class="para" id="para3" src="./assets/para3.png" />
       <div class="splash">
-        <div class="textsplash">
+        <div class="text-splash">
           <h2>your favorite</h2>
           <div class="int">
             <h2 id="dynText"></h2>
@@ -115,8 +115,8 @@
           <h2>developer</h2>
         </div>
       </div>
-      <div class="aboutme" id="about">
-        <div class="aboutmecontent">
+      <div class="about-me" id="about">
+        <div class="about-me-content">
           <h3>about me:</h3>
           <p>
             My name is Noah. I'm a 23 year old front-end web/software developer
@@ -128,73 +128,73 @@
       </div>
       <div class="showcase" id="projects">
         <h3>my projects:</h3>
-        <div class="sortmenu">
+        <div class="sort-menu">
           <p>Sort by:</p>
           <p
-            class="sortlink"
-            id="sortactive"
+            class="sort-link"
+            id="sort-active"
             onclick="filterModals('all'); setActive(1)"
           >
             All Work (5)
           </p>
-          <p class="sortlink" onclick="filterModals('node'); setActive(2)">
+          <p class="sort-link" onclick="filterModals('node'); setActive(2)">
             Node.js (1)
           </p>
-          <p class="sortlink" onclick="filterModals('web'); setActive(3)">
+          <p class="sort-link" onclick="filterModals('web'); setActive(3)">
             Web Development (3)
           </p>
-          <p class="sortlink" onclick="filterModals('game'); setActive(4)">
+          <p class="sort-link" onclick="filterModals('game'); setActive(4)">
             Game Development (1)
           </p>
         </div>
-        <div class="showcasecon">
+        <div class="showcase-con">
           <div
-            class="modalpreview"
+            class="modal-preview"
             id="class1"
             data-filter="node"
             onclick="setModalData(1); showModal()"
           >
-            <div class="textcontainer">
+            <div class="text-container">
               <p>node.js battleship</p>
             </div>
           </div>
           <div
-            class="modalpreview"
+            class="modal-preview"
             id="class2"
             data-filter="web"
             onclick="setModalData(2); showModal()"
           >
-            <div class="textcontainer">
+            <div class="text-container">
               <p>tavr website</p>
             </div>
           </div>
           <div
-            class="modalpreview"
+            class="modal-preview"
             id="class3"
             data-filter="web"
             onclick="setModalData(3); showModal()"
           >
-            <div class="textcontainer">
+            <div class="text-container">
               <p>carrd alternative</p>
             </div>
           </div>
           <div
-            class="modalpreview"
+            class="modal-preview"
             id="class4"
             data-filter="game"
             onclick="setModalData(4); showModal()"
           >
-            <div class="textcontainer">
+            <div class="text-container">
               <p>VR MMORPG</p>
             </div>
           </div>
           <div
-            class="modalpreview"
+            class="modal-preview"
             id="class5"
             data-filter="game"
             onclick="setModalData(5); showModal()"
           >
-            <div class="textcontainer">
+            <div class="text-container">
               <p>company rebrand</p>
             </div>
           </div>
