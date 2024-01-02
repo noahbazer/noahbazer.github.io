@@ -1,8 +1,9 @@
 /* COLOR VARIABLES */
 :root {
     --langcolorhtml: rgb(248, 97, 97);
-    --langcolorcss: rgb(32, 177, 255);
+    --langcolorcss: rgb(23, 107, 252);
     --langcolorjs: rgb(255, 255, 26);
+    --langcolorcs: rgb(144, 249, 255);
 }
 
 .html {
@@ -15,6 +16,10 @@
 
 .javascript {
     color: var(--langcolorjs);
+}
+
+.cs {
+    color: var(--langcolorcs);
 }
 
 * {
@@ -376,18 +381,6 @@ margin-bottom: 10px;
     color: white;
 }
 
-.yellow {
-    color: yellow;
-}
-
-.htmlcolor {
-    color: rgb(226, 73, 43);
-}
-
-.csscolor {
-    color: rgb(101, 43, 226);
-}
-
 .languagebar {
     display: flex;
     flex-direction: row;
@@ -398,9 +391,10 @@ margin-bottom: 10px;
     gap: 3px;
 }
 
-.languagebar div {
-    display: block;
-}
+.languagebar div {display: block;}
+.languagebar div:first-child {border-radius: 25px 0 0 25px;}
+.languagebar div:last-child {border-radius: 0 25px 25px 0;}
+.languagebar div:only-child {border-radius: 25px;}
 
 .aqua {
     color: aqua;
