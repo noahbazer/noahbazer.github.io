@@ -3,14 +3,14 @@
         margin-top: 50px;
     }
 
-     .textsplash {
+     .text-splash {
         flex-direction: column;
         justify-content: center;
         align-items: center;
         margin-top: 80px;
      }
      
-     .textsplash h2 {
+     .text-splash h2 {
         font-size: 40px;
         line-height: 1.1em;
         margin: 0;
@@ -38,13 +38,13 @@
         padding-left: 12px;
     }
 
-    .aboutmecontent {
+    .about-me-content {
         margin-top: 50px;
         text-align: center;
         width: 80%;
     }
 
-    .showcasecon {
+    .showcase-con {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -58,32 +58,32 @@
         left: 0;
     }
 
-    .modalcontent {
+    .modal-content {
         width: 80%;
     }
 
-    .modalcontent video {
+    .modal-content video {
         height: 40%;
     }
 
-    .modaltextplane {
+    .modal-text-plane {
         flex-direction: column;
         gap: 5px;
     }
-    .modaltextleft {
+    .modal-text-left {
         width: 100%;
         max-width: 100%;
     }
 
-    .sortmenu {
+    .sort-menu {
         flex-direction: column;
     }
 
-    .sortlink {
+    .sort-link {
         margin: 3px 0 3px 0;
     }
 
-    .sortmenu .sortlink, .sortmenu p {
+    .sort-menu .sort-link, .sort-menu p {
         padding: 0px;
     }
 }
