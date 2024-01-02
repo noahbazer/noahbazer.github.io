@@ -170,7 +170,7 @@ nav a:hover {
     padding-left: 25px;
     margin-right: none;
     overflow: visible;
-    color: var(--langcolorhtml);
+    color: var(--lang-color-html);
 }
 
 #dynCursor {
@@ -215,7 +215,7 @@ margin-bottom: 10px;
     align-items: center;
 }
 
-.abou-me-content p {
+.about-me-content p {
     text-wrap: wrap;
 }
 
