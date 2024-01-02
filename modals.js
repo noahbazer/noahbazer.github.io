@@ -5,7 +5,7 @@ const modalData = [
         description: 'build a playable, terminal-only battleship using node.js',
         tools: 'npm chalk, readline-sync',
         languages: [{lang: 'javascript', value: '100'}],
-        link: 'testlink'
+        link: 'test-link'
      },
     {   id: 2,
         backgroundVideo: './assets/tavrshowcase5.mp4',
@@ -45,20 +45,20 @@ const modalData = [
 
 const fullScreenModal = document.querySelector('.modal');
 const dataList = document.getElementsByClassName('modal-datalist')
-const langBar = document.querySelector('.languagebar');
-const langInfo = document.querySelector('.languagecount');
+const langBar = document.querySelector('.language-bar');
+const langInfo = document.querySelector('.language-count');
 console.log(dataList);
 
 const langColor = (lang) => {
     switch (lang) {
         case 'html':
-            return 'var(--langcolorhtml)';
+            return 'var(--lang-color-html)';
         case 'css':
-            return 'var(--langcolorcss)';
+            return 'var(--lang-color-css)';
         case 'javascript':
-            return 'var(--langcolorjs)';
+            return 'var(--lang-color-js)';
         case 'c#':
-            return 'var(--langcolorcs)';
+            return 'var(--lang-color-cs)';
         default:
             return 'black';
     }
@@ -116,7 +116,7 @@ const displayLangs = (id) => {
 const setLink = (id) => {
     const gitLink = document.querySelector('.gitlink')
     if (modalData[id - 1].link) {
-        gitLink.innerHTML = `<a class="gitlink" target="_blank" href = ${modalData[id - 1].link} rel="noreferrer noopener">
+        gitLink.innerHTML = `<a class="git-link" target="_blank" href = ${modalData[id - 1].link} rel="noreferrer noopener">
         open on <span class="fa-brands fa-github" aria-hidden="true"></span>
       </a>`
     } else {
