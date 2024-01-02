@@ -8,9 +8,9 @@ const dynamicCursor = document.getElementById("dynCursor");
 dynText.textContent = '<html>'
 
 const dynWordList = [
-{word: '<html>', color: 'var(--langcolorhtml)'},
-{word: '#css', color: 'var(--langcolorcss)'},
-{word: 'javaScript();', color: 'var(--langcolorjs)'}
+{word: '<html>', color: 'var(--lang-color-html)'},
+{word: '#css', color: 'var(--lang-color-css)'},
+{word: 'javaScript();', color: 'var(--lang-color-js)'}
 ];
 
 
@@ -113,8 +113,8 @@ document.addEventListener("visibilitychange", () => {
 wordUpdater();
 
 const modals = document.querySelectorAll('.modal');
-const contents = document.querySelectorAll('.modalcontent');
-const modalpreviews = document.querySelectorAll('.modalpreview');
+const contents = document.querySelectorAll('.modal-content');
+const modalPreviews = document.querySelectorAll('.modal-preview');
 
 
 const removeModal = function() {
@@ -128,7 +128,7 @@ const removeModal = function() {
 
 const showModal = function() {
     let modal = document.getElementById(`modal`);
-    let modalContent = document.getElementById(`modalcontent`);
+    let modalContent = document.getElementById(`modal-content`);
     modal.style.opacity = 1;
     modal.style.pointerEvents = 'all';
     modalContent.classList.add('visible');
@@ -136,7 +136,7 @@ const showModal = function() {
 }
 
 const filterModals = function(filter) {
-    modalpreviews.forEach((card) => {
+    modalPreviews.forEach((card) => {
         if (filter === 'all') {
             card.style.display = 'flex';
         } else if (card.dataset.filter === filter) {
@@ -147,11 +147,11 @@ const filterModals = function(filter) {
     })
 }
 
-const filters = document.querySelectorAll('.sortlink');
+const filters = document.querySelectorAll('.sort-link');
 const setActive = (child) => {
     for (let i = 0; i < filters.length; i++) {
         if (i === (child - 1)) {
-            filters[i].id = 'sortactive';
+            filters[i].id = 'sort-active';
         } else {
             filters[i].id = '';
         }

@@ -1,25 +1,25 @@
 /* COLOR VARIABLES */
 :root {
-    --langcolorhtml: rgb(248, 97, 97);
-    --langcolorcss: rgb(23, 107, 252);
-    --langcolorjs: rgb(255, 255, 26);
-    --langcolorcs: rgb(144, 249, 255);
+    --lang-color-html: rgb(248, 97, 97);
+    --lang-color-css: rgb(23, 107, 252);
+    --lang-color-js: rgb(255, 255, 26);
+    --lang-color-cs: rgb(144, 249, 255);
 }
 
 .html {
-    color: var(--langcolorhtml);
+    color: var(--lang-color-html);
 }
 
 .css {
-    color: var(--langcolorcss);
+    color: var(--lang-color-css);
 }
 
 .javascript {
-    color: var(--langcolorjs);
+    color: var(--lang-color-js);
 }
 
 .cs {
-    color: var(--langcolorcs);
+    color: var(--lang-color-cs);
 }
 
 * {
