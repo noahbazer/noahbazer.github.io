@@ -114,7 +114,7 @@ const displayLangs = (id) => {
 }
 
 const setLink = (id) => {
-    const gitLink = document.querySelector('.gitlink')
+    const gitLink = document.querySelector('.git-link')
     if (modalData[id - 1].link) {
         gitLink.innerHTML = `<a class="git-link" target="_blank" href = ${modalData[id - 1].link} rel="noreferrer noopener">
         open on <span class="fa-brands fa-github" aria-hidden="true"></span>
