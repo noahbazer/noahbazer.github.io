@@ -33,7 +33,7 @@ const modalData = [
         languages: [{lang: 'C#', value: '100'}]
      },
     {   id: 5,
-        backgroundVideo: './assets/asteriateaser.mp4',
+        backgroundVideo: './assets/rebrandshowcase2.mp4',
         name: 'company website rebrand', 
         description: 'revitalize the front-face of an existing company brand',
         tools: 'none, all native languages',

@@ -10,8 +10,14 @@ dynText.textContent = '<html>'
 const dynWordList = [
 {word: '<html>', color: 'var(--lang-color-html)'},
 {word: '#css', color: 'var(--lang-color-css)'},
-{word: 'javaScript();', color: 'var(--lang-color-js)'}
+{word: 'javaScript();', color: 'var(--lang-color-js)'},
 ];
+
+const functionTwo = function() {
+
+}
+
+functionTwo();
 
 
 function blinkCursor() {
