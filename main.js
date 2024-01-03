@@ -103,10 +103,10 @@ const startInterval = function() {
 startInterval();
 
 document.addEventListener("visibilitychange", () => {
-    if (document.visibilityState === "visible") {
-        startInterval();
+    if (document.hidden) {
+        clearInterval(intervalId)
     } else {
-        clearInterval(intervalId);
+        startInterval();
     }
 });
 

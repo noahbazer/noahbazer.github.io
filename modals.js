@@ -12,7 +12,7 @@ const modalData = [
         name: 'tavr website', 
         description: 'build a front-face for TBVR\'s flagship game',
         tools: 'none, all native languages',
-        languages: [{lang: 'javascript', value: '27'}, 
+        languages: [{lang: 'javaScript', value: '27'}, 
                     {lang: 'html', value: '34'},
                     {lang: 'css', value: '39'}, ]
      },
