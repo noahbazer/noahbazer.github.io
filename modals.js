@@ -30,7 +30,7 @@ const modalData = [
         name: 'vr mmorpg', 
         description: 'build a virtual reality mmorpg that breaks from market convention',
         tools: 'Unity 2022',
-        languages: [{lang: 'c#', value: '100'}],
+        languages: [{lang: 'c#', value: '100'}]
      },
     {   id: 5,
         backgroundVideo: './assets/asteriateaser.mp4',
@@ -40,6 +40,15 @@ const modalData = [
         languages: [{lang: 'javascript', value: '15'}, 
                     {lang: 'html', value: '43'},
                     {lang: 'css', value: '42'}, ]
+     },
+    {   id: 6,
+        backgroundVideo: './assets/timerpreview23.mp4',
+        name: 'stream timer', 
+        description: 'build a web-based, no-download stream timer for streamers',
+        tools: 'none, all native languages',
+        languages: [{lang: 'javascript', value: '80'}, 
+                    {lang: 'html', value: '7'},
+                    {lang: 'css', value: '13'}, ]
      },
 ];
 
@@ -101,8 +110,12 @@ const displayLangs = (id) => {
 
         for (let i = 0; i < modalData[id - 1].languages.length; i++) {
             const langLine = document.createElement('p');
+            let langclass = `${modalData[id - 1].languages[i].lang}`;
+        if (modalData[id - 1].languages[i].lang = 'c#') {
+            langclass = 'cs'
+        }
             langLine.innerHTML = 
-            `<p class='${modalData[id - 1].languages[i].lang}'>${modalData[id - 1].languages[i].lang} <span> - ${modalData[id - 1].languages[i].value}%</span><p>`
+            `<p class='${langclass}'>${modalData[id - 1].languages[i].lang} <span> - ${modalData[id - 1].languages[i].value}%</span><p>`
             langInfo.appendChild(langLine);
         }
 
@@ -120,7 +133,7 @@ const setLink = (id) => {
         open on <span class="fa-brands fa-github" aria-hidden="true"></span>
       </a>`
     } else {
-        gitLink.innerHTML = '<p class="gray">private repository</p>'
+        gitLink.innerHTML = '<p class="gray git-link-failed">private repository</p>'
         gitLink.href = '';
     }
 }

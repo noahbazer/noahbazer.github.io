@@ -40,7 +40,7 @@
   <body>
     <div class="disclaimer" id='disclaimer'>
       <p class="disclaimer-text">This website is <strong>incomplete.</strong> As such, some features may not work as intended (language info on modals, mobile parallax, etc.)<span class="disclaimer-text memory-clear" onclick="deleteDisclaimer()">Don't show this again</span></p>
-      <i class="fa-solid fa-xmark disexit" onclick="removeDisclaimer()"></i>
+      <i class="fa-solid fa-xmark dis-exit" onclick="removeDisclaimer()"></i>
     </div>
     <div class="header" id="header">
       <div class="header-start">
@@ -80,7 +80,7 @@
               <p><strong>tools/packages:</strong></p>
               <p class="modal-datalist">test</p>
             </div>
-            <div class="modal-text-ight">
+            <div class="modal-text-right">
               <p>Languages:</p>
               <div class="language-bar" id="languagebar1"></div>
               <div class="language-count">
@@ -191,8 +191,18 @@
           <div
             class="modal-preview"
             id="class5"
-            data-filter="game"
+            data-filter="web"
             onclick="setModalData(5); showModal()"
+          >
+            <div class="text-container">
+              <p>stream timer</p>
+            </div>
+          </div>
+          <div
+            class="modal-preview"
+            id="class6"
+            data-filter="web"
+            onclick="setModalData(6); showModal()"
           >
             <div class="text-container">
               <p>company rebrand</p>
@@ -200,9 +210,19 @@
           </div>
         </div>
       </div>
+      <div class="section-contact">
+        <div class="contact-container">
+          <h3 class="contact-title">contact me:</h3>
+          <p class="contact-desc">this is a placeholder text. say cheese!</p>
+          <ul class="contact-list">
+            <a href="https://www.linkedin.com/in/noahbazer/"><span class="fa-brands fa-linkedin"></span>linkedin</a>
+            <a href="https://www.linkedin.com/in/noahbazer/"><span class="fa-solid fa-at"></span>noahbazerdev@gmail.com</a>
+            <a></a>
+          </ul>
+        </div>
+      </div>
       <script src="./main.js"></script>
       <script src="./disclaimer.js"></script>
-      <script src="./header.js"></script>
       <script src="./modals.js"></script>
       <script src="./waldo.js"></script>
     </div>
