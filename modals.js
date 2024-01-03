@@ -4,7 +4,7 @@ const modalData = [
         name: 'node.js battleship', 
         description: 'build a playable, terminal-only battleship using node.js',
         tools: 'npm chalk, readline-sync',
-        languages: [{lang: 'javascript', value: '100'}],
+        languages: [{lang: 'JavaScript', value: '100'}],
         link: 'test-link'
      },
     {   id: 2,
@@ -12,43 +12,43 @@ const modalData = [
         name: 'tavr website', 
         description: 'build a front-face for TBVR\'s flagship game',
         tools: 'none, all native languages',
-        languages: [{lang: 'javaScript', value: '27'}, 
-                    {lang: 'html', value: '34'},
-                    {lang: 'css', value: '39'}, ]
+        languages: [{lang: 'JavaScript', value: '27'}, 
+                    {lang: 'HTML', value: '34'},
+                    {lang: 'CSS', value: '39'}, ]
      },
     {   id: 3,
         backgroundVideo: './assets/ffshowcasenew.mp4',
         name: 'carrd alternative', 
         description: 'create a cheaper, more customizable alternative to static page subscriptions',
         tools: 'none, all native languages',
-        languages: [{lang: 'javascript', value: '25'}, 
-                    {lang: 'html', value: '34'},
-                    {lang: 'css', value: '41'}, ]
+        languages: [{lang: 'JavaScript', value: '25'}, 
+                    {lang: 'HTML', value: '34'},
+                    {lang: 'CSS', value: '41'}, ]
      },
     {   id: 4,
         backgroundVideo: './assets/asteriateaser.mp4',
         name: 'vr mmorpg', 
         description: 'build a virtual reality mmorpg that breaks from market convention',
         tools: 'Unity 2022',
-        languages: [{lang: 'c#', value: '100'}]
+        languages: [{lang: 'C#', value: '100'}]
      },
     {   id: 5,
         backgroundVideo: './assets/asteriateaser.mp4',
         name: 'company website rebrand', 
         description: 'revitalize the front-face of an existing company brand',
         tools: 'none, all native languages',
-        languages: [{lang: 'javascript', value: '15'}, 
-                    {lang: 'html', value: '43'},
-                    {lang: 'css', value: '42'}, ]
+        languages: [{lang: 'JavaScript', value: '15'}, 
+                    {lang: 'HTML', value: '43'},
+                    {lang: 'CSS', value: '42'}, ]
      },
     {   id: 6,
         backgroundVideo: './assets/timerpreview23.mp4',
         name: 'stream timer', 
         description: 'build a web-based, no-download stream timer for streamers',
         tools: 'none, all native languages',
-        languages: [{lang: 'javascript', value: '80'}, 
-                    {lang: 'html', value: '7'},
-                    {lang: 'css', value: '13'}, ]
+        languages: [{lang: 'JavaScript', value: '80'}, 
+                    {lang: 'HTML', value: '7'},
+                    {lang: 'CSS', value: '13'}, ]
      },
 ];
 
@@ -60,13 +60,13 @@ console.log(dataList);
 
 const langColor = (lang) => {
     switch (lang) {
-        case 'html':
+        case 'HTML':
             return 'var(--lang-color-html)';
-        case 'css':
+        case 'CSS':
             return 'var(--lang-color-css)';
-        case 'javascript':
+        case 'JavaScript':
             return 'var(--lang-color-js)';
-        case 'c#':
+        case 'C#':
             return 'var(--lang-color-cs)';
         default:
             return 'black';
@@ -110,12 +110,13 @@ const displayLangs = (id) => {
 
         for (let i = 0; i < modalData[id - 1].languages.length; i++) {
             const langLine = document.createElement('p');
-            let langclass = `${modalData[id - 1].languages[i].lang}`;
-        if (modalData[id - 1].languages[i].lang = 'c#') {
-            langclass = 'cs'
-        }
+            langClass = '';
+            langClass = `${modalData[id - 1].languages[i].lang}`;
+        if (modalData[id - 1].languages[i].lang === 'C#') {
+            langClass = 'cs'
+        };
             langLine.innerHTML = 
-            `<p class='${langclass}'>${modalData[id - 1].languages[i].lang} <span> - ${modalData[id - 1].languages[i].value}%</span><p>`
+            `<p class='${langClass}'>${modalData[id - 1].languages[i].lang} <span> - ${modalData[id - 1].languages[i].value}%</span><p>`
             langInfo.appendChild(langLine);
         }
 

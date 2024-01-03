@@ -6,15 +6,15 @@
     --lang-color-cs: rgb(144, 249, 255);
 }
 
-.html {
+.HTML {
     color: var(--lang-color-html);
 }
 
-.css {
+.CSS {
     color: var(--lang-color-css);
 }
 
-.javascript {
+.JavaScript {
     color: var(--lang-color-js);
 }
 
