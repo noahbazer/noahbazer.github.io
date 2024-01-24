@@ -11,6 +11,8 @@ const dynWordList = [
 {word: '<html>', color: 'var(--lang-color-html)'},
 {word: '#css', color: 'var(--lang-color-css)'},
 {word: 'javaScript();', color: 'var(--lang-color-js)'},
+{word: '<React />', color: '#61DBFB'},
+{word: 'TypeScript', color: '#007acc'},
 ];
 
 const functionTwo = function() {
@@ -163,3 +165,16 @@ const setActive = (child) => {
         }
     }
 }
+
+window.addEventListener('scroll', () => {
+    console.log(window.scrollY);
+    if (window.scrollY >= 5) {
+        document.getElementById('header-container').classList.add('header-container-scrolled');
+    } else {
+        document.getElementById('header-container').classList.remove('header-container-scrolled');
+    }
+});
+
+function toggleTheme() {
+    document.body.classList.toggle('light-theme');
+  }
