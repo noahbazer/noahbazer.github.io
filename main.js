@@ -15,6 +15,8 @@ const dynWordList = [
 {word: 'TypeScript', color: '#007acc'},
 ];
 
+var rellax = new Rellax('.rellax');
+
 const functionTwo = function() {
 
 }
