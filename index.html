@@ -159,26 +159,7 @@
         </div>
       </div>
       <div class="showcase" id="projects">
-        <h3>my projects:</h3>
-        <div class="sort-menu">
-          <p>Sort by:</p>
-          <p
-            class="sort-link"
-            id="sort-active"
-            onclick="filterModals('all'); setActive(1)"
-          >
-            All Work (8)
-          </p>
-          <p class="sort-link" onclick="filterModals('node'); setActive(2)">
-            Node.js (1)
-          </p>
-          <p class="sort-link" onclick="filterModals('web'); setActive(3)">
-            Web Development (6)
-          </p>
-          <p class="sort-link" onclick="filterModals('game'); setActive(4)">
-            Game Development (1)
-          </p>
-        </div>
+        <h3>My Work:</h3>
         <div class="carousel">
           <div class="carousel-container">
             <div class="carousel-items" id="carouselcon">
@@ -188,6 +169,10 @@
                 data-filter="node"
                 onclick="setModalData(1); showModal()"
               >
+              <div class="major-project-banner">
+                <p>Major Project</p>
+                <img src="./assets/majoricon.png">
+              </div>
                 <div class="text-container">
                   <p>node.js battleship</p>
                 </div>
@@ -198,6 +183,10 @@
                 data-filter="web"
                 onclick="setModalData(2); showModal()"
               >
+              <div class="major-project-banner">
+                <p>Major Project</p>
+                <img src="./assets/majoricon.png">
+              </div>
                 <div class="text-container">
                   <p>tavr website</p>
                 </div>

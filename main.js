@@ -216,7 +216,7 @@ const lastPage = () => {
 }
 
 const movePage = (page) => {
-    const count = page * 500;
+    const count = page * 810;
     const newLeft = `-${count}px`;
     console.log('New left:', newLeft);
     carouselContainer.style.left = newLeft;
