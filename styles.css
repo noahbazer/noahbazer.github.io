@@ -378,7 +378,6 @@ nav a:hover {
 
 .carousel-items {
   position: relative;
-  left: 60px;
   height: 260px;
   width: auto;
   display: flex;
@@ -401,15 +400,14 @@ nav a:hover {
   position: absolute;
   top: 10px;
   left: 10px;
-  background-color: rgba(0, 0, 0, 0.196);
   display: flex;
-  padding: 3px 6px;
+  padding: 1px 4px;
   border-radius: 25px;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: 13px;
-  font-weight: bold;
+  font-weight: normal;
   gap: 5px;
 }
 
@@ -604,11 +602,11 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   background-color: rgba(19, 19, 19, 0.815);
-  z-index: 99;
+  z-index: 9999;
 }
 
 .modal-content {
-  height: 600px;
+  height: 630px;
   width: 820px;
   display: flex;
   flex-direction: column;
