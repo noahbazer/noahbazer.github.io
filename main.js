@@ -15,7 +15,7 @@ const dynWordList = [
   { word: 'TypeScript', color: '#007acc' },
 ];
 
-//* Rellax Parallax Effect Init
+//* Rellax Parallax Effect
 var rellax = new Rellax('.rellax');
 
 const functionTwo = function () {};
