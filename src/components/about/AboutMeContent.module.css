@@ -1,3 +1,42 @@
 .about-me-desc {
   padding-bottom: 20px;
 }
+
+.about-me-content p {
+  text-wrap: wrap;
+  margin: 0;
+}
+
+.tech-stack {
+  list-style: none;
+  padding: 0;
+  margin: 5px;
+}
+
+.tech-stack li svg {
+  z-index: 10000;
+  overflow: visible;
+  display: block;
+  margin-right: 10px;
+}
+
+.tech-stack li {
+  margin-bottom: 0px;
+  font-size: 1.2em;
+}
+
+.tech-stack i,
+.icon {
+  margin-right: 10px;
+}
+
+.icon {
+  width: 17px;
+  height: 17px;
+}
+
+.int {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
