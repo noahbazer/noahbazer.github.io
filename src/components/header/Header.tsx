@@ -52,3 +52,7 @@ export function Header() {
     </div>
   );
 }
+
+function toggleTheme() {
+  document.body.classList.toggle('light-theme');
+}
