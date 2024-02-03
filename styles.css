@@ -91,7 +91,7 @@ body.light-theme {
 }
 
 * {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: rgb(188, 188, 188);
 }
 
@@ -139,7 +139,7 @@ body {
 }
 
 .resume-button:hover {
-  background-color: #2472a3
+  background-color: #2472a3;
 }
 
 .header {
@@ -284,13 +284,13 @@ nav a:hover {
   font-size: 90px;
   font-weight: 800;
   margin: 1px;
-  background: -webkit-linear-gradient(315deg, #c442d3 25%,#647eff);
+  background: -webkit-linear-gradient(315deg, #c442d3 25%, #647eff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 #dynText {
-  font-family: "Inconsolata", monospace;
+  font-family: 'Inconsolata', monospace;
   font-size: 90px;
   font-weight: 800;
   padding-left: 20px;
@@ -378,6 +378,7 @@ nav a:hover {
 
 .carousel-items {
   position: relative;
+  left: 0;
   height: 260px;
   width: auto;
   display: flex;
@@ -434,7 +435,6 @@ nav a:hover {
   cursor: pointer;
 }
 
-
 .about-me-content {
   width: 30%;
   display: flex;
@@ -479,7 +479,8 @@ nav a:hover {
   font-size: 1.2em;
 }
 
-.tech-stack i, .icon  {
+.tech-stack i,
+.icon {
   margin-right: 10px;
 }
 
@@ -508,9 +509,6 @@ nav a:hover {
   transition: all 0.2s ease-in-out;
   z-index: 100;
   flex-basis: 20%;
-}
-
-.modal-preview:hover {
 }
 
 .modal-preview:hover .text-container {
@@ -807,82 +805,4 @@ nav a:hover {
 .contact-list a span {
   padding-right: 10px;
   color: gray;
-}
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-  transform: scale(0.7);
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #26324f;
-  transition: 0.4s;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px;
-  border-radius: 34px;
-  overflow: hidden;
-}
-
-.scheme-switcher {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  transition: 0.4s;
-}
-
-input:checked + .slider {
-  background-color: #2196f3;
-}
-
-input:checked + .slider:before {
-  transform: translateX(26px);
-}
-
-.slider i {
-  color: #fff;
-}
-
-input:checked + .slider i.fa-sun {
-  color: #ffdd01;
-}
-
-input:checked + .slider i.fa-moon {
-  color: #fff;
-}
-
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
 }
