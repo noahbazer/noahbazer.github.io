@@ -1,54 +1,53 @@
-import './Header.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSun, faMoon, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import {
+  faLinkedin,
+  faTwitter,
+  faGithub,
+  faMediumM,
+} from '@fortawesome/free-brands-svg-icons';
+import styles from './Header.module.css';
 
 export function Header() {
   return (
-    <div className="header-container">
-      <div
-        className="header"
+    <div className={styles['header-container']}>
+      <header
+        className={styles['header']}
         id="header"
       >
-        <div className="header-start">
-          <h3 className="logo">&lt;nb&gt;</h3>
-          <h3>noahbazer.dev</h3>
-        </div>
-        <nav>
-          <a href="#about">about</a>
-          <a href="#projects">projects</a>
-          <a href="#contact">contact</a>
-        </nav>
-        <p>|</p>
-        <div className="scheme-switcher">
-          <label className="switch">
+        {/* ... */}
+        <div className={styles['scheme-switcher']}>
+          <label className={styles.switch}>
             <input
               type="checkbox"
               id="theme-toggle"
               onClick={toggleTheme}
             />
-            <span className="slider round">
-              <i className="fas fa-sun"></i>
-              <i className="fas fa-moon"></i>
+            <span className={`${styles.slider} ${styles.round}`}>
+              <FontAwesomeIcon icon={faSun} />
+              <FontAwesomeIcon icon={faMoon} />
             </span>
           </label>
         </div>
-        <p>|</p>
-        <nav className="socials">
+        {/* ... */}
+        <nav className={styles.socials}>
           <a href="https://www.linkedin.com/in/noahbazer/">
-            <span className="fa-brands fa-linkedin"></span>
+            <FontAwesomeIcon icon={faLinkedin} />
           </a>
           <a href="mailto:noahbazerdev@gmail.com">
-            <i className="fa-solid fa-envelope"></i>
+            <FontAwesomeIcon icon={faEnvelope} />
           </a>
           <a href="twitter.com/noahbazer">
-            <span className="fa-brands fa-x-twitter"></span>
+            <FontAwesomeIcon icon={faTwitter} />
           </a>
           <a href="github.com/noahbazer">
-            <span className="fa-brands fa-github"></span>
+            <FontAwesomeIcon icon={faGithub} />
           </a>
           <a href="medium.com/@noahbazer">
-            <span className="fa-brands fa-medium"></span>
+            <FontAwesomeIcon icon={faMediumM} />
           </a>
         </nav>
-      </div>
+      </header>
     </div>
   );
 }
