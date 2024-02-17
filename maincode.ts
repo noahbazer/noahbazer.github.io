@@ -1,6 +1,6 @@
 let currentWord = '<html>';
 let cursorBlink = false;
-let wordTally = 0;
+let wordTally = 1;
 const dynText = document.getElementById('dynText');
 let wordColor = 'yellow';
 const dynamicCursor = document.getElementById('dynCursor');
