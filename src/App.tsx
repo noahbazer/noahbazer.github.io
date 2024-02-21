@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Header } from './components/header/Header';
+import { Splash } from './components/splash/Splash';
 import { AboutMe } from './components/about/AboutMe';
 import { Showcase } from './components/showcase/Showcase';
 import { Footer } from './components/footer/Footer';
@@ -22,6 +23,7 @@ export function App() {
         data-rellax-speed="5"
       ></div>
       <Header />
+      <Splash />
       <AboutMe />
       <Showcase />
       <Footer />
