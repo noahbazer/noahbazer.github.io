@@ -1,8 +1,0 @@
-.about-me {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 30px;
-  align-items: center;
-  margin-top: 300px;
-}
