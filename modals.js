@@ -4,6 +4,9 @@ const modalData = [
     backgroundVideo: './assets/battleshowcase.mp4',
     name: 'node.js battleship',
     description: 'build a playable, terminal-only battleship using node.js',
+    thumbnail:
+      'https://engeniusweb.com/wp-content/uploads/2021/04/Untitled-design-1.png',
+    isMajorIcon: true,
     tools: 'npm chalk, readline-sync',
     languages: [{ lang: 'JavaScript', value: '100' }],
     link: 'test-link',
@@ -13,6 +16,7 @@ const modalData = [
     backgroundVideo: './assets/tavrshowcase5.mp4',
     name: 'tavr website',
     description: "build a front-face for TBVR's flagship game",
+    thumbnail: '../assets/modals/thumbnails/tavr.webp',
     tools: 'none, all native languages',
     languages: [
       { lang: 'JavaScript', value: '27' },
@@ -194,3 +198,45 @@ const setModalData = (id) => {
     setLink(id);
   }
 };
+
+const carouselItems = document.querySelector('.carousel-items');
+
+modalData.forEach((item, i) => {
+  const wrapper = document.createElement('div');
+
+  if (item.isMajorIcon) {
+    const majorProjectBanner = document.createElement('div');
+    majorProjectBanner.className = 'major-project-banner';
+
+    const majorProjectText = document.createElement('p');
+    majorProjectText.textContent = 'Major Project';
+    majorProjectBanner.appendChild(majorProjectText);
+
+    const majorProjectImage = document.createElement('img');
+    majorProjectImage.src = './assets/majoricon.png';
+    majorProjectBanner.appendChild(majorProjectImage);
+
+    wrapper.appendChild(majorProjectBanner);
+  }
+
+  const modalPreview = document.createElement('div');
+  modalPreview.className = 'modal-preview';
+  modalPreview.style.backgroundImage = `url(${item.thumbnail})`;
+  modalPreview.style.backgroundSize = 'cover';
+  modalPreview.dataset.filter = item.filter;
+  modalPreview.onclick = function () {
+    setModalData(i);
+    showModal();
+  };
+
+  const textContainer = document.createElement('div');
+  textContainer.className = 'text-container';
+
+  const p = document.createElement('p');
+  p.textContent = item.name;
+
+  textContainer.appendChild(p);
+  modalPreview.appendChild(textContainer);
+  wrapper.appendChild(modalPreview);
+  carouselItems.appendChild(wrapper);
+});
