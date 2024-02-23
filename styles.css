@@ -286,6 +286,7 @@ nav a:hover {
   margin: 1px;
   background: -webkit-linear-gradient(315deg, #c442d3 25%, #647eff);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -299,6 +300,7 @@ nav a:hover {
   color: var(--lang-color-html);
   background: none;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: none;
 }
 
@@ -518,9 +520,6 @@ nav a:hover {
   transition: all 0.2s ease-in-out;
   z-index: 100;
   flex-basis: 20%;
-}
-
-.modal-preview:hover {
 }
 
 .modal-preview:hover .text-container {
