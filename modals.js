@@ -6,13 +6,27 @@ const modalData = [
     description: 'build a playable, terminal-only battleship using node.js',
     thumbnail:
       'https://engeniusweb.com/wp-content/uploads/2021/04/Untitled-design-1.png',
-    isMajorIcon: true,
+    isMajorProject: true,
     tools: 'npm chalk, readline-sync',
     languages: [{ lang: 'JavaScript', value: '100' }],
     link: 'test-link',
   },
   {
     id: 2,
+    backgroundVideo: './assets/saaspreview.mp4',
+    name: 'saas website',
+    description:
+      'build a software-as-a-service website from predefined mockups',
+    thumbnail: '../assets/modals/thumbnails/saas.png',
+    isMajorProject: true,
+    tools: 'none, all native languages',
+    languages: [
+      { lang: 'HTML', value: '26' },
+      { lang: 'CSS', value: '64' },
+    ],
+  },
+  {
+    id: 3,
     backgroundVideo: './assets/tavrshowcase5.mp4',
     name: 'tavr website',
     description: "build a front-face for TBVR's flagship game",
@@ -25,11 +39,12 @@ const modalData = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     backgroundVideo: './assets/ffshowcasenew.mp4',
     name: 'carrd alternative',
     description:
       'create a cheaper, more customizable alternative to static page subscriptions',
+    thumbnail: '../assets/modals/thumbnails/ffxiv.png',
     tools: 'none, all native languages',
     languages: [
       { lang: 'JavaScript', value: '25' },
@@ -38,36 +53,26 @@ const modalData = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     backgroundVideo: './assets/asteriateaser.mp4',
     name: 'vr mmorpg',
     description:
       'build a virtual reality mmorpg that breaks from market convention',
+    thumbnail: '../assets/modals/thumbnails/game.png',
     tools: 'Unity 2022',
     languages: [{ lang: 'C#', value: '100' }],
   },
   {
-    id: 5,
+    id: 6,
     backgroundVideo: './assets/rebrandshowcase2.mp4',
-    name: 'company website rebrand',
+    name: 'company rebrand',
     description: 'revitalize the front-face of an existing company brand',
+    thumbnail: '../assets/modals/thumbnails/rebrand.png',
     tools: 'none, all native languages',
     languages: [
       { lang: 'JavaScript', value: '15' },
       { lang: 'HTML', value: '43' },
       { lang: 'CSS', value: '42' },
-    ],
-  },
-  {
-    id: 6,
-    backgroundVideo: './assets/timerpreview23.mp4',
-    name: 'stream timer',
-    description: 'build a web-based, no-download stream timer for streamers',
-    tools: 'none, all native languages',
-    languages: [
-      { lang: 'JavaScript', value: '80' },
-      { lang: 'HTML', value: '7' },
-      { lang: 'CSS', value: '13' },
     ],
   },
   {
@@ -84,6 +89,18 @@ const modalData = [
   },
   {
     id: 8,
+    backgroundVideo: './assets/timerpreview23.mp4',
+    name: 'stream timer',
+    description: 'build a web-based, no-download stream timer for streamers',
+    tools: 'none, all native languages',
+    languages: [
+      { lang: 'JavaScript', value: '80' },
+      { lang: 'HTML', value: '7' },
+      { lang: 'CSS', value: '13' },
+    ],
+  },
+  {
+    id: 9,
     backgroundVideo: './assets/timerpreview23.mp4',
     name: 'stream timer',
     description: 'build a web-based, no-download stream timer for streamers',
@@ -203,8 +220,9 @@ const carouselItems = document.querySelector('.carousel-items');
 
 modalData.forEach((item, i) => {
   const wrapper = document.createElement('div');
+  wrapper.className = 'wrapper';
 
-  if (item.isMajorIcon) {
+  if (item.isMajorProject) {
     const majorProjectBanner = document.createElement('div');
     majorProjectBanner.className = 'major-project-banner';
 
@@ -217,6 +235,7 @@ modalData.forEach((item, i) => {
     majorProjectBanner.appendChild(majorProjectImage);
 
     wrapper.appendChild(majorProjectBanner);
+    wrapper.style.marginBottom = '28px';
   }
 
   const modalPreview = document.createElement('div');
@@ -225,7 +244,7 @@ modalData.forEach((item, i) => {
   modalPreview.style.backgroundSize = 'cover';
   modalPreview.dataset.filter = item.filter;
   modalPreview.onclick = function () {
-    setModalData(i);
+    setModalData(i + 1);
     showModal();
   };
 
