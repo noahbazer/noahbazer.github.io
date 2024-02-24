@@ -9,7 +9,7 @@ const modalData = [
     isMajorProject: true,
     tools: 'npm chalk, readline-sync',
     languages: [{ lang: 'JavaScript', value: '100' }],
-    link: 'test-link',
+    link: 'https://github.com/noahbazer/battleship-project',
   },
   {
     id: 2,
