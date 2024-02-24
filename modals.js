@@ -27,6 +27,20 @@ const modalData = [
   },
   {
     id: 3,
+    backgroundVideo: './assets/rebrandshowcase2.mp4',
+    name: 'company rebrand',
+    description: 'revitalize the front-face of an existing company brand',
+    thumbnail: '../assets/modals/thumbnails/rebrand.png',
+    isMajorProject: true,
+    tools: 'none, all native languages',
+    languages: [
+      { lang: 'JavaScript', value: '15' },
+      { lang: 'HTML', value: '43' },
+      { lang: 'CSS', value: '42' },
+    ],
+  },
+  {
+    id: 4,
     backgroundVideo: './assets/tavrshowcase5.mp4',
     name: 'tavr website',
     description: "build a front-face for TBVR's flagship game",
@@ -39,7 +53,7 @@ const modalData = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     backgroundVideo: './assets/ffshowcasenew.mp4',
     name: 'carrd alternative',
     description:
@@ -53,7 +67,7 @@ const modalData = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     backgroundVideo: './assets/asteriateaser.mp4',
     name: 'vr mmorpg',
     description:
@@ -61,19 +75,6 @@ const modalData = [
     thumbnail: '../assets/modals/thumbnails/game.png',
     tools: 'Unity 2022',
     languages: [{ lang: 'C#', value: '100' }],
-  },
-  {
-    id: 6,
-    backgroundVideo: './assets/rebrandshowcase2.mp4',
-    name: 'company rebrand',
-    description: 'revitalize the front-face of an existing company brand',
-    thumbnail: '../assets/modals/thumbnails/rebrand.png',
-    tools: 'none, all native languages',
-    languages: [
-      { lang: 'JavaScript', value: '15' },
-      { lang: 'HTML', value: '43' },
-      { lang: 'CSS', value: '42' },
-    ],
   },
   {
     id: 7,
