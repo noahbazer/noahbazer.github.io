@@ -281,9 +281,9 @@ nav a:hover {
 }
 
 .text-splash h2 {
-  font-size: 90px;
+  font-size: 80px;
   font-weight: 600;
-  margin: 1px;
+  margin: 0;
   background: white;
   -webkit-background-clip: text;
   background-clip: text;
@@ -292,7 +292,7 @@ nav a:hover {
 
 #dynText {
   font-family: 'Inconsolata', monospace;
-  font-size: 90px;
+  font-size: 70px;
   font-weight: 800;
   padding-left: 20px;
   margin-right: none;
@@ -335,7 +335,7 @@ nav a:hover {
   justify-content: center;
   gap: 30px;
   align-items: center;
-  margin-top: 300px;
+  margin-top: 150px;
 }
 
 .about-me-photo img {
@@ -345,6 +345,13 @@ nav a:hover {
 
 .about-me-desc {
   padding-bottom: 20px;
+}
+
+.about-me-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 150px;
 }
 
 .showcase,
@@ -455,8 +462,8 @@ nav a:hover {
 }
 
 .about-me-content h3 {
-  font-size: 1.7em;
-  font-weight: 800;
+  font-size: 4em;
+  font-weight: 600;
 }
 
 .about-me-photo {
@@ -468,6 +475,7 @@ nav a:hover {
 }
 
 .about-me-content p {
+  font-size: 1.2em;
   text-wrap: wrap;
   margin: 0;
 }
