@@ -282,9 +282,9 @@ nav a:hover {
 
 .text-splash h2 {
   font-size: 90px;
-  font-weight: 800;
+  font-weight: 600;
   margin: 1px;
-  background: -webkit-linear-gradient(315deg, #c442d3 25%, #647eff);
+  background: white;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -665,7 +665,7 @@ nav a:hover {
 }
 
 .language-count p {
-  margin: 2px 0 2px 0;
+  margin: 0;
 }
 
 .white {
@@ -884,4 +884,8 @@ input:checked + .slider i.fa-moon {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.fa-github {
+  margin-left: 5px;
 }
