@@ -356,8 +356,14 @@ nav a:hover {
 }
 
 .about-me-photo img {
-  width: 80%;
+  opacity: 0;
+  position: relative;
+  width: 100%;
   border-radius: 25px;
+  animation: fadeInFromBelow 1s ease-in-out 1.5s forwards;
+  -webkit-animation: fadeInFromBelow 1s ease-in-out 1.5s forwards; /* Safari and Chrome */
+  -moz-animation: fadeInFromBelow 1s ease-in-out 1.5s forwards; /* Firefox */
+  -o-animation: fadeInFromBelow 1s ease-in-out 1.5s forwards;
 }
 
 .about-me-desc {
@@ -386,16 +392,24 @@ nav a:hover {
 
 .showcase,
 .section-contact {
+  background-color: #1f2228;
   opacity: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 150px;
   animation: fadeInFromBelow 1s ease-in-out 1.5s forwards;
   -webkit-animation: fadeInFromBelow 1s ease-in-out 1.5s forwards; /* Safari and Chrome */
   -moz-animation: fadeInFromBelow 1s ease-in-out 1.5s forwards; /* Firefox */
   -o-animation: fadeInFromBelow 1s ease-in-out 1.5s forwards;
+}
+
+.showcase {
+  padding-top: 50px;
+}
+
+.section-contact {
+  padding-top: 150px;
 }
 
 .showcase h3 {
