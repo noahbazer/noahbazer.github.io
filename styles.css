@@ -1077,14 +1077,22 @@ input:checked + .slider i.fa-moon {
   border-radius: 25px;
 }
 
-.about-me-2-images,
-.about-me-3-images {
+.about-me-2-images {
   max-width: 45%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 60px;
+}
+
+.about-me-3-image {
+  max-width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
 
 .about-me-2-image,
@@ -1109,10 +1117,13 @@ input:checked + .slider i.fa-moon {
   margin-top: 220px;
 }
 
-.about-me-2-image img,
-.about-me-3-image img {
+.about-me-2-image img {
   min-width: 100%;
   max-width: 100%;
+}
+
+.about-me-3-image img {
+  width: 700px;
 }
 
 .about-me-2-image span {
@@ -1124,4 +1135,65 @@ input:checked + .slider i.fa-moon {
 
 .about-me-2-section {
   background-color: #1f2228;
+}
+
+.about-me-3-images {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.article {
+  border-radius: 5px;
+}
+
+.article:nth-of-type(1) {
+  animation: bob 4s ease-in-out infinite 1s;
+  margin-right: 150px;
+}
+
+.article:nth-of-type(2) {
+  animation: bob 4s ease-in-out infinite 0.5s;
+}
+
+.article:nth-of-type(3) {
+  animation: bob 4s ease-in-out infinite 1.5s;
+  margin-left: 150px;
+}
+
+.git-profile .profile-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 5px;
+}
+
+.git-profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.git-profile img {
+  height: 100px;
+  border-radius: 55%;
+}
+
+.git-profile a,
+.git-profile a span {
+  margin-left: 10px;
+  text-decoration: none;
+  color: gray;
+  transition: all 0.3s ease-in-out;
+}
+
+.git-profile a:hover,
+.git-profile a:hover span {
+  color: white;
+  transition: all 0.3s ease-in-out;
 }
