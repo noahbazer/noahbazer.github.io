@@ -91,6 +91,8 @@ const movePage = (page) => {
 };
 
 document.addEventListener('DOMContentLoaded', function () {
+  window.scrollTo(0, 0);
+
   let currentSection = 0;
   let isScrolling = false; // Flag to track whether a scroll animation is in progress
   const sections = document.querySelectorAll('.section');
