@@ -95,6 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const sections = document.querySelectorAll('.section');
   const headerContainer = document.getElementById('header-container');
   const scrollHint = document.querySelector('.scroll-hint');
+  const sectionTwoElements = document.querySelectorAll('.section-two-element');
 
   function smoothScroll(targetSection) {
     const targetPosition = sections[targetSection].offsetTop;
@@ -147,6 +148,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Update scroll-hint visibility based on current section
     updateScrollHintVisibility();
+
+    // Update visibility of elements in the second section
+    updateSectionTwoVisibility();
   }
 
   function updateHeaderClass() {
@@ -164,15 +168,32 @@ document.addEventListener('DOMContentLoaded', function () {
     const targetSection = 1; // Adjust the target section index as needed
 
     if (currentSection === targetSection) {
-      // Set the opacity or hide the scroll hint element
-      scrollHint.style.opacity = '0'; // Adjust as needed for your preferred opacity value
+      // Add the fade-out class to initiate the fade-out animation
+      scrollHint.classList.add('fade-out');
     } else {
-      // Reset the opacity or show the scroll hint element
-      scrollHint.style.opacity = '1'; // Adjust as needed for your preferred opacity value
+      // Remove the fade-out class to reset the opacity
+      scrollHint.classList.remove('fade-out');
     }
+  }
+
+  function updateSectionTwoVisibility() {
+    const targetSection = 1; // Adjust the target section index as needed
+
+    // Check if the current section is the second section
+    const isSectionTwo = currentSection === targetSection;
+
+    // Toggle the visible class for elements in the second section
+    sectionTwoElements.forEach((element) => {
+      if (isSectionTwo) {
+        element.classList.add('visible');
+      } else {
+        element.classList.remove('visible');
+      }
+    });
   }
 
   window.addEventListener('wheel', handleScroll);
   window.addEventListener('scroll', updateHeaderClass);
   window.addEventListener('scroll', updateScrollHintVisibility);
+  window.addEventListener('scroll', updateSectionTwoVisibility);
 });
