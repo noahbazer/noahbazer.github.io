@@ -17,6 +17,7 @@ body {
   background-position: center;
   background-attachment: fixed;
   z-index: 0;
+  overflow: hidden;
 }
 
 body.light-theme {
@@ -347,12 +348,39 @@ nav a:hover {
   justify-content: center;
   gap: 30px;
   align-items: center;
-  margin-top: 200px;
+  padding-top: 200px;
   animation: fadeInFromBelow 1s ease-in-out 0.5s forwards;
   animation-delay: 1s;
   -webkit-animation: fadeInFromBelow 1s ease-in-out 0.5s forwards; /* Safari and Chrome */
   -moz-animation: fadeInFromBelow 1s ease-in-out 0.5s forwards; /* Firefox */
   -o-animation: fadeInFromBelow 1s ease-in-out 0.5s forwards;
+}
+
+.scroll-hint {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.scroll-hint i {
+  margin-left: 15px;
+  animation: bob 1s infinite;
+}
+
+@keyframes bob {
+  0% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
 }
 
 .about-me-photo img {
@@ -407,6 +435,7 @@ nav a:hover {
 
 .showcase {
   padding-top: 50px;
+  padding-bottom: 500px;
 }
 
 .section-contact {

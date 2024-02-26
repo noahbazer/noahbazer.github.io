@@ -45,19 +45,6 @@ const setActive = (child) => {
   }
 };
 
-window.addEventListener('scroll', () => {
-  console.log(window.scrollY);
-  if (window.scrollY >= 5) {
-    document
-      .getElementById('header-container')
-      .classList.add('header-container-scrolled');
-  } else {
-    document
-      .getElementById('header-container')
-      .classList.remove('header-container-scrolled');
-  }
-});
-
 function toggleTheme() {
   document.body.classList.toggle('light-theme');
 }
@@ -102,3 +89,90 @@ const movePage = (page) => {
   console.log('New left:', newLeft);
   carouselContainer.style.left = newLeft;
 };
+
+document.addEventListener('DOMContentLoaded', function () {
+  let currentSection = 0;
+  const sections = document.querySelectorAll('.section');
+  const headerContainer = document.getElementById('header-container');
+  const scrollHint = document.querySelector('.scroll-hint');
+
+  function smoothScroll(targetSection) {
+    const targetPosition = sections[targetSection].offsetTop;
+    const currentPosition = window.scrollY;
+    const distance = targetPosition - currentPosition;
+    const duration = 1000; // Adjust the duration as needed
+
+    let startTime;
+
+    function animation(currentTime) {
+      if (startTime === undefined) startTime = currentTime;
+      const elapsedTime = currentTime - startTime;
+      const ease = easeInOutCubic(
+        elapsedTime,
+        currentPosition,
+        distance,
+        duration
+      );
+      window.scrollTo(0, ease);
+
+      if (elapsedTime < duration) {
+        requestAnimationFrame(animation);
+      }
+    }
+
+    function easeInOutCubic(t, b, c, d) {
+      t /= d / 2;
+      if (t < 1) return (c / 2) * t * t * t + b;
+      t -= 2;
+      return (c / 2) * (t * t * t + 2) + b;
+    }
+
+    requestAnimationFrame(animation);
+  }
+
+  function handleScroll(event) {
+    event.preventDefault();
+    const delta = event.deltaY;
+
+    if (delta > 0 && currentSection < sections.length - 1) {
+      currentSection++;
+      smoothScroll(currentSection);
+    } else if (delta < 0 && currentSection > 0) {
+      currentSection--;
+      smoothScroll(currentSection);
+    }
+
+    // Update header class based on scroll position
+    updateHeaderClass();
+
+    // Update scroll-hint visibility based on current section
+    updateScrollHintVisibility();
+  }
+
+  function updateHeaderClass() {
+    const scrolledClass = 'header-container-scrolled';
+    const scrollThreshold = 5;
+
+    if (window.scrollY >= scrollThreshold) {
+      headerContainer.classList.add(scrolledClass);
+    } else {
+      headerContainer.classList.remove(scrolledClass);
+    }
+  }
+
+  function updateScrollHintVisibility() {
+    const targetSection = 1; // Adjust the target section index as needed
+
+    if (currentSection === targetSection) {
+      // Set the opacity or hide the scroll hint element
+      scrollHint.style.opacity = '0'; // Adjust as needed for your preferred opacity value
+    } else {
+      // Reset the opacity or show the scroll hint element
+      scrollHint.style.opacity = '1'; // Adjust as needed for your preferred opacity value
+    }
+  }
+
+  window.addEventListener('wheel', handleScroll);
+  window.addEventListener('scroll', updateHeaderClass);
+  window.addEventListener('scroll', updateScrollHintVisibility);
+});
