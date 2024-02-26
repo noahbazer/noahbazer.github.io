@@ -91,22 +91,28 @@ const movePage = (page) => {
 };
 
 document.addEventListener('DOMContentLoaded', function () {
+  // Disable default scroll restoration
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+
+  // Scroll to the top on page load
   window.scrollTo(0, 0);
 
   let currentSection = 0;
-  let isScrolling = false; // Flag to track whether a scroll animation is in progress
+  let isScrolling = false;
   const sections = document.querySelectorAll('.section');
   const headerContainer = document.getElementById('header-container');
   const scrollHint = document.querySelector('.scroll-hint');
 
   function smoothScroll(targetSection) {
-    if (isScrolling) return; // Ignore additional scroll events if an animation is in progress
-    isScrolling = true; // Set the flag to indicate that a scroll animation is starting
+    if (isScrolling) return;
+    isScrolling = true;
 
     const targetPosition = sections[targetSection].offsetTop;
     const currentPosition = window.scrollY;
     const distance = targetPosition - currentPosition;
-    const duration = 1000; // Adjust the duration as needed
+    const duration = 1000;
 
     let startTime;
 
@@ -124,8 +130,8 @@ document.addEventListener('DOMContentLoaded', function () {
       if (elapsedTime < duration) {
         requestAnimationFrame(animation);
       } else {
-        // Animation complete, reset the flag
         isScrolling = false;
+        updateSectionVisibility(); // Update visibility after the animation is complete
       }
     }
 
@@ -143,6 +149,8 @@ document.addEventListener('DOMContentLoaded', function () {
     event.preventDefault();
     const delta = event.deltaY;
 
+    if (isScrolling) return; // Ignore additional scroll events during animation
+
     if (delta > 0 && currentSection < sections.length - 1) {
       currentSection++;
       smoothScroll(currentSection);
@@ -156,9 +164,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Update scroll-hint visibility based on current section
     updateScrollHintVisibility();
-
-    // Update visibility of elements in the second section
-    updateSectionTwoVisibility();
   }
 
   function updateHeaderClass() {
@@ -185,8 +190,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function updateSectionVisibility() {
-    // Check if the current section is the second section
-
     // Toggle the visible class for specific elements in the second section
     const aboutMe2Images = document.querySelector('.about-me-2-images');
     const aboutMe2Content = document.querySelector('.about-me-2-content');
@@ -197,10 +200,17 @@ document.addEventListener('DOMContentLoaded', function () {
     if (currentSection === 1) {
       aboutMe2Images.style.opacity = '1';
       aboutMe2Content.style.opacity = '1';
+    } else {
+      aboutMe2Images.style.opacity = '0';
+      aboutMe2Content.style.opacity = '0';
     }
+
     if (currentSection === 2) {
       aboutMe3Images.style.opacity = '1';
       aboutMe3Content.style.opacity = '1';
+    } else {
+      aboutMe3Images.style.opacity = '0';
+      aboutMe3Content.style.opacity = '0';
     }
   }
 
