@@ -378,16 +378,11 @@ nav a:hover {
 }
 
 .about-me-2 {
-  animation: fadeInFromBelow 1s ease-in-out 1.5s forwards;
+  animation: fadeInFromBelow 1s ease-in-out 0.5s forwards;
   animation-delay: 1s;
   -webkit-animation: fadeInFromBelow 1s ease-in-out 1.5s forwards; /* Safari and Chrome */
   -moz-animation: fadeInFromBelow 1s ease-in-out 1.5s forwards; /* Firefox */
   -o-animation: fadeInFromBelow 1s ease-in-out 1.5s forwards;
-}
-
-.tagline2 {
-  line-height: 1.1em;
-  margin-bottom: 50px;
 }
 
 .about-me-2 .about-me-2-images.visible {

@@ -183,16 +183,16 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function updateSectionTwoVisibility() {
-    const targetSection = 1; // Adjust the target section index as needed
+    const targetSection = 0; // Adjust the target section index as needed
 
     // Check if the current section is the second section
-    const isSectionTwo = currentSection === targetSection;
+    const isSectionOne = currentSection === targetSection;
 
     // Toggle the visible class for specific elements in the second section
     const aboutMe2Images = document.querySelector('.about-me-2-images');
     const aboutMe2Content = document.querySelector('.about-me-2-content');
 
-    if (isSectionTwo) {
+    if (!isSectionOne) {
       aboutMe2Images.style.opacity = '1';
       aboutMe2Content.style.opacity = '1';
     } else {
