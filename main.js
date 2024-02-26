@@ -92,12 +92,15 @@ const movePage = (page) => {
 
 document.addEventListener('DOMContentLoaded', function () {
   let currentSection = 0;
+  let isScrolling = false; // Flag to track whether a scroll animation is in progress
   const sections = document.querySelectorAll('.section');
   const headerContainer = document.getElementById('header-container');
   const scrollHint = document.querySelector('.scroll-hint');
-  const sectionTwoElements = document.querySelectorAll('.section-two-element');
 
   function smoothScroll(targetSection) {
+    if (isScrolling) return; // Ignore additional scroll events if an animation is in progress
+    isScrolling = true; // Set the flag to indicate that a scroll animation is starting
+
     const targetPosition = sections[targetSection].offsetTop;
     const currentPosition = window.scrollY;
     const distance = targetPosition - currentPosition;
@@ -118,6 +121,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (elapsedTime < duration) {
         requestAnimationFrame(animation);
+      } else {
+        // Animation complete, reset the flag
+        isScrolling = false;
       }
     }
 
@@ -168,11 +174,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const targetSection = 1; // Adjust the target section index as needed
 
     if (currentSection === targetSection) {
-      // Add the fade-out class to initiate the fade-out animation
-      scrollHint.classList.add('fade-out');
+      // Set the opacity or hide the scroll hint element
+      scrollHint.style.opacity = '0'; // Adjust as needed for your preferred opacity value
     } else {
-      // Remove the fade-out class to reset the opacity
-      scrollHint.classList.remove('fade-out');
+      // Reset the opacity or show the scroll hint element
+      scrollHint.style.opacity = '1'; // Adjust as needed for your preferred opacity value
     }
   }
 
@@ -182,17 +188,20 @@ document.addEventListener('DOMContentLoaded', function () {
     // Check if the current section is the second section
     const isSectionTwo = currentSection === targetSection;
 
-    // Toggle the visible class for elements in the second section
-    sectionTwoElements.forEach((element) => {
-      if (isSectionTwo) {
-        element.classList.add('visible');
-      } else {
-        element.classList.remove('visible');
-      }
-    });
+    // Toggle the visible class for specific elements in the second section
+    const aboutMe2Images = document.querySelector('.about-me-2-images');
+    const aboutMe2Content = document.querySelector('.about-me-2-content');
+
+    if (isSectionTwo) {
+      aboutMe2Images.style.opacity = '1';
+      aboutMe2Content.style.opacity = '1';
+    } else {
+      aboutMe2Images.style.opacity = '0';
+      aboutMe2Content.style.opacity = '0';
+    }
   }
 
-  window.addEventListener('wheel', handleScroll);
+  window.addEventListener('wheel', handleScroll, { passive: false });
   window.addEventListener('scroll', updateHeaderClass);
   window.addEventListener('scroll', updateScrollHintVisibility);
   window.addEventListener('scroll', updateSectionTwoVisibility);
