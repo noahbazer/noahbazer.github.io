@@ -182,27 +182,28 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  function updateSectionTwoVisibility() {
-    const targetSection = 0; // Adjust the target section index as needed
-
+  function updateSectionVisibility() {
     // Check if the current section is the second section
-    const isSectionOne = currentSection === targetSection;
 
     // Toggle the visible class for specific elements in the second section
     const aboutMe2Images = document.querySelector('.about-me-2-images');
     const aboutMe2Content = document.querySelector('.about-me-2-content');
 
-    if (!isSectionOne) {
+    const aboutMe3Images = document.querySelector('.about-me-3-images');
+    const aboutMe3Content = document.querySelector('.about-me-3-content');
+
+    if (currentSection === 1) {
       aboutMe2Images.style.opacity = '1';
       aboutMe2Content.style.opacity = '1';
-    } else {
-      aboutMe2Images.style.opacity = '0';
-      aboutMe2Content.style.opacity = '0';
+    }
+    if (currentSection === 2) {
+      aboutMe3Images.style.opacity = '1';
+      aboutMe3Content.style.opacity = '1';
     }
   }
 
   window.addEventListener('wheel', handleScroll, { passive: false });
   window.addEventListener('scroll', updateHeaderClass);
   window.addEventListener('scroll', updateScrollHintVisibility);
-  window.addEventListener('scroll', updateSectionTwoVisibility);
+  window.addEventListener('scroll', updateSectionVisibility);
 });

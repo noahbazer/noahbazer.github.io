@@ -124,21 +124,25 @@ body {
   }
 }
 
+.about-me-3 .about-me-3-images,
 .about-me-2 .about-me-2-images {
   opacity: 0;
   transition: opacity 1s ease 1.5s;
   animation: fadeUpFromBottom 1s ease 2s; /* Adjust the transition duration as needed */
 }
+.about-me-3 .about-me-3-content,
 .about-me-2 .about-me-2-content {
   opacity: 0;
   transition: opacity 1s ease 1s; /* Adjust the transition duration as needed */
 }
 
-.about-me-2 .about-me-2-images.visible {
+.about-me-2 .about-me-2-images.visible,
+.about-me-3 .about-me-3-images.visible {
   animation: fadeInFromBelow 0.5s ease-out 1.5s both;
 }
 
-.about-me-2 .about-me-2-content.visible {
+.about-me-2 .about-me-2-content.visible,
+.about-me-3 .about-me-3-content.visible {
   animation: fadeInFromBelow 0.5s ease-out 1s both;
 }
 
@@ -369,6 +373,14 @@ nav a:hover {
   padding-top: 200px;
 }
 
+.about-me-3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
 .about-me {
   animation: fadeInFromBelow 1s ease-in-out 0.5s forwards;
   animation-delay: 1s;
@@ -378,11 +390,16 @@ nav a:hover {
 }
 
 .about-me-2 {
-  animation: fadeInFromBelow 1s ease-in-out 0.5s forwards;
+  animation: fadeInFromBelow 1s ease-in-out 1.5s forwards;
   animation-delay: 1s;
   -webkit-animation: fadeInFromBelow 1s ease-in-out 1.5s forwards; /* Safari and Chrome */
   -moz-animation: fadeInFromBelow 1s ease-in-out 1.5s forwards; /* Firefox */
   -o-animation: fadeInFromBelow 1s ease-in-out 1.5s forwards;
+}
+
+.tagline2 {
+  line-height: 1.1em;
+  margin-bottom: 50px;
 }
 
 .about-me-2 .about-me-2-images.visible {
@@ -397,7 +414,8 @@ nav a:hover {
   flex-direction: row;
 }
 
-.about-me-2 {
+.about-me-2,
+.about-me-3 {
   flex-direction: column;
 }
 
@@ -451,7 +469,8 @@ nav a:hover {
   gap: 50px;
 }
 
-.about-me-2-container {
+.about-me-2-container,
+.about-me-3-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -585,7 +604,8 @@ nav a:hover {
 }
 
 .about-me-content,
-.about-me-2-content {
+.about-me-2-content,
+.about-me-3-content {
   width: 30%;
   display: flex;
   flex-direction: column;
@@ -603,8 +623,18 @@ nav a:hover {
   padding-top: 50px;
 }
 
+.about-me-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  padding-top: 260px;
+}
+
 .about-me-content h3,
-.about-me-2-content h3 {
+.about-me-2-content h3,
+.about-me-3-content h3 {
   font-size: 5em;
   font-weight: 600;
 }
@@ -618,7 +648,8 @@ nav a:hover {
 }
 
 .about-me-content p,
-.about-me-2-content p {
+.about-me-2-content p,
+.about-me-3-content p {
   font-size: 1.2em;
   text-wrap: wrap;
   margin: 0;
@@ -1046,7 +1077,8 @@ input:checked + .slider i.fa-moon {
   border-radius: 25px;
 }
 
-.about-me-2-images {
+.about-me-2-images,
+.about-me-3-images {
   max-width: 45%;
   display: flex;
   flex-direction: row;
@@ -1055,7 +1087,8 @@ input:checked + .slider i.fa-moon {
   gap: 60px;
 }
 
-.about-me-2-image {
+.about-me-2-image,
+.about-me-3-image {
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -1076,7 +1109,8 @@ input:checked + .slider i.fa-moon {
   margin-top: 220px;
 }
 
-.about-me-2-image img {
+.about-me-2-image img,
+.about-me-3-image img {
   min-width: 100%;
   max-width: 100%;
 }
