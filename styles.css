@@ -369,8 +369,11 @@ nav a:hover {
   display: flex;
   justify-content: center;
   gap: 30px;
-  align-items: center;
-  padding-top: 200px;
+}
+
+.about-me {
+  height: 85vh;
+  align-items: flex-end;
 }
 
 .about-me-3 {
@@ -611,6 +614,10 @@ nav a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+
+.about-me-content {
+  padding-bottom: 15vh;
 }
 
 .about-me-2 {
