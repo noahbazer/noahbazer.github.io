@@ -155,7 +155,7 @@ body {
   align-items: center;
   width: 100%;
   justify-content: space-around;
-  height: 50px;
+  height: 5vh;
   background-color: rgb(29, 29, 29);
   transition: background-color 0.2s ease-in-out, border-width 0.2s ease-in-out;
 }
@@ -163,7 +163,7 @@ body {
 .resume-button {
   display: inline-block;
   padding: 10px 20px;
-  font-size: 1em;
+  font-size: 1.2vh;
   text-align: center;
   text-decoration: none;
   background-color: #3097d7;
@@ -179,12 +179,12 @@ body {
 .header {
   display: flex;
   position: fixed;
+  height: 5vh;
   top: 0;
   margin: 0 auto;
   flex-direction: row;
   justify-content: space-between;
   align-content: center;
-  padding: 5px 10px;
   z-index: 19000000;
   border-bottom: 0px solid;
   background-color: rgb(29, 29, 29);
@@ -194,7 +194,7 @@ body {
   color: gray;
   margin: 0 10px;
   padding-top: 2px;
-  font-size: 1.5em;
+  font-size: 3vh;
   font-weight: 200;
 }
 
@@ -203,7 +203,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-size: 30px;
+  font-size: 1vh;
   gap: 10px;
   margin-right: 300px;
 }
@@ -269,7 +269,7 @@ nav {
 
 nav a {
   color: gray;
-  font-size: 17px;
+  font-size: 1.4vh;
   text-decoration: none;
   font-weight: 200;
   letter-spacing: 2px;
@@ -423,18 +423,29 @@ nav a:hover {
 }
 
 .scroll-hint {
+  opacity: 0;
+  width: 100%;
+  height: 15vh;
+  background-color: #1f2228;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-bottom: 100px;
-  opacity: 1;
-  transition: opacity 0.5s ease;
+  animation: fadeInFromBelow 1s ease-in-out 1.5s forwards;
+  animation-delay: 1s;
+  -webkit-animation: fadeInFromBelow 1s ease-in-out 1.5s forwards; /* Safari and Chrome */
+  -moz-animation: fadeInFromBelow 1s ease-in-out 1.5s forwards; /* Firefox */
+  -o-animation: fadeInFromBelow 1s ease-in-out 1.5s forwards;
 }
 
-.scroll-hint i {
+.scroll-hint p span {
   margin-left: 15px;
   animation: bob 1s infinite;
+}
+
+.scroll-hint p {
+  opacity: 1;
+  transition: opacity 0.5s ease;
 }
 
 @keyframes bob {
@@ -485,7 +496,7 @@ nav a:hover {
   height: 20px;
 }
 
-.other .tech-stack li {
+.other li {
   font-size: 1.2em;
   display: flex;
   flex-direction: row;
@@ -518,7 +529,7 @@ nav a:hover {
 
 .showcase h3 {
   margin-bottom: 10px;
-  font-size: 4em;
+  font-size: 2vh;
   font-weight: 600;
 }
 
@@ -617,17 +628,16 @@ nav a:hover {
 }
 
 .about-me-content {
-  padding-bottom: 15vh;
+  padding-bottom: 10vh;
 }
 
 .about-me-2 {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
   height: 100vh;
   background-color: #1f2228;
-  padding-top: 50px;
+  padding-top: 3vh;
 }
 
 .about-me-3 {
@@ -636,13 +646,13 @@ nav a:hover {
   justify-content: flex-start;
   align-items: center;
   height: 100vh;
-  padding-top: 260px;
+  padding-top: 15vh;
 }
 
 .about-me-content h3,
 .about-me-2-content h3,
 .about-me-3-content h3 {
-  font-size: 5em;
+  font-size: 6vh;
   font-weight: 600;
 }
 
@@ -657,7 +667,7 @@ nav a:hover {
 .about-me-content p,
 .about-me-2-content p,
 .about-me-3-content p {
-  font-size: 1.2em;
+  font-size: 1.2vh;
   text-wrap: wrap;
   margin: 0;
 }
@@ -677,7 +687,7 @@ nav a:hover {
 
 .tech-stack li {
   margin-bottom: 0px;
-  font-size: 1.2em;
+  font-size: 2vh;
 }
 
 .tech-stack i,
@@ -1120,10 +1130,6 @@ input:checked + .slider i.fa-moon {
   color: gray;
 }
 
-.about-me-2-image:nth-of-type(2) {
-  margin-top: 220px;
-}
-
 .about-me-2-image img {
   min-width: 100%;
   max-width: 100%;
@@ -1203,4 +1209,32 @@ input:checked + .slider i.fa-moon {
 .git-profile a:hover span {
   color: white;
   transition: all 0.3s ease-in-out;
+}
+
+.warning {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1a1a1a;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.warning p {
+  max-width: 50%;
+}
+
+@media only screen and (max-width: 1023px) and (orientation: portrait),
+  (max-height: 1023px) and (orientation: landscape) {
+  div {
+    display: none;
+  }
+
+  body .warning {
+    display: flex;
+  }
 }

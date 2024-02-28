@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let isScrolling = false;
   const sections = document.querySelectorAll('.section');
   const headerContainer = document.getElementById('header-container');
-  const scrollHint = document.querySelector('.scroll-hint');
+  const scrollHint = document.querySelector('.scroll-hint p');
 
   function smoothScroll(targetSection) {
     if (isScrolling) return;
@@ -200,17 +200,11 @@ document.addEventListener('DOMContentLoaded', function () {
     if (currentSection === 1) {
       aboutMe2Images.style.opacity = '1';
       aboutMe2Content.style.opacity = '1';
-    } else {
-      aboutMe2Images.style.opacity = '0';
-      aboutMe2Content.style.opacity = '0';
     }
 
     if (currentSection === 2) {
       aboutMe3Images.style.opacity = '1';
       aboutMe3Content.style.opacity = '1';
-    } else {
-      aboutMe3Images.style.opacity = '0';
-      aboutMe3Content.style.opacity = '0';
     }
   }
 
