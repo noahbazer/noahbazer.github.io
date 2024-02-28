@@ -213,3 +213,38 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', updateScrollHintVisibility);
   window.addEventListener('scroll', updateSectionVisibility);
 });
+
+const disclaimer = document.getElementById('disclaimer');
+
+const hideDisclaimer = () => {
+  disclaimer.style.bottom = '-100px';
+};
+
+// Add a key to localStorage
+localStorage.setItem('myKey', 'myValue');
+
+// Check if the key exists when the page loads
+document.addEventListener('DOMContentLoaded', function () {
+  if (localStorage.getItem('myKey')) {
+    // Key exists, do something
+    console.log('Key exists');
+  } else {
+    // Key does not exist, do something else
+    console.log('Key does not exist');
+  }
+});
+
+function deleteDisclaimer() {
+  localStorage.setItem('disclaimerKey', 'true');
+  hideDisclaimer();
+}
+
+function checkDisclaimer() {
+  if (localStorage.getItem('disclaimerKey')) {
+    disclaimer.style.display = 'none';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  checkDisclaimer();
+});
