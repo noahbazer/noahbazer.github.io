@@ -123,7 +123,6 @@ body {
     transform: translateY(0);
   }
 }
-
 .about-me-3 .about-me-3-images,
 .about-me-2 .about-me-2-images {
   opacity: 0;
@@ -191,6 +190,7 @@ body {
 }
 
 .header p {
+  display: none;
   color: gray;
   margin: 0 10px;
   padding-top: 2px;
@@ -260,6 +260,10 @@ h3 {
 }
 
 nav {
+  display: none;
+}
+
+.socials {
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -1083,10 +1087,6 @@ input:checked + .slider i.fa-moon {
 
 .slider.round:before {
   border-radius: 50%;
-}
-
-.fa-github {
-  margin-left: 5px;
 }
 
 .code-snippet {
