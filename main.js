@@ -47,12 +47,12 @@ const setActive = (child) => {
 
 document.addEventListener('DOMContentLoaded', function () {
   // Disable default scroll restoration
-  // if ('scrollRestoration' in history) {
-  //   history.scrollRestoration = 'manual';
-  // }
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
 
   // Scroll to the top on page load
-  // window.scrollTo(0, 0);
+  window.scrollTo(0, 0);
 
   let currentSection = 0;
   let isScrolling = false;
