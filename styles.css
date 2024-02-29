@@ -358,11 +358,8 @@ nav a:hover {
 .showcase-con {
   display: flex;
   height: auto;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  max-width: 75%;
-  gap: 30px;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -513,9 +510,10 @@ nav a:hover {
   background-color: #1f2228;
   opacity: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 10%;
   animation: fadeInFromBelow 1s ease-in-out 1.5s forwards;
   -webkit-animation: fadeInFromBelow 1s ease-in-out 1.5s forwards; /* Safari and Chrome */
   -moz-animation: fadeInFromBelow 1s ease-in-out 1.5s forwards; /* Firefox */
@@ -539,7 +537,7 @@ nav a:hover {
 }
 
 .carousel {
-  width: 80vw;
+  width: 45%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -548,10 +546,9 @@ nav a:hover {
 }
 
 .carousel-container {
-  width: 83vw;
+  width: 100%;
   flex-direction: row;
   justify-content: flex-start;
-  overflow: hidden;
 }
 
 .carousel-items {
@@ -562,6 +559,7 @@ nav a:hover {
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
   gap: 30px;
   transition: all 0.5s ease-in-out;
 }
@@ -579,6 +577,7 @@ nav a:hover {
 }
 
 .wrapper {
+  width: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -655,7 +654,8 @@ nav a:hover {
 
 .about-me-content h3,
 .about-me-2-content h3,
-.about-me-3-content h3 {
+.about-me-3-content h3,
+.about-me-4-content h3 {
   font-size: 6vh;
   font-weight: 600;
 }
@@ -670,7 +670,8 @@ nav a:hover {
 
 .about-me-content p,
 .about-me-2-content p,
-.about-me-3-content p {
+.about-me-3-content p,
+.about-me-4-content p {
   font-size: 1.2vh;
   text-wrap: wrap;
   margin: 0;
@@ -714,11 +715,12 @@ nav a:hover {
   position: relative;
   top: 0;
   overflow: hidden;
-  width: 240px;
-  min-width: 240px;
-  max-width: 240px;
+  width: 10vw;
+  min-width: 90%;
+  height: 3vh;
+  max-height: 5vh;
   display: flex;
-  padding: 120px 0px 0px 0px;
+  padding: 10vh 0px 0px 0px;
   border-radius: 25px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;

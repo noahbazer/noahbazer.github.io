@@ -59,6 +59,7 @@ const modalData = [
     description:
       'create a cheaper, more customizable alternative to static page subscriptions',
     thumbnail: '../assets/modals/thumbnails/ffxiv.png',
+    isMajorProject: false,
     tools: 'none, all native languages',
     languages: [
       { lang: 'JavaScript', value: '25' },
