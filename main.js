@@ -152,6 +152,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const aboutMe3Images = document.querySelector('.about-me-3-images');
     const aboutMe3Content = document.querySelector('.about-me-3-content');
 
+    const aboutMe4Images = document.querySelector('.about-me-4-images');
+    const aboutMe4Content = document.querySelector('.about-me-4-content');
+
     if (currentSection === 1) {
       aboutMe2Images.style.opacity = '1';
       aboutMe2Content.style.opacity = '1';
@@ -160,6 +163,11 @@ document.addEventListener('DOMContentLoaded', function () {
     if (currentSection === 2) {
       aboutMe3Images.style.opacity = '1';
       aboutMe3Content.style.opacity = '1';
+    }
+
+    if (currentSection === 3) {
+      aboutMe4Images.style.opacity = '1';
+      aboutMe4Content.style.opacity = '1';
     }
   }
 
