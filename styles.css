@@ -522,8 +522,6 @@ nav a:hover {
 
 .showcase {
   height: 100vh;
-  padding-top: 50px;
-  padding-bottom: 500px;
 }
 
 .section-contact {
@@ -1237,6 +1235,10 @@ input:checked + .slider i.fa-moon {
 
   body .warning {
     display: flex;
+  }
+
+  body .disclaimer {
+    display: none;
   }
 }
 
