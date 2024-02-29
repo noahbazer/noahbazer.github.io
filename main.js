@@ -45,51 +45,6 @@ const setActive = (child) => {
   }
 };
 
-function toggleTheme() {
-  document.body.classList.toggle('light-theme');
-}
-
-let activePage = 0;
-
-const carouselContainer = document.getElementById('carouselcon');
-const carouselButtons = document.getElementsByClassName('carousel-button');
-
-const setPage = (page) => {
-  activePage = page;
-  for (let i = 0; i < carouselButtons.length; i++) {
-    if (i === activePage) {
-      carouselButtons[i].classList.add('fa');
-      carouselButtons[i].classList.remove('fa-regular');
-    } else {
-      carouselButtons[i].classList.remove('fa');
-      carouselButtons[i].classList.add('fa-regular');
-    }
-  }
-  movePage(activePage);
-};
-
-const nextPage = () => {
-  console.log(carouselButtons.length);
-  if (activePage < carouselButtons.length - 1) {
-    activePage++;
-    setPage(activePage);
-  }
-};
-
-const lastPage = () => {
-  if (activePage > 0) {
-    activePage--;
-    setPage(activePage);
-  }
-};
-
-const movePage = (page) => {
-  const count = page * 810;
-  const newLeft = `-${count}px`;
-  console.log('New left:', newLeft);
-  carouselContainer.style.left = newLeft;
-};
-
 document.addEventListener('DOMContentLoaded', function () {
   // Disable default scroll restoration
   if ('scrollRestoration' in history) {

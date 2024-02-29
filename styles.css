@@ -523,6 +523,7 @@ nav a:hover {
 }
 
 .showcase {
+  height: 100vh;
   padding-top: 50px;
   padding-bottom: 500px;
 }
@@ -538,7 +539,7 @@ nav a:hover {
 }
 
 .carousel {
-  width: 1300px;
+  width: 80vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -547,7 +548,7 @@ nav a:hover {
 }
 
 .carousel-container {
-  width: 1320px;
+  width: 83vw;
   flex-direction: row;
   justify-content: flex-start;
   overflow: hidden;
