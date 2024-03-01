@@ -405,7 +405,8 @@ h3 {
 }
 
 .about-me-2,
-.about-me-3 {
+.about-me-3,
+.about-me-4 {
   flex-direction: column;
 }
 
@@ -471,7 +472,8 @@ h3 {
 }
 
 .about-me-2-container,
-.about-me-3-container {
+.about-me-3-container,
+.about-me-4-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -493,7 +495,6 @@ h3 {
 
 .showcase,
 .section-contact {
-  background-color: #1f2228;
   opacity: 0;
   display: flex;
   flex-direction: row;
@@ -620,9 +621,11 @@ h3 {
   padding-bottom: 10vh;
 }
 
-.about-me-2 {
+.about-me-2,
+.about-me-4 {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   height: 100vh;
   background-color: #1f2228;
