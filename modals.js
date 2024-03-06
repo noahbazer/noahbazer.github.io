@@ -74,6 +74,7 @@ const modalData = [
     description:
       'build a virtual reality mmorpg that breaks from market convention',
     thumbnail: '../assets/modals/thumbnails/game.png',
+    isMajorProject: false,
     tools: 'Unity 2022',
     languages: [{ lang: 'C#', value: '100' }],
   },
@@ -237,6 +238,22 @@ modalData.forEach((item, i) => {
     majorProjectBanner.appendChild(majorProjectImage);
 
     wrapper.appendChild(majorProjectBanner);
+    wrapper.style.marginBottom = '28px';
+  }
+
+  if (item.isProProject) {
+    const proProjectBanner = document.createElement('div');
+    proProjectBanner.className = 'pro-project-banner';
+
+    const proProjectText = document.createElement('p');
+    proProjectText.textContent = 'Pro Project';
+    proProjectBanner.appendChild(proProjectText);
+
+    const proProjectImage = document.createElement('img');
+    proProjectImage.src = './assets/proicon.png';
+    proProjectBanner.appendChild(proProjectImage);
+
+    wrapper.appendChild(proProjectBanner);
     wrapper.style.marginBottom = '28px';
   }
 
