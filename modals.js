@@ -41,6 +41,20 @@ const modalData = [
   },
   {
     id: 4,
+    backgroundVideo: './assets/concretepreview.mp4',
+    name: 'concrete world',
+    description: 'redesign a concrete company website to be more modern',
+    thumbnail: '../assets/modals/thumbnails/concrete.png',
+    isProProject: true,
+    tools: 'none, all native languages',
+    languages: [
+      { lang: 'JavaScript', value: '15' },
+      { lang: 'HTML', value: '43' },
+      { lang: 'CSS', value: '42' },
+    ],
+  },
+  {
+    id: 5,
     backgroundVideo: './assets/tavrshowcase5.mp4',
     name: 'tavr website',
     description: "build a front-face for TBVR's flagship game",
@@ -53,7 +67,7 @@ const modalData = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     backgroundVideo: './assets/ffshowcasenew.mp4',
     name: 'carrd alternative',
     description:
@@ -68,7 +82,7 @@ const modalData = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     backgroundVideo: './assets/asteriateaser.mp4',
     name: 'vr mmorpg',
     description:
@@ -77,18 +91,6 @@ const modalData = [
     isMajorProject: false,
     tools: 'Unity 2022',
     languages: [{ lang: 'C#', value: '100' }],
-  },
-  {
-    id: 7,
-    backgroundVideo: './assets/timerpreview23.mp4',
-    name: 'stream timer',
-    description: 'build a web-based, no-download stream timer for streamers',
-    tools: 'none, all native languages',
-    languages: [
-      { lang: 'JavaScript', value: '80' },
-      { lang: 'HTML', value: '7' },
-      { lang: 'CSS', value: '13' },
-    ],
   },
   {
     id: 8,
@@ -104,6 +106,18 @@ const modalData = [
   },
   {
     id: 9,
+    backgroundVideo: './assets/timerpreview23.mp4',
+    name: 'stream timer',
+    description: 'build a web-based, no-download stream timer for streamers',
+    tools: 'none, all native languages',
+    languages: [
+      { lang: 'JavaScript', value: '80' },
+      { lang: 'HTML', value: '7' },
+      { lang: 'CSS', value: '13' },
+    ],
+  },
+  {
+    id: 10,
     backgroundVideo: './assets/timerpreview23.mp4',
     name: 'stream timer',
     description: 'build a web-based, no-download stream timer for streamers',
