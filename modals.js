@@ -122,18 +122,13 @@ const langInfo = document.querySelector('.language-count');
 console.log(dataList);
 
 const langColor = (lang) => {
-  switch (lang) {
-    case 'HTML':
-      return 'var(--lang-color-html)';
-    case 'CSS':
-      return 'var(--lang-color-css)';
-    case 'JavaScript':
-      return 'var(--lang-color-js)';
-    case 'C#':
-      return 'var(--lang-color-cs)';
-    default:
-      return 'black';
-  }
+    const langColors = {
+        HTML: 'var(--lang-color-html)',
+        CSS: 'var(--lang-color-css)',
+        JavaScript: 'var(--lang-color-js)',
+        'C#': 'var(--lang-color-cs)',
+    };
+    return langColors[lang] || 'black';
 };
 
 const buildBar = (id) => {
