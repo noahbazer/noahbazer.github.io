@@ -500,7 +500,7 @@ h3 {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 10%;
+  gap: 5%;
   animation: fadeInFromBelow 1s ease-in-out 1.5s forwards;
   -webkit-animation: fadeInFromBelow 1s ease-in-out 1.5s forwards; /* Safari and Chrome */
   -moz-animation: fadeInFromBelow 1s ease-in-out 1.5s forwards; /* Firefox */
@@ -522,7 +522,7 @@ h3 {
 }
 
 .carousel {
-  width: 45%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -568,7 +568,8 @@ h3 {
   align-items: flex-start;
 }
 
-.major-project-banner {
+.major-project-banner,
+.pro-project-banner {
   position: relative;
   left: 0px;
   top: -5px;
@@ -588,9 +589,19 @@ h3 {
   margin-bottom: 7px;
 }
 
+.pro-project-banner img {
+  height: 16px;
+  margin-bottom: 5px;
+}
+
 .major-project-banner p {
   margin: 0;
   color: #ffd90f;
+}
+
+.pro-project-banner p {
+  margin: 0;
+  color: #65e240;
 }
 
 .carousel-button {
@@ -732,40 +743,6 @@ h3 {
   pointer-events: all;
   opacity: 1;
   transform: translateY(0);
-}
-
-#class3 {
-  background-image: url(https://cdn.discordapp.com/attachments/1135458074170245212/1182583942277255198/image.png?ex=65853a1f&is=6572c51f&hm=45bd02360912ce3c1398ee0a94f88a956c0c6d3538de7a8f7beb7365b2ccc564&);
-  background-size: cover;
-}
-
-#class4 {
-  background-image: url(https://cdn.discordapp.com/attachments/1135458074170245212/1184353539821162496/image.png?ex=658baa30&is=65793530&hm=1b11206e0e916564200873d6fe52947f259b3163aed4b35330221e62e10bb181&);
-  background-size: cover;
-}
-
-#class5 {
-  background-image: url(https://cdn.discordapp.com/attachments/1102192551114571920/1188326752964071504/image.png?ex=659a1e87&is=6587a987&hm=8f31a52de4b790314363d22bd7aa9dbc4753887c5ab62eb0c31ed98bf6c71321&);
-  background-size: cover;
-  background-position: center;
-}
-
-#class6 {
-  background-image: url(https://cdn.discordapp.com/attachments/1102192551114571920/1191957258200952994/image.png?ex=65a753b3&is=6594deb3&hm=afd1a7b551a17af53df2eb1e441eda50a34de76238b9bd7ac61cdf36c653e60e&);
-  background-size: cover;
-  background-position: center;
-}
-
-#class7 {
-  background-image: url(https://cdn.discordapp.com/attachments/1102192551114571920/1195546932387528704/image.png?ex=65b462d8&is=65a1edd8&hm=226ff0139b5ee3d5043500b7ac42afe9cb98066a4fe138f82f860f4c81d25392&);
-  background-size: cover;
-  background-position: center;
-}
-
-#class8 {
-  background-image: url(https://cdn.discordapp.com/attachments/1102192551114571920/1195545693327200346/image.png?ex=65b461b1&is=65a1ecb1&hm=359e995fc43823f4b3a2e61a847c83b9c18b0f3cf6539e34fd02b4bbbbb4b887&);
-  background-size: cover;
-  background-position: center;
 }
 
 .text-container {
@@ -1136,3 +1113,5 @@ h3 {
   color: white;
   text-decoration: underline;
 }
+
+/* lol */
