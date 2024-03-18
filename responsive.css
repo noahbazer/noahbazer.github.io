@@ -1,89 +1,101 @@
 @media (orientation: portrait) {
-    .splash {
-        margin-top: 50px;
-    }
+  .splash {
+    margin-top: 50px;
+  }
 
-     .text-splash {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 80px;
-     }
-     
-     .text-splash h2 {
-        font-size: 40px;
-        line-height: 1.1em;
-        margin: 0;
-    }
-    
-    .header {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-left: 0;
-        padding-right: 0;
-        background-color: rgba(25, 25, 25, 0.369);
-    }
-    
-    nav {
-        display: none;
-    }
-    
-    #dynCursor {
-        display: inline-flex;
-    }
-    
-    #dynText {
-        padding-left: 12px;
-    }
+  .text-splash {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+  }
 
-    .about-me-content {
-        margin-top: 50px;
-        text-align: center;
-        width: 80%;
-    }
+  .text-splash h2 {
+    font-size: 40px;
+    line-height: 1.1em;
+    margin: 0;
+  }
 
-    .showcase-con {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: rgba(25, 25, 25, 0.369);
+  }
 
-    .modal {
-        width: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-    }
+  nav {
+    display: none;
+  }
 
-    .modal-content {
-        width: 80%;
-    }
+  #dynCursor {
+    display: inline-flex;
+  }
 
-    .modal-content video {
-        height: 40%;
-    }
+  #dynText {
+    padding-left: 12px;
+  }
 
-    .modal-text-plane {
-        flex-direction: column;
-        gap: 5px;
-    }
-    .modal-text-left {
-        width: 100%;
-        max-width: 100%;
-    }
+  .about-me-content {
+    margin-top: 50px;
+    text-align: center;
+    width: 80%;
+  }
 
-    .sort-menu {
-        flex-direction: column;
-    }
+  .showcase-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .sort-link {
-        margin: 3px 0 3px 0;
-    }
+  .modal {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
 
-    .sort-menu .sort-link, .sort-menu p {
-        padding: 0px;
-    }
+  .modal-content {
+    width: 80%;
+  }
+
+  .modal-content video {
+    height: 40%;
+  }
+
+  .modal-text-plane {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .modal-text-left {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .sort-menu {
+    flex-direction: column;
+  }
+
+  .sort-link {
+    margin: 3px 0 3px 0;
+  }
+
+  .sort-menu .sort-link,
+  .sort-menu p {
+    padding: 0px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .about-me-content p,
+  .about-me-2-content p,
+  .about-me-3-content p,
+  .about-me-4-content p {
+    font-size: 1.8vh;
+    text-wrap: wrap;
+    margin: 0;
+  }
 }
