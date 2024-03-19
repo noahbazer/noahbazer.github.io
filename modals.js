@@ -21,7 +21,7 @@ const modalData = [
     isMajorProject: true,
     tools: 'none, all native languages',
     languages: [
-      { lang: 'HTML', value: '26' },
+      { lang: 'HTML', value: '36' },
       { lang: 'CSS', value: '64' },
     ],
   },
