@@ -92,42 +92,6 @@ const modalData = [
     tools: 'Unity 2022',
     languages: [{ lang: 'C#', value: '100' }],
   },
-  {
-    id: 8,
-    backgroundVideo: './assets/timerpreview23.mp4',
-    name: 'stream timer',
-    description: 'build a web-based, no-download stream timer for streamers',
-    tools: 'none, all native languages',
-    languages: [
-      { lang: 'JavaScript', value: '80' },
-      { lang: 'HTML', value: '7' },
-      { lang: 'CSS', value: '13' },
-    ],
-  },
-  {
-    id: 9,
-    backgroundVideo: './assets/timerpreview23.mp4',
-    name: 'stream timer',
-    description: 'build a web-based, no-download stream timer for streamers',
-    tools: 'none, all native languages',
-    languages: [
-      { lang: 'JavaScript', value: '80' },
-      { lang: 'HTML', value: '7' },
-      { lang: 'CSS', value: '13' },
-    ],
-  },
-  {
-    id: 10,
-    backgroundVideo: './assets/timerpreview23.mp4',
-    name: 'stream timer',
-    description: 'build a web-based, no-download stream timer for streamers',
-    tools: 'none, all native languages',
-    languages: [
-      { lang: 'JavaScript', value: '80' },
-      { lang: 'HTML', value: '7' },
-      { lang: 'CSS', value: '13' },
-    ],
-  },
 ];
 
 const fullScreenModal = document.querySelector('.modal');
@@ -137,13 +101,13 @@ const langInfo = document.querySelector('.language-count');
 console.log(dataList);
 
 const langColor = (lang) => {
-    const langColors = {
-        HTML: 'var(--lang-color-html)',
-        CSS: 'var(--lang-color-css)',
-        JavaScript: 'var(--lang-color-js)',
-        'C#': 'var(--lang-color-cs)',
-    };
-    return langColors[lang] || 'black';
+  const langColors = {
+    HTML: 'var(--lang-color-html)',
+    CSS: 'var(--lang-color-css)',
+    JavaScript: 'var(--lang-color-js)',
+    'C#': 'var(--lang-color-cs)',
+  };
+  return langColors[lang] || 'black';
 };
 
 const buildBar = (id) => {
