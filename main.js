@@ -155,6 +155,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const aboutMe4Images = document.querySelector('.about-me-4-images');
     const aboutMe4Content = document.querySelector('.about-me-4-content');
 
+    const aboutMe5Images = document.querySelector('.about-me-5-images');
+    const aboutMe5Content = document.querySelector('.about-me-5-content');
+
     if (currentSection === 1) {
       aboutMe2Images.style.opacity = '1';
       aboutMe2Content.style.opacity = '1';
@@ -168,6 +171,11 @@ document.addEventListener('DOMContentLoaded', function () {
     if (currentSection === 3) {
       aboutMe4Images.style.opacity = '1';
       aboutMe4Content.style.opacity = '1';
+    }
+
+    if (currentSection === 4) {
+      aboutMe5Images.style.opacity = '1';
+      aboutMe5Content.style.opacity = '1';
     }
   }
 

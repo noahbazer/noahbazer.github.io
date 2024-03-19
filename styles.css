@@ -134,20 +134,23 @@ body {
 
 .about-me-3 .about-me-3-content,
 .about-me-2 .about-me-2-content,
-.about-me-4 .about-me-4-content {
+.about-me-4 .about-me-4-content,
+.about-m3-5 .about-me-5-content {
   opacity: 0;
   transition: opacity 1s ease 1s;
 }
 
 .about-me-2 .about-me-2-images.visible,
 .about-me-3 .about-me-3-images.visible,
-.about-me-4 .about-me-4-images.visible {
+.about-me-4 .about-me-4-images.visible,
+.about-me-5 .about-me-5-images.visible {
   animation: fadeInFromBelow 0.5s ease-out 1.5s both;
 }
 
 .about-me-2 .about-me-2-content.visible,
 .about-me-3 .about-me-3-content.visible,
-.about-me-4 .about-me-4-content.visible {
+.about-me-4 .about-me-4-content.visible,
+.about-me-5 .about-me-5-content.visible {
   animation: fadeInFromBelow 0.5s ease-out 1s both;
 }
 
@@ -471,7 +474,8 @@ h3 {
 
 .about-me-2-container,
 .about-me-3-container,
-.about-me-4-container {
+.about-me-4-container,
+.about-me-5-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -626,7 +630,8 @@ h3 {
 
 .about-me-2-content,
 .about-me-3-content,
-.about-me-4-content {
+.about-me-4-content,
+.about-me-5-content {
   width: 30%;
   display: flex;
   flex-direction: column;
@@ -656,7 +661,8 @@ h3 {
 .about-me-content h3,
 .about-me-2-content h3,
 .about-me-3-content h3,
-.about-me-4-content h3 {
+.about-me-4-content h3,
+.about-me-5-content h3 {
   font-size: 6vh;
   font-weight: 600;
 }
@@ -672,7 +678,8 @@ h3 {
 .about-me-content p,
 .about-me-2-content p,
 .about-me-3-content p,
-.about-me-4-content p {
+.about-me-4-content p,
+.about-me-5-content p {
   font-size: 1.2vh;
   text-wrap: wrap;
   margin: 0;

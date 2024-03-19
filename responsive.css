@@ -93,7 +93,8 @@
   .about-me-content p,
   .about-me-2-content p,
   .about-me-3-content p,
-  .about-me-4-content p {
+  .about-me-4-content p,
+  .about-me-5-content p {
     font-size: 1em;
     text-wrap: wrap;
     margin: 0;
@@ -104,7 +105,8 @@
   .about-me-content p,
   .about-me-2-content p,
   .about-me-3-content p,
-  .about-me-4-content p {
+  .about-me-4-content p,
+  .about-me-5-content p {
     font-size: 0.8em;
     text-wrap: wrap;
     margin: 0;
