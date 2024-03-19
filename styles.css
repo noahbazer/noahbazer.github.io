@@ -126,7 +126,8 @@ body {
 
 .about-me-3 .about-me-3-images,
 .about-me-2 .about-me-2-images,
-.about-me-4 .about-me-4-images {
+.about-me-4 .about-me-4-images,
+.about-me-5 .about-me-5-images {
   opacity: 0;
   transition: opacity 1s ease 1.5s;
   animation: fadeUpFromBottom 1s ease 2s;
@@ -135,7 +136,7 @@ body {
 .about-me-3 .about-me-3-content,
 .about-me-2 .about-me-2-content,
 .about-me-4 .about-me-4-content,
-.about-m3-5 .about-me-5-content {
+.about-me-5 .about-me-5-content {
   opacity: 0;
   transition: opacity 1s ease 1s;
 }
