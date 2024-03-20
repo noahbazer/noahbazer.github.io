@@ -100,7 +100,12 @@ const modalData = [
     thumbnail: '../assets/modals/thumbnails/gitart.png',
     isMajorProject: false,
     tools: 'React, TailwindCSS, DaisyUI',
-    languages: [{ lang: 'TypeScript', value: '100' }],
+    languages: [
+      { lang: 'CSS', value: '45.5' },
+      { lang: 'TypeScript', value: '33.7' },
+      { lang: 'JavaScript', value: '11.3' },
+      { lang: 'HTML', value: '9.5' },
+    ],
   },
 ];
 

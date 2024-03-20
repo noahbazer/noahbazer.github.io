@@ -1,7 +1,7 @@
 /* COLOR VARIABLES */
 :root {
   --lang-color-html: rgb(248, 97, 97);
-  --lang-color-css: rgb(23, 107, 252);
+  --lang-color-css: #563d7c;
   --lang-color-js: rgb(255, 255, 26);
   --lang-color-ts: #3178c6;
   --lang-color-react: rgb(97, 218, 251);
