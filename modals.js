@@ -92,6 +92,16 @@ const modalData = [
     tools: 'Unity 2022',
     languages: [{ lang: 'C#', value: '100' }],
   },
+  {
+    id: 8,
+    backgroundVideo: './assets/gitartpreview2.mp4',
+    name: 'HeatMap Art',
+    description: 'an app that allows you to make art like a git heatmap',
+    thumbnail: '../assets/modals/thumbnails/gitart.png',
+    isMajorProject: false,
+    tools: 'React',
+    languages: [{ lang: 'JavaScript', value: '100' }],
+  },
 ];
 
 const fullScreenModal = document.querySelector('.modal');
