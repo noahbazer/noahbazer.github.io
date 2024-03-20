@@ -99,8 +99,8 @@ const modalData = [
     description: 'an app that allows you to make art like a git heatmap',
     thumbnail: '../assets/modals/thumbnails/gitart.png',
     isMajorProject: false,
-    tools: 'React',
-    languages: [{ lang: 'JavaScript', value: '100' }],
+    tools: 'React, TailwindCSS, DaisyUI',
+    languages: [{ lang: 'TypeScript', value: '100' }],
   },
 ];
 
@@ -115,6 +115,7 @@ const langColor = (lang) => {
     HTML: 'var(--lang-color-html)',
     CSS: 'var(--lang-color-css)',
     JavaScript: 'var(--lang-color-js)',
+    TypeScript: 'var(--lang-color-ts)',
     'C#': 'var(--lang-color-cs)',
   };
   return langColors[lang] || 'black';
