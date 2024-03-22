@@ -541,7 +541,7 @@ h3 {
 
 .carousel-items {
   position: relative;
-  height: 260px;
+  min-height: 30vh;
   left: 0;
   width: auto;
   display: flex;

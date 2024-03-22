@@ -107,6 +107,20 @@ const modalData = [
       { lang: 'HTML', value: '9.5' },
     ],
   },
+  {
+    id: 9,
+    backgroundVideo: './assets/controllerpreview.mp4',
+    name: 'ControllerTest',
+    description: 'a web-based application for testing and configuring controllers',
+    thumbnail: '../assets/modals/thumbnails/controller.png',
+    isMajorProject: false,
+    tools: 'none, all native languages',
+    languages: [
+      { lang: 'CSS', value: '42' },
+      { lang: 'HTML', value: '40' },
+      { lang: 'JavaScript', value: '18' },
+    ],
+  },
 ];
 
 const fullScreenModal = document.querySelector('.modal');
