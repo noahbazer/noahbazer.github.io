@@ -186,9 +186,9 @@ body {
 .resume-button {
   display: inline-block;
   width: 10vw;
-  padding: 10px 20px;
-  margin-top: 20px;
-  font-size: 1.2vh;
+  padding: 1vh 2vw;
+  margin-top: 1vh;
+  font-size: 1.6vh;
   text-align: center;
   text-decoration: none;
   background-color: #3097d7;
