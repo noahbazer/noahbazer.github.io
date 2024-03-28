@@ -64,7 +64,10 @@ document.addEventListener('DOMContentLoaded', function () {
     if (isScrolling) return;
     isScrolling = true;
 
-    const targetPosition = sections[targetSection].offsetTop;
+    // Use getBoundingClientRect to calculate the target position
+    const targetPosition =
+      sections[targetSection].getBoundingClientRect().top + window.scrollY;
+
     const currentPosition = window.scrollY;
     const distance = targetPosition - currentPosition;
     const duration = 1000;
@@ -121,6 +124,11 @@ document.addEventListener('DOMContentLoaded', function () {
     updateScrollHintVisibility();
   }
 
+  window.addEventListener('resize', function () {
+    const targetPosition =
+      sections[currentSection].getBoundingClientRect().top + window.scrollY;
+    window.scrollTo(0, targetPosition);
+  });
   function updateHeaderClass() {
     const scrolledClass = 'header-container-scrolled';
     const scrollThreshold = 5;
