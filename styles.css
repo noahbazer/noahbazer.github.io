@@ -470,7 +470,7 @@ h3 {
 .about-me-photo img {
   opacity: 0;
   position: relative;
-  width: 90%;
+  width: 50vh;
   animation: fadeInFromBelow 1s ease-in-out 1.5s forwards;
   -webkit-animation: fadeInFromBelow 1s ease-in-out 1.5s forwards; /* Safari and Chrome */
   -moz-animation: fadeInFromBelow 1s ease-in-out 1.5s forwards; /* Firefox */
