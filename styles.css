@@ -51,6 +51,19 @@ body.light-theme {
   z-index: -1;
 }
 
+.bg,
+.bg2 {
+  pointer-events: none;
+}
+
+#container {
+  pointer-events: none;
+}
+
+#container * {
+  pointer-events: auto;
+}
+
 .HTML {
   color: var(--lang-color-html);
 }
@@ -171,7 +184,9 @@ body {
 
 .resume-button {
   display: inline-block;
+  width: 10vw;
   padding: 10px 20px;
+  margin-top: 20px;
   font-size: 1.2vh;
   text-align: center;
   text-decoration: none;
@@ -483,12 +498,14 @@ h3 {
   gap: 130px;
 }
 
-.other .tech-stack .icon {
-  width: 20px;
-  height: 20px;
+.tech-stack .icon img,
+.tech-stack li .modal-text-right {
+  width: 1.5vh;
+  height: 1.5vh;
 }
 
-.other li {
+.other li,
+.tech-stack li {
   font-size: 1.2em;
   display: flex;
   flex-direction: row;
@@ -699,19 +716,24 @@ h3 {
   margin-right: 10px;
 }
 
-.tech-stack li {
+.tech-stack li,
+.tech-stack li img {
   margin-bottom: 0px;
   font-size: 1.6vh;
 }
 
 .tech-stack i,
 .icon {
+  width: 2vh;
   margin-right: 10px;
 }
 
 .icon {
-  width: 17px;
-  height: 17px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  height: 1em;
 }
 
 .int {

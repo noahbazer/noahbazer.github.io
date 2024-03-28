@@ -219,3 +219,13 @@ function checkDisclaimer() {
 document.addEventListener('DOMContentLoaded', function () {
   checkDisclaimer();
 });
+
+//function that takes the resume download button and changes the text to "Downloaded" when clicked, then changes back to "Download Resume" after 3 seconds
+
+function downloadResume() {
+  let downloadButton = document.getElementById('resume');
+  downloadButton.innerHTML = 'Downloading...';
+  setTimeout(() => {
+    downloadButton.innerHTML = 'Download Resume';
+  }, 3000);
+}
