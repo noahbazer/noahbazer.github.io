@@ -198,6 +198,24 @@ body {
   pointer-events: all;
 }
 
+.resume-button-mobile {
+  display: inline-block;
+  padding: 1vh 2vw;
+  margin-top: 1vh;
+  text-align: center;
+  text-decoration: none;
+  background-color: #3097d7;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+  pointer-events: all;
+}
+
+.resume-button-mobile {
+  width: 60vw;
+  font-size: 2vh;
+}
+
 .resume-button:hover {
   background-color: #2472a3;
 }
@@ -1118,6 +1136,10 @@ h3 {
   }
 
   body .disclaimer {
+    display: none;
+  }
+
+  #header-container {
     display: none;
   }
 }
