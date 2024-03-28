@@ -229,3 +229,10 @@ function downloadResume() {
     downloadButton.innerHTML = 'Download Resume';
   }, 3000);
 }
+
+//function that logs the screen width and height on page load
+
+document.addEventListener('DOMContentLoaded', function () {
+  console.log(`Screen width: ${window.innerWidth}`);
+  console.log(`Screen height: ${window.innerHeight}`);
+});

@@ -475,6 +475,7 @@ h3 {
   -webkit-animation: fadeInFromBelow 1s ease-in-out 1.5s forwards; /* Safari and Chrome */
   -moz-animation: fadeInFromBelow 1s ease-in-out 1.5s forwards; /* Firefox */
   -o-animation: fadeInFromBelow 1s ease-in-out 1.5s forwards;
+  max-height: 80%;
 }
 
 .about-me-desc {
