@@ -180,6 +180,7 @@ body {
   height: 5vh;
   background-color: rgb(29, 29, 29);
   transition: background-color 0.2s ease-in-out, border-width 0.2s ease-in-out;
+  z-index: 1000000000;
 }
 
 .resume-button {
