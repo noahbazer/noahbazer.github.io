@@ -199,36 +199,20 @@ const hideDisclaimer = () => {
   disclaimer.style.bottom = '-100px';
 };
 
-// Add a key to localStorage
-localStorage.setItem('myKey', 'myValue');
-
-// Check if the key exists when the page loads
-document.addEventListener('DOMContentLoaded', function () {
-  if (localStorage.getItem('myKey')) {
-    // Key exists, do something
-    console.log('Key exists');
-  } else {
-    // Key does not exist, do something else
-    console.log('Key does not exist');
-  }
-});
-
-function deleteDisclaimer() {
-  localStorage.setItem('disclaimerKey', 'true');
+const deleteDisclaimer = () => {
+  localStorage.setItem('disclaimer', 'true');
   hideDisclaimer();
-}
+};
 
-function checkDisclaimer() {
-  if (localStorage.getItem('disclaimerKey')) {
-    disclaimer.style.display = 'none';
+const checkDisclaimer = () => {
+  if (localStorage.getItem('disclaimer') !== 'true') {
+    disclaimer.style.bottom = '0';
   }
-}
+};
 
 document.addEventListener('DOMContentLoaded', function () {
   checkDisclaimer();
 });
-
-//function that takes the resume download button and changes the text to "Downloaded" when clicked, then changes back to "Download Resume" after 3 seconds
 
 function downloadResume() {
   let downloadButton = document.getElementById('resume');

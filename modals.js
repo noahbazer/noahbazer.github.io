@@ -111,7 +111,8 @@ const modalData = [
     id: 9,
     backgroundVideo: './assets/controllerpreview.mp4',
     name: 'ControllerTest',
-    description: 'a web-based application for testing and configuring controllers',
+    description:
+      'a web-based application for testing and configuring controllers',
     thumbnail: '../assets/modals/thumbnails/controller.png',
     isMajorProject: false,
     tools: 'none, all native languages',
