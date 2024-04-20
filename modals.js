@@ -1,6 +1,22 @@
 const modalData = [
   {
     id: 1,
+    backgroundVideo: './assets/skypreview.mp4',
+    name: 'sky height tool',
+    description:
+      'a tool for calculating the height of characters in sky: children of the light',
+    thumbnail: '../assets/modals/thumbnails/sky.png',
+    isMajorProject: true,
+    tools: 'none, all native languages',
+    languages: [
+      { lang: 'JavaScript', value: '50.6' },
+      { lang: 'CSS', value: '36.8' },
+      { lang: 'HTML', value: '12.6' },
+    ],
+    livelink: 'https://skyheight.net',
+  },
+  {
+    id: 2,
     backgroundVideo: './assets/battleshowcase.mp4',
     name: 'node.js battleship',
     description: 'build a playable, terminal-only battleship using node.js',
@@ -12,7 +28,7 @@ const modalData = [
     link: 'https://github.com/noahbazer/battleship-project',
   },
   {
-    id: 2,
+    id: 3,
     backgroundVideo: './assets/saaspreview.mp4',
     name: 'saas website',
     description:
@@ -26,7 +42,7 @@ const modalData = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     backgroundVideo: './assets/rebrandshowcase2.mp4',
     name: 'company rebrand',
     description: 'revitalize the front-face of an existing company brand',
@@ -40,7 +56,7 @@ const modalData = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     backgroundVideo: './assets/concretepreview.mp4',
     name: 'concrete world',
     description: 'redesign a concrete company website to be more modern',
@@ -54,7 +70,7 @@ const modalData = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     backgroundVideo: './assets/tavrshowcase5.mp4',
     name: 'tavr website',
     description: "build a front-face for TBVR's flagship game",
@@ -67,7 +83,7 @@ const modalData = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     backgroundVideo: './assets/ffshowcasenew.mp4',
     name: 'carrd alternative',
     description:
@@ -82,7 +98,7 @@ const modalData = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     backgroundVideo: './assets/asteriateaser.mp4',
     name: 'vr mmorpg',
     description:
@@ -93,7 +109,7 @@ const modalData = [
     languages: [{ lang: 'C#', value: '100' }],
   },
   {
-    id: 8,
+    id: 9,
     backgroundVideo: './assets/gitartpreview2.mp4',
     name: 'HeatMap Art',
     description: 'an app that allows you to make art like a git heatmap',
@@ -108,7 +124,7 @@ const modalData = [
     ],
   },
   {
-    id: 9,
+    id: 10,
     backgroundVideo: './assets/controllerpreview.mp4',
     name: 'ControllerTest',
     description:
@@ -198,7 +214,12 @@ const displayLangs = (id) => {
 
 const setLink = (id) => {
   const gitLink = document.querySelector('.git-link');
-  if (modalData[id - 1].link) {
+  if (modalData[id - 1].livelink) {
+    gitLink.innerHTML = `<a class="git-link" target="_blank" href = ${
+      modalData[id - 1].livelink
+    } rel="noreferrer noopener">${modalData[id - 1].livelink}
+    </a>`;
+  } else if (modalData[id - 1].link) {
     gitLink.innerHTML = `<a class="git-link" target="_blank" href = ${
       modalData[id - 1].link
     } rel="noreferrer noopener">

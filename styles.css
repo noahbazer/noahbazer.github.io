@@ -924,7 +924,7 @@ h3 {
 
 .git-link,
 .git-link span {
-  color: gray;
+  color: rgb(0, 183, 255);
   text-decoration: none;
 }
 
@@ -934,13 +934,13 @@ h3 {
 
 .git-link-failed,
 .git-link-failed span {
-  color: gray;
+  color: rgb(0, 183, 255);
   text-decoration: none;
 }
 
 .git-link:hover,
 .git-link:hover span {
-  color: rgb(83, 178, 255);
+  color: rgb(0, 183, 255);
 }
 
 .gray {
