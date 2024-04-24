@@ -14,7 +14,7 @@ const modalData = [
   {
     id: 2,
     backgroundVideo: './assets/saaspreview.mp4',
-    name: 'saas website',
+    name: 'software as a service (saas) website',
     description:
       'build a software-as-a-service website from predefined mockups',
     thumbnail: '../assets/modals/thumbnails/saas.png',
