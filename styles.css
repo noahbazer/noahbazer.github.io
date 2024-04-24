@@ -572,7 +572,7 @@ h3 {
 
 .carousel-container {
   width: 100%;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
 }
 
@@ -580,20 +580,20 @@ h3 {
   position: relative;
   min-height: 30vh;
   left: 0;
-  width: auto;
+  width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 15px;
   transition: all 0.5s ease-in-out;
 }
 
 .carousel-item {
   position: relative;
   top: 0;
-  height: 400px;
-  min-width: 150px;
+  height: 10vh;
+  width: 90%;
   border-radius: 15px;
   border: 1px solid white;
   display: flex;
@@ -602,10 +602,13 @@ h3 {
 }
 
 .wrapper {
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  height: 5vh;
+  width: 100%;
+  padding: 10px 15px;
+}
+
+.wrapper:hover {
+  border: 1px solid white;
 }
 
 .major-project-banner,
@@ -668,13 +671,27 @@ h3 {
 
 .about-me-2-content,
 .about-me-3-content,
-.about-me-4-content,
-.about-me-5-content {
+.about-me-4-content {
   width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+
+.about-me-5-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me-5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-me-2,
@@ -763,24 +780,24 @@ h3 {
 }
 
 .modal-preview {
+  box-sizing: border-box;
   position: relative;
   top: 0;
   overflow: hidden;
-  width: 10vw;
-  min-width: 90%;
-  height: 3vh;
-  max-height: 5vh;
+  width: 90%;
+  height: 90%;
   display: flex;
-  padding: 10vh 0px 0px 0px;
+  padding: 5px 10px;
   border-radius: 25px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   z-index: 100;
   flex-basis: 20%;
+  border: 1px solid rgb(61, 61, 61);
 }
 
-.modal-preview:hover .text-container {
-  top: 0;
+.modal-preview:hover {
+  border: 1px solid white;
   transition: all 0.2s ease-in-out;
 }
 
@@ -798,17 +815,12 @@ h3 {
 }
 
 .text-container {
-  position: relative;
-  top: 70px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  gap: 50px;
-  background-color: rgba(0, 0, 0, 0.605);
-  padding: 1px 30px;
-  border-radius: 0 0 25px 25px;
-  text-align: center;
-  transition: all 0.2s ease-in-out;
+  z-index: 100;
+}
+
+.text-container p {
+  margin: 0;
+  color: white;
 }
 
 .modal {
@@ -1152,4 +1164,62 @@ h3 {
   cursor: pointer;
   color: white;
   text-decoration: underline;
+}
+
+.showcase-section-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  max-width: 90%;
+}
+
+.showcase-video {
+  max-width: 90%;
+}
+
+.about-me-5-content h4,
+.about-me-5-images h4 {
+  font-size: 3vh;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: white;
+}
+
+.about-me-5-content p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-width: 90%;
+}
+
+.showcase-title2 {
+  color: whtie;
+  font-size: 5vh;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.showcase-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5vh;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.showcase-link span {
+  color: white;
+  margin-left: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.showcase-link:hover {
+  span {
+    color: rgb(0, 183, 255);
+    transition: all 0.2s ease-in-out;
+  }
+  color: rgb(0, 183, 255);
+  transition: all 0.2s ease-in-out;
 }

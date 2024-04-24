@@ -1,22 +1,6 @@
 const modalData = [
   {
     id: 1,
-    backgroundVideo: './assets/skypreview.mp4',
-    name: 'sky height tool',
-    description:
-      'a tool for calculating the height of characters in sky: children of the light',
-    thumbnail: '../assets/modals/thumbnails/sky.png',
-    isMajorProject: true,
-    tools: 'none, all native languages',
-    languages: [
-      { lang: 'JavaScript', value: '50.6' },
-      { lang: 'CSS', value: '36.8' },
-      { lang: 'HTML', value: '12.6' },
-    ],
-    livelink: 'https://skyheight.net',
-  },
-  {
-    id: 2,
     backgroundVideo: './assets/battleshowcase.mp4',
     name: 'node.js battleship',
     description: 'build a playable, terminal-only battleship using node.js',
@@ -28,7 +12,7 @@ const modalData = [
     link: 'https://github.com/noahbazer/battleship-project',
   },
   {
-    id: 3,
+    id: 2,
     backgroundVideo: './assets/saaspreview.mp4',
     name: 'saas website',
     description:
@@ -42,7 +26,7 @@ const modalData = [
     ],
   },
   {
-    id: 4,
+    id: 3,
     backgroundVideo: './assets/rebrandshowcase2.mp4',
     name: 'company rebrand',
     description: 'revitalize the front-face of an existing company brand',
@@ -56,7 +40,7 @@ const modalData = [
     ],
   },
   {
-    id: 5,
+    id: 4,
     backgroundVideo: './assets/concretepreview.mp4',
     name: 'concrete world',
     description: 'redesign a concrete company website to be more modern',
@@ -70,7 +54,7 @@ const modalData = [
     ],
   },
   {
-    id: 6,
+    id: 5,
     backgroundVideo: './assets/tavrshowcase5.mp4',
     name: 'tavr website',
     description: "build a front-face for TBVR's flagship game",
@@ -83,7 +67,7 @@ const modalData = [
     ],
   },
   {
-    id: 7,
+    id: 6,
     backgroundVideo: './assets/ffshowcasenew.mp4',
     name: 'carrd alternative',
     description:
@@ -98,7 +82,7 @@ const modalData = [
     ],
   },
   {
-    id: 8,
+    id: 7,
     backgroundVideo: './assets/asteriateaser.mp4',
     name: 'vr mmorpg',
     description:
@@ -109,7 +93,7 @@ const modalData = [
     languages: [{ lang: 'C#', value: '100' }],
   },
   {
-    id: 9,
+    id: 8,
     backgroundVideo: './assets/gitartpreview2.mp4',
     name: 'HeatMap Art',
     description: 'an app that allows you to make art like a git heatmap',
@@ -124,7 +108,7 @@ const modalData = [
     ],
   },
   {
-    id: 10,
+    id: 9,
     backgroundVideo: './assets/controllerpreview.mp4',
     name: 'ControllerTest',
     description:
@@ -247,44 +231,9 @@ const setModalData = (id) => {
 const carouselItems = document.querySelector('.carousel-items');
 
 modalData.forEach((item, i) => {
-  const wrapper = document.createElement('div');
-  wrapper.className = 'wrapper';
-
-  if (item.isMajorProject) {
-    const majorProjectBanner = document.createElement('div');
-    majorProjectBanner.className = 'major-project-banner';
-
-    const majorProjectText = document.createElement('p');
-    majorProjectText.textContent = 'Major Project';
-    majorProjectBanner.appendChild(majorProjectText);
-
-    const majorProjectImage = document.createElement('img');
-    majorProjectImage.src = './assets/majoricon.png';
-    majorProjectBanner.appendChild(majorProjectImage);
-
-    wrapper.appendChild(majorProjectBanner);
-    wrapper.style.marginBottom = '28px';
-  }
-
-  if (item.isProProject) {
-    const proProjectBanner = document.createElement('div');
-    proProjectBanner.className = 'pro-project-banner';
-
-    const proProjectText = document.createElement('p');
-    proProjectText.textContent = 'Pro Project';
-    proProjectBanner.appendChild(proProjectText);
-
-    const proProjectImage = document.createElement('img');
-    proProjectImage.src = './assets/proicon.png';
-    proProjectBanner.appendChild(proProjectImage);
-
-    wrapper.appendChild(proProjectBanner);
-    wrapper.style.marginBottom = '28px';
-  }
-
   const modalPreview = document.createElement('div');
   modalPreview.className = 'modal-preview';
-  modalPreview.style.backgroundImage = `url(${item.thumbnail})`;
+  modalPreview.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${item.thumbnail})`;
   modalPreview.style.backgroundSize = 'cover';
   modalPreview.dataset.filter = item.filter;
   modalPreview.onclick = function () {
@@ -298,8 +247,7 @@ modalData.forEach((item, i) => {
   const p = document.createElement('p');
   p.textContent = item.name;
 
-  textContainer.appendChild(p);
   modalPreview.appendChild(textContainer);
-  wrapper.appendChild(modalPreview);
-  carouselItems.appendChild(wrapper);
+  textContainer.appendChild(p);
+  carouselItems.appendChild(modalPreview);
 });
