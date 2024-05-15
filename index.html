@@ -84,293 +84,496 @@
     ></script>
   </head>
   <body>
-    <div
-      class="parallax1"
-      id="parallax1"
-    ></div>
-    <div
-      class="parallax2"
-      id="parallax2"
-    ></div>
-    <div
-      class="intro-screen-layer"
-      id="intro-screen-layer"
-    >
-      <h2
-        class="intro-buffer"
-        id="introBuffer"
+    <div class="modal-bundle">
+      <div
+        class="modal"
+        id="modal"
+        onclick="removeModal()"
       >
-        Hi, my name is
-      </h2>
-    </div>
-    <div
-      class="intro-screen"
-      id="intro-screen"
-    >
-      <div class="intro-text-container">
-        <h1
-          class="intro-name"
-          id="introName"
+        <div
+          class="modal-content fade-in-up"
+          id="modal-content"
+          onclick="event.stopPropagation()"
         >
-          Noah Bazer
-        </h1>
+          <i
+            class="fa-solid fa-xmark exit-button"
+            onclick="removeModal()"
+          ></i>
+          <video
+            loop
+            muted
+            class="modal-datalist"
+            autoplay="autoplay"
+            src="./assets/battleshowcase.mp4"
+          ></video>
+          <div class="modal-text-plane">
+            <div class="modal-text-left">
+              <p><strong>project:</strong></p>
+              <p class="modal-datalist">test</p>
+              <hr />
+              <p><strong>objective:</strong></p>
+              <p class="modal-datalist">test</p>
+              <hr />
+              <p><strong>tools/packages:</strong></p>
+              <p class="modal-datalist">test</p>
+            </div>
+            <div class="modal-text-right">
+              <p>Languages:</p>
+              <div
+                class="language-bar"
+                id="languagebar1"
+              ></div>
+              <div class="language-count">
+                <div class="yellow">
+                  Javascript<span class="white">- 100%</span>
+                </div>
+              </div>
+              <a
+                class="git-link"
+                target="_blank"
+                rel="noreferrer noopener"
+                href="https://github.com/noahbazer/battleship-project"
+              >
+                open on <span class="fa-brands fa-github"></span>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <header>
-      <h2
-        class="header-title"
-        id="header-title"
-      >
-        Noah Bazer
-      </h2>
-      <nav id="navbar">
-        <a href="https://github.com"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
-        <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
-        <a
-          class="contactme"
-          href="mailto:your-email@example.com"
-          >Contact Me</a
-        >
-      </nav>
-    </header>
     <div
-      class="main-container"
-      id="main-container"
+      class="rellax bg"
+      data-rellax-speed="12"
+    ></div>
+    <div
+      class="rellax bg2"
+      data-rellax-speed="5"
+    ></div>
+    <div
+      class="header-container"
+      id="header-container"
     >
-      <div class="main-info">
-        <div class="image">
+      <div
+        class="header"
+        id="header"
+      >
+        <div class="header-start">
+          <h3 class="logo">&lt;nb&gt;</h3>
+          <h3>noahbazer.dev</h3>
+        </div>
+        <nav class="socials">
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/noahbazer/"
+            ><span class="fa-brands fa-linkedin"></span
+          ></a>
+          <a
+            target="_blank"
+            href="mailto:noahbazerdev@gmail.com"
+            ><span class="fa-solid fa-envelope"></span
+          ></a>
+          <a
+            target="_blank"
+            href="https://github.com/noahbazer"
+            ><span class="fa-brands fa-github"></span
+          ></a>
+          <a
+            target="_blank"
+            href="https://medium.com/@nbazer00"
+            ><span class="fa-brands fa-medium"></span
+          ></a>
+        </nav>
+      </div>
+    </div>
+    <div id="container">
+      <section
+        class="about-me section"
+        id="section1"
+      >
+        <div class="about-me-content">
+          <h3>Hi, I'm Noah.</h3>
+          <p class="about-me-desc">
+            I'm a 23-year-old front-end web/software developer with a passion
+            for creating beautiful and innovative solutions for clients of all
+            needs. I'm constantly working to expand my skillset and stay ahead
+            of industry standards.
+          </p>
+          <div class="about-me-container">
+            <div class="stack">
+              <p>My Tech Stack:</p>
+              <ul class="tech-stack">
+                <li class="HTML"><i class="fab fa-html5"></i> HTML</li>
+                <li class="CSS">
+                  <i class="fab fa-css3-alt"></i> CSS (+ Tailwind CSS)
+                </li>
+                <li class="JavaScript"><i class="fab fa-js"></i> Javascript</li>
+                <li class="TypeScript">
+                  <div class="icon">
+                    <img
+                      src="./assets/tslogo.svg"
+                      alt="TypeScript logo"
+                    />
+                  </div>
+                  Typescript
+                </li>
+                <li class="React">
+                  <i class="fab fa-react"></i> React (+ React Native)
+                </li>
+                <li class="Node"><i class="fab fa-node-js"></i> Node.js</li>
+                <!-- <li class="Express"><i class="fas fa-server"></i> Express</li>
+                <li class="MongoDB"><i class="fas fa-database"></i> MongoDB</li> -->
+              </ul>
+              <a
+                href="./assets/resume.pdf"
+                download
+                id="resume"
+                class="resume-button"
+                onclick="downloadResume()"
+                >Download My Resume</a
+              >
+            </div>
+            <div class="other">
+              <p>My other skills:</p>
+              <ul class="tech-stack">
+                <li>
+                  <div class="icon">
+                    <img
+                      src="./assets/photoshoplogo.png"
+                      alt="TypeScript logo"
+                    />
+                  </div>
+                  Adobe Photoshop
+                </li>
+                <li>
+                  <div class="icon">
+                    <img
+                      src="./assets/premierelogo.png"
+                      alt="TypeScript logo"
+                    />
+                  </div>
+                  Adobe Premiere Pro
+                </li>
+                <li>
+                  <div class="icon">
+                    <img
+                      src="./assets/hitfilmlogo.webp"
+                      alt="TypeScript logo"
+                    />
+                  </div>
+                  Hitfilm Express
+                </li>
+                <li>
+                  <div class="icon">
+                    <img
+                      src="./assets/blenderlogo.png"
+                      alt="TypeScript logo"
+                    />
+                  </div>
+                  Blender Texturing
+                </li>
+                <li>
+                  <div class="icon">
+                    <img
+                      src="./assets/unitylogo.png"
+                      alt="TypeScript logo"
+                    />
+                  </div>
+                  Unity Game Development
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="about-me-photo">
           <img
-            class="main-photo"
-            src="./assets/splashphoto2.png"
-            alt="Noah Bazer"
+            src="./assets/splashphoto.png"
+            alt="me"
           />
         </div>
-        <div class="about-me-container">
-          <div class="about-me">
-            <h3>About Me</h3>
+      </section>
+      <div class="scroll-hint">
+        <p>
+          scroll down to see more<span class="fa-solid fa-chevron-down"></span>
+        </p>
+      </div>
+      <section class="about-me-2 section">
+        <div class="about-me-2-container">
+          <div class="about-me-2-images">
+            <div class="about-me-2-image">
+              <img
+                class="code-snippet"
+                src="./assets/badcode2.png"
+                alt="web development"
+              />
+              <span class="fa-solid fa-arrow-down"></span>
+              <img
+                class="code-snippet"
+                src="./assets/goodcode2.png"
+                alt="web development"
+              />
+              <p class="psa">
+                For those wondering, I'm using Atom-One-Dark and MonoCraft with
+                glyphs enabled :)
+              </p>
+            </div>
+            <div class="about-me-2-image">
+              <img
+                class="code-snippet"
+                src="./assets/badcode1.png"
+                alt="web development"
+              />
+              <span class="fa-solid fa-arrow-down"></span>
+              <img
+                class="code-snippet"
+                src="./assets/goodcode1.png"
+                alt="web development"
+              />
+            </div>
+          </div>
+          <div class="about-me-2-content">
+            <h3 class="tagline2">Clean code,<br />every time.</h3>
             <p>
-              I am a full-stack developer with a passion for creating and
-              designing web applications. I have experience with a variety of
-              technologies and frameworks, including React, Node.js, and
-              Express. I am always looking for new opportunities to learn and
-              grow as a developer.
+              I'm a firm believer in the power of clean, efficient code. I
+              strive to write code that is easy to read, easy to maintain, and
+              easy to understand. I'm constantly learning new techniques and
+              best practices to ensure that my code is always top-notch.
+            </p>
+            <br />
+            <p>
+              I leverage tools like Prettier and am comfortable working with
+              team convention sheets to integrate my code seamlessly into any
+              team project.
+            </p>
+            <br />
+            <p>
+              I'm also a huge fan of the "Don't Repeat Yourself" principle and
+              am always looking for better ways to refactor and optimize my
+              code.
             </p>
           </div>
-          <div class="stack">
-            <h3>My Stack</h3>
-            <div
-              class="stack-container"
-              id="stack-container"
-            >
-              <div class="blurb html">
-                <span class="fab fa-html5"></span>HTML
-              </div>
-              <div class="blurb css"><span class="fab fa-css3"></span>CSS</div>
-              <div class="blurb javascript">
-                <span class="fab fa-js"></span>JavaScript
-              </div>
-              <div class="blurb typescript">
-                <span class="fa-kit fa-typescript"></span>TypeScript
-              </div>
-              <div class="blurb react">
-                <span class="fab fa-react"></span>React
-              </div>
-              <div class="blurb node">
-                <span class="fab fa-node"></span>Node
-              </div>
-              <div class="blurb express">
-                <span class="fab fa-node-js"></span>Express
-              </div>
-              <div class="blurb mongodb">
-                <span class="fa-solid fa-database"></span>MongoDB
-              </div>
-              <div class="blurb github">
-                <span class="fab fa-github"></span>GitHub
+        </div>
+      </section>
+      <section class="about-me-3 section">
+        <div class="about-me-3-container">
+          <div class="about-me-3-content">
+            <h3 class="tagline2">
+              Community Active,<br />open source defender.
+            </h3>
+            <p>
+              I'm active in the developer community and am always looking for
+              new ways to give back. I'm a huge fan of open source software and
+              am always looking for new ways to contribute. I'm also a big fan
+              of teaching and mentoring and am always looking for new ways to
+              help others learn and grow.
+            </p>
+            <br />
+            <p>
+              Since I started committing to GitHub in 2023, I've made over 300
+              commits and have contributed to over 20 repositories.
+            </p>
+            <br />
+            <p>
+              I also am very active on social platforms such as Medium, where I
+              write articles about my experiences and share my knowledge with
+              the community.
+            </p>
+          </div>
+          <div class="about-me-3-images">
+            <div class="about-me-3-image">
+              <a
+                class="article"
+                href="https://medium.com/@nbazer00/5-important-javascript-conventions-ive-learned-during-my-coding-journey-3ff3ff215b6a?source=user_profile---------0----------------------------"
+                target="_blank"
+              >
+                <img
+                  src="./assets/article1.png"
+                  alt="article"
+                />
+              </a>
+              <a
+                class="article"
+                href="https://medium.com/@nbazer00/callbacks-in-javascript-for-dummies-516eb194827c?source=user_profile---------2----------------------------"
+                target="_blank"
+              >
+                <img
+                  src="./assets/article2.png"
+                  alt="web development"
+                />
+              </a>
+              <a
+                class="article"
+                href="https://medium.com/@nbazer00/how-i-built-battleship-from-scratch-in-javascript-3db9251fae72?source=user_profile---------1----------------------------"
+                target="_blank"
+              >
+                <img
+                  src="./assets/article3.png"
+                  alt="web development"
+                />
+              </a>
+            </div>
+            <div class="profiles">
+              <div class="git-profile">
+                <img
+                  src="./assets/gitprofile.jpg"
+                  alt="github profile"
+                />
+                <div class="profile-links">
+                  <a
+                    target="_blank"
+                    href="https://github.com/noahbazer"
+                    >Go to my Github profile<span
+                      class="fa-solid fa-arrow-right"
+                    ></span
+                  ></a>
+                  <a
+                    target="_blank"
+                    href="https://medium.com/@nbazer00"
+                    >Go to my Medium page<span
+                      class="fa-solid fa-arrow-right"
+                    ></span
+                  ></a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="main-showcase">
-        <h2>My Major Projects:</h2>
-        <div class="major-projects">
-          <div class="project-modal">
-            <div class="modal-hover">
-              <p class="modal-hover-text">
-                Click to travel<span class="fa-solid fa-arrow-right"></span>
-              </p>
+      </section>
+      <section class="about-me-4 section">
+        <div class="about-me-4-container">
+          <div class="about-me-4-images">
+            <div class="about-me-4-image">
+              <img
+                class="codewars"
+                src="https://www.codewars.com/users/noahbazer/badges/large"
+                alt="web development"
+              />
             </div>
+            <div class="about-me-4-image">
+              <iframe
+                src="https://clips.twitch.tv/embed?clip=TenderLivelyPigHassanChop-iB04MZhUm3yT2uN0&parent=www.noahbazer.dev"
+                frameborder="0"
+                allowfullscreen="true"
+                scrolling="no"
+                height="378"
+                width="620"
+              ></iframe>
+            </div>
+          </div>
+          <div class="about-me-4-content">
+            <h3 class="tagline2">Craving excellence,<br />Line by line.</h3>
+            <p>
+              In my free time, I love to challenge myself with coding puzzles on
+              Codewars and LeetCode. I'm always looking for new ways to improve
+              my problem-solving skills and am constantly working to become a
+              better developer.
+            </p>
+            <br />
+            <p>
+              I've attached my Codewars badge to the left. I'm currently ranked
+              6 kyu and growing every day!
+            </p>
+            <br />
+            <p>
+              I also stream my coding sessions on Twitch in my free time. I love
+              to share my knowledge and help others learn and grow.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        class="showcase section about-me-5"
+        id="section2"
+      >
+        <h2 class="showcase-title2">My Work</h2>
+        <div class="showcase-section-wrapper">
+          <div class="about-me-5-content">
+            <h4>Recent Flagship Project: Sky Height Tool</h4>
             <video
-              autoplay
+              class="showcase-video"
               loop
               muted
-              class="modal-image"
+              autoplay
               src="./assets/skypreview.mp4"
             ></video>
-            <div class="modal-content">
-              <div class="modal-blurbs">
-                <div class="modal-blurb majorproject">
-                  <p class="blurb-text">Personal Project</p>
-                </div>
-                <div class="modal-blurb proproject">
-                  <img
-                    src="./assets/proicon.png"
-                    class="blurb-icon"
-                  />
-                  <p class="blurb-text">Paid Project</p>
-                </div>
-              </div>
-              <div class="title-link">
-                <h3>Sky Height Tool</h3>
-                <a
-                  class="bluelink"
-                  href="https://skyheight.net"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >skyheight.net</a
-                >
-              </div>
-              <div class="langs">
-                <i class="fab fa-html5"></i>
-                <i class="fab fa-css3"></i>
-                <i class="fab fa-js"></i>
-              </div>
-              <p class="modal-desc">
-                Sky Height Tool is a web application that allows users to
-                measure their Sky: Children of the Light character's height in
-                relation to world objects. The application uses a custom
-                algorithm to calculate the character's height based on the
-                user's input.
-              </p>
-            </div>
+            <p>
+              The Sky Height Tool is a web application that allows users to
+              measure and compare the height of their Sky: Children of the Light
+              characters. The tool uses a custom algorithm to calculate the
+              height of the character based on the height of the user's screen.
+              The tool also allows users to compare the height of their
+              character to the height of other characters in the game. The Sky
+              Height Tool is built using native languages, and is used by
+              hundreds of players every day.
+            </p>
+            <a
+              href="https://skyheight.net"
+              target="_blank"
+              class="showcase-link"
+              >View the Sky Height Tool Here<span
+                class="fa-solid fa-arrow-right"
+              ></span
+            ></a>
           </div>
-          <div class="project-modal">
-            <video
-              autoplay
-              loop
-              muted
-              class="modal-image"
-              src="./assets/concretepreview.mp4"
-            ></video>
-            <div class="modal-content">
-              <div class="modal-blurbs">
-                <div class="modal-blurb proproject">
-                  <img
-                    src="./assets/proicon.png"
-                    class="blurb-icon"
-                  />
-                  <p class="blurb-text">Paid Project</p>
-                </div>
-              </div>
-              <div class="title-link">
-                <h3>Concrete World</h3>
-                <a
-                  class="bluelink"
-                  href="https://concreteworld.net"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >concreteworld.net<span
-                    class="fa-solid fa-arrow-right bluelink"
-                  ></span
-                ></a>
-              </div>
-              <div class="langs">
-                <i class="fab fa-html5"></i>
-                <i class="fab fa-css3"></i>
-                <i class="fab fa-js"></i>
-              </div>
-              <p class="modal-desc">
-                Concrete World is a local epoxy company that specializes in the
-                installation of custom epoxy floors. Recently they underwent a
-                complete rebranding and needed a new website to reflect their
-                new image. I was tasked with creating a new website that would
-                showcase their services and provide a platform for potential
-                customers to contact them.
-              </p>
-            </div>
-          </div>
-          <div class="project-modal">
-            <video
-              autoplay
-              loop
-              muted
-              class="modal-image"
-              src="./assets/battleshowcase.mp4"
-            ></video>
-            <div class="modal-content">
-              <div class="modal-blurbs">
-                <div class="modal-blurb majorproject">
-                  <img
-                    src="./assets/majoricon.png"
-                    class="blurb-icon"
-                  />
-                  <p class="blurb-text">Personal Project</p>
-                </div>
-              </div>
-              <div class="title-link">
-                <h3>Node.js Battleship</h3>
-                <a
-                  class="bluelink"
-                  href="https://github.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >github repository<span
-                    class="fa-solid fa-arrow-right bluelink"
-                  ></span
-                ></a>
-              </div>
-              <div class="langs">
-                <i class="fab fa-js"></i>
-                <i class="fab fa-node"></i>
-              </div>
-              <p class="modal-desc">
-                This version of battleship was made using nothing but Node.js
-                and the command line. The game has advanced, yet optimized ship
-                generation and placement algorithms, and a fully functional game
-                loop. The game is played in the command line and is fully
-                responsive.
-              </p>
-            </div>
-          </div>
-          <div class="project-modal">
-            <video
-              autoplay
-              loop
-              muted
-              class="modal-image"
-              src="./assets/saaspreview.mp4"
-            ></video>
-            <div class="modal-content">
-              <div class="modal-blurbs">
-                <div class="modal-blurb majorproject">
-                  <img
-                    src="./assets/majoricon.png"
-                    class="blurb-icon"
-                  />
-                  <p class="blurb-text">Personal Project</p>
-                </div>
-              </div>
-              <div class="title-link">
-                <h3>Software as a Service site</h3>
-                <p class="gray">private repository</p>
-              </div>
-              <div class="langs">
-                <i class="fab fa-html5"></i>
-                <i class="fab fa-css3"></i>
-                <i class="fab fa-js"></i>
-              </div>
-              <p class="modal-desc">
-                This Software as a Service (SaaS) website was made by taking
-                several mockups and turning them into a fully functional
-                website. The website is a simple, clean, and modern design that
-                is easy to navigate and use. The website is fully responsive and
-                works on all devices.
-              </p>
-            </div>
+          <div class="carousel about-me-5-images">
+            <h4>My Other Works</h4>
+            <div
+              class="carousel-items"
+              id="carouselcon"
+            ></div>
           </div>
         </div>
-      </div>
+      </section>
+      <section class="section-contact">
+        <div class="contact-container">
+          <h3 class="contact-title">contact me:</h3>
+          <p class="contact-desc">this is a placeholder text. say cheese!</p>
+          <ul class="contact-list">
+            <a href="https://www.linkedin.com/in/noahbazer/"
+              ><span class="fa-brands fa-linkedin"></span>linkedin</a
+            >
+            <a href="mailto:noahbazerdev@gmail.com"
+              ><span class="fa-solid fa-at"></span>noahbazerdev@gmail.com</a
+            >
+            <a></a>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <div class="warning">
+      <p>
+        This site does not yet support mobile devices and tablets. Please view
+        on a desktop or laptop for the best experience. <br /><br />If you would
+        still like to download my resume, please click the button below. Thanks!
+      </p>
+      <a
+        href="./assets/resume.pdf"
+        download
+        id="resume"
+        class="resume-button-mobile"
+        onclick="downloadResume()"
+        >Download My Resume</a
+      >
+    </div>
+    <div
+      class="disclaimer"
+      id="disclaimer"
+    >
+      <p>
+        This site is a work in progress and is not yet complete. I update it
+        almost every day, so make sure to check back!
+      </p>
+      <p
+        class="disclaimer-link"
+        onclick="hideDisclaimer()"
+      >
+        Dismiss
+      </p>
+      <p
+        class="disclaimer-link"
+        onclick="deleteDisclaimer()"
+      >
+        Don't show this again
+      </p>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
     <script
