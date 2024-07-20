@@ -20,6 +20,30 @@ body {
   background-attachment: fixed;
   z-index: 0;
   overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar-track {
+  background: #2d2d2d; /* Light grey track */
+}
+
+/* Customizes the scrollbar handle */
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px; /* Makes the thumb more rounded */
+  border: 4px solid transparent; /* Optional: Adds a border */
+  background-clip: padding-box;
+  background: var(--color-brass); /* Dark grey handle */
+}
+
+/* Customizes the scrollbar handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brass); /* Lighter grey handle on hover */
+}
+
+/* Customizes the scrollbar width */
+body::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+  border-radius: 10px;
 }
 
 body.light-theme {
@@ -144,8 +168,8 @@ body {
 .about-me-4 .about-me-4-images,
 .about-me-5 .about-me-5-images {
   opacity: 0;
-  transition: opacity 1s ease .5s;
-  animation: fadeUpFromBottom 1s ease .5s;
+  transition: opacity 1s ease 0.5s;
+  animation: fadeUpFromBottom 1s ease 0.5s;
 }
 
 .about-me-3 .about-me-3-content,
@@ -180,7 +204,6 @@ body {
   width: 100%;
   justify-content: space-around;
   height: 5vh;
-  background-color: rgb(29, 29, 29);
   transition: background-color 0.2s ease-in-out, border-width 0.2s ease-in-out;
   z-index: 10000000;
 }
