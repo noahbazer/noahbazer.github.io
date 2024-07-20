@@ -1,14 +1,36 @@
-// Prevent default scrolling behavior for a set duration
-const preventScroll = (e) => e.preventDefault();
+// Initialize Lenis
+const lenis = new Lenis({
+  duration: 1.2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  direction: 'vertical',
+  gestureDirection: 'vertical',
+  smooth: true,
+  smoothTouch: false,
+  touchMultiplier: 2,
+  infinite: false,
+});
 
-// Disable scrolling
-document.addEventListener('wheel', preventScroll, { passive: false });
-document.addEventListener('touchmove', preventScroll, { passive: false });
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
 
-// Enable scrolling after a delay
+requestAnimationFrame(raf);
+
+// Lock scroll by setting body to fixed position and hide scrollbar
+document.body.style.position = 'fixed';
+document.body.style.width = '100%';
+document.body.classList.add('scrollbar-hidden');
+
+// Enable scrolling after 4 seconds and show scrollbar gracefully
 setTimeout(() => {
-  document.removeEventListener('wheel', preventScroll);
-  document.removeEventListener('touchmove', preventScroll);
+  document.body.style.position = '';
+  document.body.style.width = '';
+  document.body.classList.remove('scrollbar-hidden');
+  document.body.classList.add('scrollbar-visible');
+  setTimeout(() => {
+    document.body.classList.remove('scrollbar-visible');
+  }, 2000); // Match this duration with the transition duration
 }, 4000);
 
 // Give header-container the header-container-scrolled class on scroll
@@ -20,54 +42,6 @@ window.addEventListener('scroll', function () {
     headerContainer.classList.remove('header-container-scrolled');
   }
 });
-
-let lastScrollY = window.scrollY;
-let velocity = 0;
-let isScrolling;
-
-// Function to track scroll speed
-function trackScrollSpeed() {
-  const newScrollY = window.scrollY;
-  const delta = newScrollY - lastScrollY;
-  const now = performance.now();
-  if (lastTime) {
-    const deltaTime = now - lastTime;
-    // Speed in pixels/ms
-    velocity = delta / deltaTime;
-  }
-  lastScrollY = newScrollY;
-  lastTime = now;
-}
-
-// Function to apply inertia
-function applyInertia() {
-  if (Math.abs(velocity) > 0.0001) {
-    // Threshold for stopping
-    window.scrollBy(0, velocity * 50); // Adjust multiplier for inertia strength
-    // Apply friction to reduce velocity
-    velocity *= 0.95; // Adjust for desired friction effect
-
-    requestAnimationFrame(applyInertia);
-  }
-}
-
-// Enhanced scroll event listener
-window.addEventListener(
-  'scroll',
-  () => {
-    // Clear any queued inertia animations
-    window.cancelAnimationFrame(isScrolling);
-
-    trackScrollSpeed();
-
-    // Set a timeout to end scrolling
-    clearTimeout(window.inertiaTimeout);
-    window.inertiaTimeout = setTimeout(() => {
-      applyInertia();
-    }, 100); // Delay to determine end of scrolling
-  },
-  { passive: true }
-);
 
 function setTextAnimation(
   delay,

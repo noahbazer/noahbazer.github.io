@@ -17,6 +17,27 @@ html {
   scroll-behavior: smooth;
 }
 
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
 body {
   background-size: 20%;
   background-repeat: repeat;
@@ -37,6 +58,7 @@ body::-webkit-scrollbar-thumb {
   border: 4px solid transparent; /* Optional: Adds a border */
   background-clip: padding-box;
   background: var(--color-brass); /* Dark grey handle */
+  transition: background 0.3s ease;
 }
 
 /* Customizes the scrollbar handle on hover */
@@ -48,6 +70,7 @@ body::-webkit-scrollbar-thumb:hover {
 body::-webkit-scrollbar {
   width: 10px; /* Width of the scrollbar */
   border-radius: 10px;
+  transition: opacity 0.3s ease;
 }
 
 body.light-theme {
