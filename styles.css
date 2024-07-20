@@ -242,10 +242,11 @@ body {
   font-size: 1.6vh;
   text-align: center;
   text-decoration: none;
-  background-color: #3097d7;
-  color: white;
+  background-color: var(--color-brass);
+  color: black;
+  font-weight: 600;
   border-radius: 5px;
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease-in-out;
   pointer-events: all;
 }
 
@@ -258,7 +259,7 @@ body {
   background-color: #3097d7;
   color: white;
   border-radius: 5px;
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease-in-out;
   pointer-events: all;
 }
 
@@ -268,7 +269,9 @@ body {
 }
 
 .resume-button:hover {
-  background-color: #2472a3;
+  background-color: #c8ac64;
+  color: white;
+  transition: all 0.2s ease-in-out;
 }
 
 .header {
@@ -562,11 +565,13 @@ h3 {
 }
 
 .scroll-hint p span {
+  color: var(--color-brass);
   margin-left: 15px;
   animation: bob 1s infinite;
 }
 
 .scroll-hint p {
+  font-weight: 600;
   opacity: 1;
   transition: opacity 0.5s ease;
 }
@@ -1290,7 +1295,7 @@ h3 {
 }
 
 .showcase-title2 {
-  color: white;
+  color: brass;
   font-size: 5vh;
   font-weight: 600;
   margin-bottom: 10px;
@@ -1314,9 +1319,10 @@ h3 {
 
 .showcase-link:hover {
   span {
-    color: rgb(0, 183, 255);
+    color: var(--color-brass);
     transition: all 0.2s ease-in-out;
+    transform: translateX(5px);
   }
-  color: rgb(0, 183, 255);
+  color: var(--color-brass);
   transition: all 0.2s ease-in-out;
 }
