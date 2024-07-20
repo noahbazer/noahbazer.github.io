@@ -13,6 +13,10 @@
   --color-brass: #fbdc90;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-size: 20%;
   background-repeat: repeat;
@@ -262,7 +266,7 @@ body {
   width: 10vw;
   padding: 1vh 2vw;
   margin-top: 1vh;
-  font-size: 1.6vh;
+  font-size: 1rem;
   text-align: center;
   text-decoration: none;
   background-color: var(--color-brass);
