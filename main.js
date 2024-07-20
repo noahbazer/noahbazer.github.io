@@ -1,3 +1,41 @@
+// Custom easing function for scrolling
+function easeInOutQuad(t) {
+  return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+}
+
+// Smooth scroll function
+function smoothScroll(target, duration) {
+  const start = window.pageYOffset;
+  const end = typeof target === 'number' ? target : target.offsetTop;
+  const distance = end - start;
+  const startTime = performance.now();
+
+  function scroll() {
+    const currentTime = performance.now();
+    const time = Math.min(1, (currentTime - startTime) / duration);
+    const timeFunction = easeInOutQuad(time);
+    window.scrollTo(0, start + distance * timeFunction);
+
+    if (time < 1) {
+      requestAnimationFrame(scroll);
+    }
+  }
+
+  requestAnimationFrame(scroll);
+}
+
+// Attach smooth scroll to all anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      smoothScroll(targetElement, 1000); // Adjust duration as needed
+    }
+  });
+});
+
 function setTextAnimation(
   delay,
   duration,
@@ -79,144 +117,57 @@ document.addEventListener('DOMContentLoaded', function () {
   // Scroll to the top on page load
   window.scrollTo(0, 0);
 
-  let currentSection = 0;
-  let isScrolling = false;
-  const sections = document.querySelectorAll('.section');
-  const headerContainer = document.getElementById('header-container');
-  const scrollHint = document.querySelector('.scroll-hint p');
-
-  function smoothScroll(targetSection) {
-    if (isScrolling) return;
-    isScrolling = true;
-
-    // Use getBoundingClientRect to calculate the target position
-    const targetPosition =
-      sections[targetSection].getBoundingClientRect().top + window.scrollY;
-
-    const currentPosition = window.scrollY;
-    const distance = targetPosition - currentPosition;
-    const duration = 1000;
-
-    let startTime;
-
-    function animation(currentTime) {
-      if (startTime === undefined) startTime = currentTime;
-      const elapsedTime = currentTime - startTime;
-      const ease = easeInOutCubic(
-        elapsedTime,
-        currentPosition,
-        distance,
-        duration
-      );
-      window.scrollTo(0, ease);
-
-      if (elapsedTime < duration) {
-        requestAnimationFrame(animation);
-      } else {
-        isScrolling = false;
-        updateSectionVisibility(); // Update visibility after the animation is complete
-      }
+// Function to handle intersection changes
+function handleIntersection(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      observer.unobserve(entry.target); // Stop observing once the element is visible
     }
-
-    function easeInOutCubic(t, b, c, d) {
-      t /= d / 2;
-      if (t < 1) return (c / 2) * t * t * t + b;
-      t -= 2;
-      return (c / 2) * (t * t * t + 2) + b;
-    }
-
-    requestAnimationFrame(animation);
-  }
-
-  function handleScroll(event) {
-    event.preventDefault();
-    const delta = event.deltaY;
-
-    if (isScrolling) return; // Ignore additional scroll events during animation
-
-    if (delta > 0 && currentSection < sections.length - 1) {
-      currentSection++;
-      smoothScroll(currentSection);
-    } else if (delta < 0 && currentSection > 0) {
-      currentSection--;
-      smoothScroll(currentSection);
-    }
-
-    // Update header class based on scroll position
-    updateHeaderClass();
-
-    // Update scroll-hint visibility based on current section
-    updateScrollHintVisibility();
-  }
-
-  window.addEventListener('resize', function () {
-    const targetPosition =
-      sections[currentSection].getBoundingClientRect().top + window.scrollY;
-    window.scrollTo(0, targetPosition);
   });
-  function updateHeaderClass() {
-    const scrolledClass = 'header-container-scrolled';
-    const scrollThreshold = 5;
+}
 
-    if (window.scrollY >= scrollThreshold) {
-      headerContainer.classList.add(scrolledClass);
-    } else {
-      headerContainer.classList.remove(scrolledClass);
-    }
-  }
-
-  function updateScrollHintVisibility() {
-    const targetSection = 1; // Adjust the target section index as needed
-
-    if (currentSection === targetSection) {
-      // Set the opacity or hide the scroll hint element
-      scrollHint.style.opacity = '0'; // Adjust as needed for your preferred opacity value
-    } else {
-      // Reset the opacity or show the scroll hint element
-      scrollHint.style.opacity = '1'; // Adjust as needed for your preferred opacity value
-    }
-  }
-
-  function updateSectionVisibility() {
-    // Toggle the visible class for specific elements in the second section
-    const aboutMe2Images = document.querySelector('.about-me-2-images');
-    const aboutMe2Content = document.querySelector('.about-me-2-content');
-
-    const aboutMe3Images = document.querySelector('.about-me-3-images');
-    const aboutMe3Content = document.querySelector('.about-me-3-content');
-
-    const aboutMe4Images = document.querySelector('.about-me-4-images');
-    const aboutMe4Content = document.querySelector('.about-me-4-content');
-
-    const aboutMe5Images = document.querySelector('.about-me-5-images');
-    const aboutMe5Content = document.querySelector('.about-me-5-content');
-
-    if (currentSection === 1) {
-      aboutMe2Images.style.opacity = '1';
-      aboutMe2Content.style.opacity = '1';
-    }
-
-    if (currentSection === 2) {
-      aboutMe3Images.style.opacity = '1';
-      aboutMe3Content.style.opacity = '1';
-    }
-
-    if (currentSection === 3) {
-      aboutMe4Images.style.opacity = '1';
-      aboutMe4Content.style.opacity = '1';
-    }
-
-    if (currentSection === 4) {
-      aboutMe5Images.style.opacity = '1';
-      aboutMe5Content.style.opacity = '1';
-    }
-  }
-
-  window.addEventListener('wheel', handleScroll, { passive: false });
-  window.addEventListener('scroll', updateHeaderClass);
-  window.addEventListener('scroll', updateScrollHintVisibility);
-  window.addEventListener('scroll', updateSectionVisibility);
+// Create an Intersection Observer instance
+const observer = new IntersectionObserver(handleIntersection, {
+  root: null, // Use the viewport as the root
+  rootMargin: '0px',
+  threshold: 0.5 // Trigger when 50% of the element is visible
 });
+
+// Function to observe elements
+function updateSectionVisibility() {
+  const aboutMe2Images = document.querySelector('.about-me-2-images');
+  const aboutMe2Content = document.querySelector('.about-me-2-content');
+  const aboutMe3Images = document.querySelector('.about-me-3-images');
+  const aboutMe3Content = document.querySelector('.about-me-3-content');
+  const aboutMe4Images = document.querySelector('.about-me-4-images');
+  const aboutMe4Content = document.querySelector('.about-me-4-content');
+  const aboutMe5Images = document.querySelector('.about-me-5-images');
+  const aboutMe5Content = document.querySelector('.about-me-5-content');
+
+  // Set initial opacity to 0
+  aboutMe2Images.style.opacity = '0';
+  aboutMe2Content.style.opacity = '0';
+  aboutMe3Images.style.opacity = '0';
+  aboutMe3Content.style.opacity = '0';
+  aboutMe4Images.style.opacity = '0';
+  aboutMe4Content.style.opacity = '0';
+  aboutMe5Images.style.opacity = '0';
+  aboutMe5Content.style.opacity = '0';
+
+  // Observe elements
+  observer.observe(aboutMe2Images);
+  observer.observe(aboutMe2Content);
+  observer.observe(aboutMe3Images);
+  observer.observe(aboutMe3Content);
+  observer.observe(aboutMe4Images);
+  observer.observe(aboutMe4Content);
+  observer.observe(aboutMe5Images);
+  observer.observe(aboutMe5Content);
+}
+
+// Call the updateSectionVisibility function to start observing
+updateSectionVisibility();
 
 const disclaimer = document.getElementById('disclaimer');
 
@@ -245,4 +196,4 @@ function downloadResume() {
   setTimeout(() => {
     downloadButton.innerHTML = 'Download Resume';
   }, 3000);
-}
+}});

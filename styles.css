@@ -19,7 +19,7 @@ body {
   background-position: center;
   background-attachment: fixed;
   z-index: 0;
-  overflow: hidden;
+  overflow-y: scroll;
 }
 
 body.light-theme {
@@ -144,8 +144,8 @@ body {
 .about-me-4 .about-me-4-images,
 .about-me-5 .about-me-5-images {
   opacity: 0;
-  transition: opacity 1s ease 1.5s;
-  animation: fadeUpFromBottom 1s ease 2s;
+  transition: opacity 1s ease .5s;
+  animation: fadeUpFromBottom 1s ease .5s;
 }
 
 .about-me-3 .about-me-3-content,
@@ -153,21 +153,21 @@ body {
 .about-me-4 .about-me-4-content,
 .about-me-5 .about-me-5-content {
   opacity: 0;
-  transition: opacity 1s ease 1s;
+  transition: opacity 1s ease 0s;
 }
 
 .about-me-2 .about-me-2-images.visible,
 .about-me-3 .about-me-3-images.visible,
 .about-me-4 .about-me-4-images.visible,
 .about-me-5 .about-me-5-images.visible {
-  animation: fadeInFromBelow 0.5s ease-out 1.5s both;
+  animation: fadeInFromBelow 0.5s ease-out both;
 }
 
 .about-me-2 .about-me-2-content.visible,
 .about-me-3 .about-me-3-content.visible,
 .about-me-4 .about-me-4-content.visible,
 .about-me-5 .about-me-5-content.visible {
-  animation: fadeInFromBelow 0.5s ease-out 1s both;
+  animation: fadeInFromBelow 0.5s ease-out both;
 }
 
 .header-container {
