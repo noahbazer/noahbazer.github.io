@@ -1,4 +1,5 @@
 /* COLOR VARIABLES */
+
 :root {
   --lang-color-html: rgb(248, 97, 97);
   --lang-color-css: #7350a7;
@@ -9,6 +10,7 @@
   --lang-color-express: rgb(239, 159, 255);
   --lang-color-mongodb: rgb(19, 170, 82);
   --lang-color-cs: rgb(144, 249, 255);
+  --color-brass: #fbdc90;
 }
 
 body {
@@ -180,7 +182,56 @@ body {
   height: 5vh;
   background-color: rgb(29, 29, 29);
   transition: background-color 0.2s ease-in-out, border-width 0.2s ease-in-out;
-  z-index: 1000000000;
+  z-index: 10000000;
+}
+
+.brass {
+  color: var(--color-brass);
+}
+
+.intro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 140000000;
+  background-color: rgb(29, 29, 29);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: slideUp 1s ease-in-out 0.5s forwards;
+  animation-delay: 2s;
+}
+
+.intro h3 {
+  opacity: 0;
+  font-size: 6rem;
+  font-weight: 600;
+  letter-spacing: -14px;
+  margin: 0;
+  animation: fadeInAndGrow 3s ease-in 0s forwards;
+}
+
+@keyframes fadeInAndGrow {
+  from {
+    opacity: 0;
+    transform: scale(1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-300%);
+  }
 }
 
 .resume-button {
@@ -248,9 +299,14 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-size: 1vh;
   gap: 10px;
   margin-right: 300px;
+}
+
+.header-start h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  transition: ease-in-out 0.2s;
 }
 
 .header-container-scrolled {
@@ -258,6 +314,11 @@ body {
   background-color: rgb(29, 29, 29);
   border-bottom: 1px solid rgb(54, 54, 54);
   transition: background-color 0.2s ease-in-out, border-width 0.2s ease-in-out;
+}
+
+.header-container-scrolled #header .header-start h3 {
+  font-size: 1rem;
+  transition: ease-in-out 0.2s;
 }
 
 .logo {
@@ -307,21 +368,26 @@ h3 {
 .socials {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 20px;
   justify-content: flex-end;
   align-items: center;
 }
 
 .socials a span {
   color: gray;
-  font-size: 1.4vh;
+  font-size: 1.3rem;
   text-decoration: none;
-  font-weight: 200;
   letter-spacing: 2px;
+  transition: all 0.2s ease-in-out;
+}
+
+.header-container-scrolled .socials a span {
+  font-size: 1em;
+  transition: all 0.2s ease-in-out;
 }
 
 .socials a span:hover {
-  color: white;
+  color: var(--color-brass);
 }
 
 .text-splash {
@@ -342,6 +408,37 @@ h3 {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* Google chrome */
+@-webkit-keyframes svg-text-anim {
+  40% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  60% {
+    stroke-dashoffset: 0;
+    fill: #fede86;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #fede86;
+  }
+}
+/* Most browsers */
+@keyframes svg-text-anim {
+  40% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  60% {
+    stroke-dashoffset: 0;
+    fill: #fede86;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #fede86;
+  }
 }
 
 #dynText {
@@ -411,10 +508,10 @@ h3 {
 
 .about-me {
   animation: fadeInFromBelow 1s ease-in-out 0.5s forwards;
-  animation-delay: 1s;
-  -webkit-animation: fadeInFromBelow 1s ease-in-out 0.5s forwards; /* Safari and Chrome */
-  -moz-animation: fadeInFromBelow 1s ease-in-out 0.5s forwards; /* Firefox */
-  -o-animation: fadeInFromBelow 1s ease-in-out 0.5s forwards;
+  animation-delay: 2.5s;
+  -webkit-animation: fadeInFromBelow 1s ease-in-out 2.5s forwards; /* Safari and Chrome */
+  -moz-animation: fadeInFromBelow 1s ease-in-out 2.5s forwards; /* Firefox */
+  -o-animation: fadeInFromBelow 1s ease-in-out 2.5s forwards;
 }
 
 .about-me-2 {
@@ -458,10 +555,10 @@ h3 {
   justify-content: center;
   align-items: center;
   animation: fadeInFromBelow 1s ease-in-out 1.5s forwards;
-  animation-delay: 1s;
-  -webkit-animation: fadeInFromBelow 1s ease-in-out 1.5s forwards; /* Safari and Chrome */
-  -moz-animation: fadeInFromBelow 1s ease-in-out 1.5s forwards; /* Firefox */
-  -o-animation: fadeInFromBelow 1s ease-in-out 1.5s forwards;
+  animation-delay: 3s;
+  -webkit-animation: fadeInFromBelow 1s ease-in-out 3s forwards; /* Safari and Chrome */
+  -moz-animation: fadeInFromBelow 1s ease-in-out 3s forwards; /* Firefox */
+  -o-animation: fadeInFromBelow 1s ease-in-out 3s forwards;
 }
 
 .scroll-hint p span {
@@ -490,10 +587,10 @@ h3 {
   opacity: 0;
   position: relative;
   width: 50vh;
-  animation: fadeInFromBelow 1s ease-in-out 1.5s forwards;
-  -webkit-animation: fadeInFromBelow 1s ease-in-out 1.5s forwards; /* Safari and Chrome */
-  -moz-animation: fadeInFromBelow 1s ease-in-out 1.5s forwards; /* Firefox */
-  -o-animation: fadeInFromBelow 1s ease-in-out 1.5s forwards;
+  animation: fadeInFromBelow 1s ease-in-out 3s forwards;
+  -webkit-animation: fadeInFromBelow 1s ease-in-out 3s forwards; /* Safari and Chrome */
+  -moz-animation: fadeInFromBelow 1s ease-in-out 3s forwards; /* Firefox */
+  -o-animation: fadeInFromBelow 1s ease-in-out 3s forwards;
   max-height: 80%;
 }
 
@@ -1050,7 +1147,7 @@ h3 {
 .about-me-2-image span {
   font-size: 3em;
   margin: 25px;
-  color: white;
+  color: var(--color-brass);
   animation: bob 2s infinite;
 }
 
