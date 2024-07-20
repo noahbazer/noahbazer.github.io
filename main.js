@@ -17,6 +17,29 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
+function disableIframePointerEvents() {
+  const iframes = document.querySelectorAll('iframe');
+  iframes.forEach(iframe => {
+    iframe.style.pointerEvents = 'none';
+  });
+}
+
+// Function to enable pointer events on iframes
+function enableIframePointerEvents() {
+  const iframes = document.querySelectorAll('iframe');
+  iframes.forEach(iframe => {
+    iframe.style.pointerEvents = 'auto';
+  });
+}
+
+// Add scroll event listener to disable pointer events on iframes
+let scrollTimeout;
+window.addEventListener('scroll', () => {
+  disableIframePointerEvents();
+  clearTimeout(scrollTimeout);
+  scrollTimeout = setTimeout(enableIframePointerEvents, 100); // Adjust timeout as needed
+});
+
 // Lock scroll by setting body to fixed position and hide scrollbar
 document.body.style.position = 'fixed';
 document.body.style.width = '100%';
