@@ -1219,8 +1219,12 @@ h3 {
 
 .git-profile a:hover,
 .git-profile a:hover span {
-  color: white;
+  color: var(--color-brass);
   transition: all 0.3s ease-in-out;
+}
+
+.git-profile a:hover span {
+  transform: translateX(5px);
 }
 
 .warning {
