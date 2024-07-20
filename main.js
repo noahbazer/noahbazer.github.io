@@ -36,10 +36,18 @@ setTimeout(() => {
 // Give header-container the header-container-scrolled class on scroll
 window.addEventListener('scroll', function () {
   const headerContainer = document.querySelector('.header-container');
+  const scrollHint = document.getElementById('scrollhintp');
+  console.log('ScrollHint Element:', scrollHint); // Check if the element is found
   if (window.scrollY > 0) {
     headerContainer.classList.add('header-container-scrolled');
+    console.log('Before setting opacity to 0:', scrollHint.style.opacity);
+    scrollHint.style.opacity = '0';
+    console.log('After setting opacity to 0:', scrollHint.style.opacity);
   } else {
     headerContainer.classList.remove('header-container-scrolled');
+    console.log('Before setting opacity to 1:', scrollHint.style.opacity);
+    scrollHint.style.opacity = '1';
+    console.log('After setting opacity to 1:', scrollHint.style.opacity);
   }
 });
 
