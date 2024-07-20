@@ -899,7 +899,8 @@ h3 {
 }
 
 .modal-preview:hover {
-  border: 1px solid white;
+  color: var(--color-brass);
+  border: 1px solid var(--color-brass);
   transition: all 0.2s ease-in-out;
 }
 
@@ -920,9 +921,15 @@ h3 {
   z-index: 100;
 }
 
+.modal-preview:hover .text-container p {
+  color: var(--color-brass);
+  transition: all 0.2s ease-in-out;
+}
+
 .text-container p {
   margin: 0;
   color: white;
+  transition: all 0.2s ease-in-out;
 }
 
 .modal {

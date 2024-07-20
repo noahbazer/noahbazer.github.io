@@ -3,6 +3,16 @@ function easeInOutQuad(t) {
   return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
 }
 
+// Give header-container the header-container-scrolled class on scroll
+window.addEventListener('scroll', function () {
+  const headerContainer = document.querySelector('.header-container');
+  if (window.scrollY > 0) {
+    headerContainer.classList.add('header-container-scrolled');
+  } else {
+    headerContainer.classList.remove('header-container-scrolled');
+  }
+});
+
 // Smooth scroll function
 function smoothScroll(target, duration) {
   const start = window.pageYOffset;
