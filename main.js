@@ -206,27 +206,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Call the updateSectionVisibility function to start observing
   updateSectionVisibility();
-});
 
-const disclaimer = document.getElementById("disclaimer");
+  const disclaimer = document.getElementById("disclaimer");
 
-const hideDisclaimer = () => {
-  disclaimer.style.bottom = "-100px";
-};
+  const hideDisclaimer = () => {
+    disclaimer.style.bottom = "-100px";
+  };
 
-const deleteDisclaimer = () => {
-  localStorage.setItem("disclaimer", "true");
-  hideDisclaimer();
-};
+  const deleteDisclaimer = () => {
+    localStorage.setItem("disclaimer", "true");
+    hideDisclaimer();
+  };
 
-const checkDisclaimer = () => {
-  if (localStorage.getItem("disclaimer") !== "true") {
-    disclaimer.style.bottom = "0";
-  }
-};
+  const checkDisclaimer = () => {
+    if (localStorage.getItem("disclaimer") !== "true") {
+      disclaimer.style.bottom = "0";
+    }
+  };
 
-document.addEventListener("DOMContentLoaded", function () {
-  checkDisclaimer();
+  document.addEventListener("DOMContentLoaded", function () {
+    checkDisclaimer();
+  });
 });
 
 function downloadResume() {
