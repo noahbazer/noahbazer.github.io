@@ -466,31 +466,30 @@ h3 {
 /* Google chrome */
 @-webkit-keyframes svg-text-anim {
   40% {
-    stroke-dashoffset: 0;
+    stroke-dashoffset: var(--path-length);
     fill: transparent;
   }
   60% {
     stroke-dashoffset: 0;
-    fill: #fede86;
+    fill: var(--fill-color);
   }
   100% {
     stroke-dashoffset: 0;
-    fill: #fede86;
+    fill: var(--fill-color);
   }
 }
-/* Most browsers */
 @keyframes svg-text-anim {
   40% {
-    stroke-dashoffset: 0;
+    stroke-dashoffset: var(--path-length);
     fill: transparent;
   }
   60% {
     stroke-dashoffset: 0;
-    fill: #fede86;
+    fill: var(--fill-color);
   }
   100% {
     stroke-dashoffset: 0;
-    fill: #fede86;
+    fill: var(--fill-color);
   }
 }
 
