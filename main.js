@@ -236,28 +236,3 @@ function downloadResume() {
     downloadButton.innerHTML = "Download Resume";
   }, 3000);
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-  var twitchClipContainer = document.getElementById("twitchClipContainer");
-  var observer = new IntersectionObserver(
-    function (entries, observer) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          // Load Twitch clip when it enters the viewport
-          var iframe = document.createElement("iframe");
-          iframe.src =
-            "https://clips.twitch.tv/embed?clip=TenderLivelyPigHassanChop-iB04MZhUm3yT2uN0&parent=www.noahbazer.dev";
-          iframe.width = "620";
-          iframe.height = "378";
-          iframe.allowFullscreen = true;
-          iframe.scrolling = "no";
-          twitchClipContainer.appendChild(iframe);
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.1 }
-  ); // Adjust threshold as needed
-
-  observer.observe(twitchClipContainer);
-});
