@@ -718,52 +718,6 @@ h3 {
   justify-content: flex-end;
 }
 
-.wrapper {
-  height: 5vh;
-  width: 100%;
-  padding: 10px 15px;
-}
-
-.wrapper:hover {
-  border: 1px solid white;
-}
-
-.major-project-banner,
-.pro-project-banner {
-  position: relative;
-  left: 0px;
-  top: -5px;
-  display: flex;
-  padding: 1px 4px;
-  border-radius: 25px;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-size: 13px;
-  font-weight: normal;
-  gap: 5px;
-}
-
-.major-project-banner img {
-  height: 20px;
-  margin-bottom: 7px;
-}
-
-.pro-project-banner img {
-  height: 16px;
-  margin-bottom: 5px;
-}
-
-.major-project-banner p {
-  margin: 0;
-  color: #ffd90f;
-}
-
-.pro-project-banner p {
-  margin: 0;
-  color: #65e240;
-}
-
 .carousel-button {
   cursor: pointer;
 }
@@ -821,6 +775,11 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.about-me-5 .about-me-content p {
+  max-width: 80%;
+  margin-top: 10px;
 }
 
 .about-me-2,
@@ -1114,16 +1073,19 @@ h3 {
 }
 
 .exit-button:hover {
-  color: rgb(255, 87, 87);
+  color: var(--color-brass);
 }
 
 .code-snippet {
   border-radius: 25px;
 }
 
-.about-me-2 .about-me-images {
-  max-width: 45%;
+.about-me-images {
   display: flex;
+  max-width: 45%;
+}
+
+.about-me-2 .about-me-images {
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -1131,8 +1093,6 @@ h3 {
 }
 
 .about-me-3 .about-me-images {
-  max-width: 45%;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -1140,8 +1100,6 @@ h3 {
 }
 
 .about-me-3-image {
-  max-width: 45%;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -1149,8 +1107,6 @@ h3 {
 }
 
 .about-me-4 .about-me-images {
-  max-width: 45%;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
