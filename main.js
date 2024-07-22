@@ -182,34 +182,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Function to observe elements
   function updateSectionVisibility() {
-    const aboutMe2Images = document.querySelector('.about-me-2-images');
-    const aboutMe2Content = document.querySelector('.about-me-2-content');
-    const aboutMe3Images = document.querySelector('.about-me-3-images');
-    const aboutMe3Content = document.querySelector('.about-me-3-content');
-    const aboutMe4Images = document.querySelector('.about-me-4-images');
-    const aboutMe4Content = document.querySelector('.about-me-4-content');
-    const aboutMe5Images = document.querySelector('.about-me-5-images');
-    const aboutMe5Content = document.querySelector('.about-me-5-content');
+    const aboutMeImages = document.querySelectorAll('.about-me-images');
+    const aboutMeContent = document.querySelectorAll('.about-me-content');
 
     // Set initial opacity to 0
-    aboutMe2Images.style.opacity = '0';
-    aboutMe2Content.style.opacity = '0';
-    aboutMe3Images.style.opacity = '0';
-    aboutMe3Content.style.opacity = '0';
-    aboutMe4Images.style.opacity = '0';
-    aboutMe4Content.style.opacity = '0';
-    aboutMe5Images.style.opacity = '0';
-    aboutMe5Content.style.opacity = '0';
+    aboutMeImages.forEach((image) => {
+      image.style.opacity = '0';
+    });
+
+    aboutMeContent.forEach((content) => {
+      content.style.opacity = '0';
+    });
 
     // Observe elements
-    observer.observe(aboutMe2Images);
-    observer.observe(aboutMe2Content);
-    observer.observe(aboutMe3Images);
-    observer.observe(aboutMe3Content);
-    observer.observe(aboutMe4Images);
-    observer.observe(aboutMe4Content);
-    observer.observe(aboutMe5Images);
-    observer.observe(aboutMe5Content);
+    aboutMeImages.forEach((image) => {
+      observer.observe(image);
+    });
+
+    aboutMeContent.forEach((content) => {
+      observer.observe(content);
+    });
   }
 
   // Call the updateSectionVisibility function to start observing

@@ -38,6 +38,11 @@ html.lenis body {
   pointer-events: none;
 }
 
+* {
+  font-family: 'Poppins', sans-serif;
+  color: rgb(188, 188, 188);
+}
+
 body {
   background-size: 20%;
   background-repeat: repeat;
@@ -46,6 +51,10 @@ body {
   z-index: 0;
   overflow-y: scroll;
   overflow-x: hidden;
+  margin: 0;
+  background-color: rgb(29, 29, 29);
+  transition: all 0.2s ease-in-out;
+  scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar-track {
@@ -84,29 +93,20 @@ body.light-theme {
   left: 0;
   width: 100%;
   height: 200%;
+  background-repeat: repeat;
+  background-position: center;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.bg1 {
   background-image: url(./assets/bgpat.png);
   background-size: 30%;
-  background-repeat: repeat;
-  background-position: center;
-  z-index: -1;
 }
 
 .bg2 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 200%;
   background-image: url(./assets/bgpat2.png);
   background-size: 50%;
-  background-repeat: repeat;
-  background-position: center;
-  z-index: -1;
-}
-
-.bg,
-.bg2 {
-  pointer-events: none;
 }
 
 #container {
@@ -157,28 +157,6 @@ body.light-theme {
   color: inherit;
 }
 
-* {
-  font-family: 'Poppins', sans-serif;
-  color: rgb(188, 188, 188);
-}
-
-body.light-theme * {
-  color: #000;
-  background-color: #fff;
-  transition: all 0.2s ease-in-out;
-}
-
-body.light-theme #dynText {
-  background-color: #1a1a1a;
-}
-
-body {
-  margin: 0;
-  background-color: rgb(29, 29, 29);
-  transition: all 0.2s ease-in-out;
-  scroll-behavior: smooth;
-}
-
 @keyframes fadeInFromBelow {
   from {
     opacity: 0;
@@ -190,34 +168,22 @@ body {
   }
 }
 
-.about-me-3 .about-me-3-images,
-.about-me-2 .about-me-2-images,
-.about-me-4 .about-me-4-images,
-.about-me-5 .about-me-5-images {
+.about-me-images {
   opacity: 0;
   transition: opacity 1s ease 0.5s;
   animation: fadeUpFromBottom 1s ease 0.5s;
 }
 
-.about-me-3 .about-me-3-content,
-.about-me-2 .about-me-2-content,
-.about-me-4 .about-me-4-content,
-.about-me-5 .about-me-5-content {
+.about-me-content {
   opacity: 0;
   transition: opacity 1s ease 0s;
 }
 
-.about-me-2 .about-me-2-images.visible,
-.about-me-3 .about-me-3-images.visible,
-.about-me-4 .about-me-4-images.visible,
-.about-me-5 .about-me-5-images.visible {
+.about-me-images.visible {
   animation: fadeInFromBelow 0.5s ease-out both;
 }
 
-.about-me-2 .about-me-2-content.visible,
-.about-me-3 .about-me-3-content.visible,
-.about-me-4 .about-me-4-content.visible,
-.about-me-5 .about-me-5-content.visible {
+.about-me-content.visible {
   animation: fadeInFromBelow 0.5s ease-out both;
 }
 
@@ -579,11 +545,11 @@ h3 {
   margin-bottom: 4vh;
 }
 
-.about-me-2 .about-me-2-images.visible {
+.about-me-2 .about-me-images.visible {
   animation: fadeInUp 0.5s ease-out 0.3s both;
 }
 
-.about-me-2 .about-me-2-content.visible {
+.about-me-2 .about-me-content.visible {
   animation: fadeInUp 0.5s ease-out 0.6s both;
 }
 
@@ -664,9 +630,9 @@ h3 {
 .about-me-4-container,
 .about-me-5-container {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 130px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 130px;
 }
 
 .tech-stack .icon img,
@@ -811,7 +777,7 @@ h3 {
   cursor: pointer;
 }
 
-.about-me-content {
+.about-me .about-me-content {
   width: 30%;
   height: 100%;
   display: flex;
@@ -820,9 +786,7 @@ h3 {
   align-items: flex-start;
 }
 
-.about-me-2-content,
-.about-me-3-content,
-.about-me-4-content {
+.about-me-2 .about-me-content {
   width: 30%;
   display: flex;
   flex-direction: column;
@@ -830,12 +794,33 @@ h3 {
   align-items: flex-start;
 }
 
-.about-me-5-content {
-  width: 50%;
+.about-me-2 .about-me-2-content p {
+  margin: 0;
+}
+
+.about-me-2 .about-me-images {
+  max-width: 45%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.about-me-3 .about-me-content {
+  width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+}
+
+.about-me-4 .about-me-content {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .about-me-5 {
@@ -848,12 +833,12 @@ h3 {
 .about-me-2,
 .about-me-4 {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #1f2228;
-  padding-top: 3vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1f2228;
+    padding-top: 3vh;
 }
 
 .about-me-3 {
@@ -865,10 +850,10 @@ h3 {
 }
 
 .about-me-content h3,
-.about-me-2-content h3,
-.about-me-3-content h3,
-.about-me-4-content h3,
-.about-me-5-content h3 {
+.about-me-content h3,
+.about-me-content h3,
+.about-me-content h3,
+.about-me-content h3 {
   font-size: 6vh;
   font-weight: 600;
 }
@@ -882,10 +867,10 @@ h3 {
 }
 
 .about-me-content p,
-.about-me-2-content p,
-.about-me-3-content p,
-.about-me-4-content p,
-.about-me-5-content p {
+.about-me-content p,
+.about-me-content p,
+.about-me-content p,
+.about-me-content p {
   font-size: 1.2vh;
   text-wrap: wrap;
   margin: 0;
@@ -1151,7 +1136,7 @@ h3 {
   border-radius: 25px;
 }
 
-.about-me-2-images {
+.about-me-2 .about-me-images {
   max-width: 45%;
   display: flex;
   flex-direction: row;
@@ -1160,13 +1145,13 @@ h3 {
   gap: 60px;
 }
 
-.about-me-4-images {
+.about-me-3 .about-me-images {
   max-width: 45%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 60px;
 }
 
 .about-me-3-image {
@@ -1176,6 +1161,15 @@ h3 {
   justify-content: center;
   align-items: center;
   gap: 50px;
+}
+
+.about-me-4 .about-me-images {
+  max-width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
 
 .about-me-2-image,
@@ -1216,7 +1210,7 @@ h3 {
   background-color: #1f2228;
 }
 
-.about-me-3-images {
+.about-me-images:nth-of-type(3) {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1340,18 +1334,12 @@ h3 {
   max-width: 90%;
 }
 
-.about-me-5-content h4,
-.about-me-5-images h4 {
+.about-me-content h4,
+.about-me-images h4 {
   font-size: 3vh;
   font-weight: 600;
   margin-bottom: 25px;
   color: white;
-}
-
-.about-me-5-content p {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  max-width: 80%;
 }
 
 .showcase-title2 {
