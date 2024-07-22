@@ -1076,9 +1076,12 @@ h3 {
   color: var(--color-brass);
 }
 
-.code-snippet,
-.about-me-4-image {
+.code-snippet {
   border-radius: 25px;
+  box-shadow: 9px 7px 13px 2px rgba(0, 0, 0, 0.308);
+}
+
+.codewars {
   box-shadow: 9px 7px 13px 2px rgba(0, 0, 0, 0.308);
 }
 
@@ -1131,6 +1134,8 @@ h3 {
 
 .psa {
   font-size: 0.8em;
+  margin-top: 30px;
+  margin-left: 10px;
   color: gray;
 }
 
