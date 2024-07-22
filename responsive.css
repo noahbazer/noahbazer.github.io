@@ -38,7 +38,7 @@
     padding-left: 12px;
   }
 
-  .about-me-content {
+  .about-me .about-me-content {
     margin-top: 50px;
     text-align: center;
     width: 80%;
@@ -90,10 +90,7 @@
 }
 
 @media (max-width: 1920px) {
-  .about-me-content p,
-  .about-me-2-content p,
-  .about-me-3-content p,
-  .about-me-4-content p {
+  .about-me-content p {
     font-size: 1em;
     text-wrap: wrap;
     margin: 0;
@@ -106,10 +103,7 @@
 }
 
 @media (max-width: 1280px) {
-  .about-me-content p,
-  .about-me-2-content p,
-  .about-me-3-content p,
-  .about-me-4-content p {
+  .about-me-content p {
     font-size: 0.8em;
     text-wrap: wrap;
     margin: 0;
