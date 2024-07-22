@@ -227,15 +227,15 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("DOMContentLoaded", function () {
     checkDisclaimer();
   });
-
-  function downloadResume() {
-    let downloadButton = document.getElementById("resume");
-    downloadButton.innerHTML = "Downloading...";
-    setTimeout(() => {
-      downloadButton.innerHTML = "Download Resume";
-    }, 3000);
-  }
 });
+
+function downloadResume() {
+  let downloadButton = document.getElementById("resume");
+  downloadButton.innerHTML = "Downloading...";
+  setTimeout(() => {
+    downloadButton.innerHTML = "Download Resume";
+  }, 3000);
+}
 
 document.addEventListener("DOMContentLoaded", function () {
   var twitchClipContainer = document.getElementById("twitchClipContainer");
