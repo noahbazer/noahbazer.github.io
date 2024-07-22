@@ -1254,13 +1254,13 @@ h3 {
 
 .disclaimer-link {
   font-size: 1vh;
-  color: gray;
+  color: white;
   text-decoration: none;
 }
 
 .disclaimer-link:hover {
   cursor: pointer;
-  color: white;
+  color: var(--color-brass);
   text-decoration: underline;
 }
 
