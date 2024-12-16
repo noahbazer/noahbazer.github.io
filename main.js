@@ -154,6 +154,24 @@ const setActive = (child) => {
   }
 };
 
+//function that plays an animation with frames in the asset section. The first few frames should be run through, and the last few frames should then be repeated indefinitely.
+const runAnim = () => {
+  const anim = document.getElementById("anim");
+  const codewars = document.getElementById("codewars");
+  const codewarscon = document.getElementById("anim-con");
+  setTimeout(() => {
+    anim.src = "./assets/knightanim1.gif";
+    anim.classList.add("animset");
+  }, 1000);
+  setTimeout(() => {
+    anim.src = "./assets/knightanim2.gif";
+  }, 2300);
+  setTimeout(() => {
+    codewars.classList.add("codewarsset");
+    codewarscon.classList.add("anim-conset");
+  }, 2800);
+};
+
 document.addEventListener("DOMContentLoaded", function () {
   // Disable default scroll restoration
   if ("scrollRestoration" in history) {
@@ -168,6 +186,12 @@ document.addEventListener("DOMContentLoaded", function () {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.style.opacity = "1";
+
+        // If entry with classname anim-con is intersecting, also callback a custom function
+        if (entry.target.classList.contains("anim-con")) {
+          runAnim();
+        }
+
         observer.unobserve(entry.target); // Stop observing once the element is visible
       }
     });

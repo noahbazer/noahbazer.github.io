@@ -1067,9 +1067,43 @@ h3 {
   align-items: center;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .codewars {
-  width: 100%;
-  height: 120%;
+  opacity: 0;
+  height: 50px !important;
+  transition: all 1s ease-in-out;
+  margin-top: 35px;
+}
+
+.anim-con {
+  margin-bottom: -60px;
+  transition: all 1s ease-in-out;
+  width: 40% !important;
+  max-width: 35vw !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.anim-conset {
+  margin-bottom: 0px;
+  transition: all 1s ease-in-out;
+  width: 40% !important;
+  max-width: 35vw !important;
+}
+
+.codewarsset {
+  opacity: 1;
+  transition: all 1s ease-in-out;
 }
 
 .exit-button:hover {
@@ -1318,4 +1352,26 @@ h3 {
   }
   color: var(--color-brass);
   transition: all 0.2s ease-in-out;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.anim {
+  transform: translateX(-100%);
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.animset {
+  opacity: 1;
+  transform: translateX(0%);
+  height: 400px;
+  transition: all 0.5s ease-in-out;
 }
