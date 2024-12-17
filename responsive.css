@@ -109,6 +109,10 @@
     margin: 0;
   }
 
+  .wave span {
+    font-size: 1.2em;
+  }
+
   .about-me-5-content p {
     font-size: 0.8em;
     text-wrap: wrap;
