@@ -1367,11 +1367,12 @@ h3 {
   transform: translateX(-100%);
   transition: all 0.5s ease-in-out;
   opacity: 0;
+  height: 300px;
 }
 
 .animset {
   opacity: 1;
   transform: translateX(0%);
-  height: 400px;
+  height: 300px;
   transition: all 0.5s ease-in-out;
 }
